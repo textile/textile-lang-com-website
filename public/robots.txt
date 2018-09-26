@@ -1,0 +1,17 @@
+User-agent: scooter
+Disallow: /
+
+User-agent: wget
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: webzip
+Disallow: /
+
+User-agent: WebStripper
+Disallow: /
+
+User-agent: WebCapture
+Disallow: /

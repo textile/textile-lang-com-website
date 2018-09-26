@@ -1,0 +1,13 @@
+/.htaccess
+/assets/*/
+/css.php
+/files
+/images
+/img
+/index.php
+/mockups
+/themes/*/
+/textpattern
+/vendor
+/*.png
+/*.ico

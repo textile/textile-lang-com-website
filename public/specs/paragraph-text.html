@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=utf-8' http-equiv='content-type'>
+    <title>Writing Paragraph Text - Textile Reference</title>
+    <!-- <link href="/main.css" rel="stylesheet" type="text/css" /> -->
+    <link href='/specs/stylesheets/application.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div id='header'></div>
+    <div id='content'>
+      <h1>Writing Paragraph Text</h1>
+      <p>
+        <a href='/specs/'>Back to index</a>
+      </p>
+      <p class='check_boxes'>
+        <input id='toggle-html-output' type='checkbox'>
+        <label for='toggle-html-output'>Show HTML output</label>
+      </p>
+      <div class='example-group'>
+        <h2>Simple paragraphs</h2>
+        <div class='example clearfix' id='Simple-paragraphs'>
+          <div class='desc'>
+            <p>Paragraphs are separated by a blank line.</p>
+          </div>
+          <div class='input'>
+            <div class='type'>Textile</div>
+            <pre>This is a paragraph.&#x000A;&#x000A;This is another paragraph</pre>
+          </div>
+          <div class='html' style='display:none'>
+            <div class='type'>HTML</div>
+            <pre>&lt;p&gt;This is a paragraph.&lt;/p&gt;&#x000A;&lt;p&gt;This is another paragraph&lt;/p&gt;</pre>
+          </div>
+          <div class='output'>
+            <div class='type'>Browser</div>
+            <div class='output-inner'>
+              <p>This is a paragraph.</p>
+              <p>This is another paragraph</p>
+            </div>
+          </div>
+        </div>
+        <h3>Explicit paragraphs</h3>
+        <div class='example clearfix' id='Explicit-paragraphs'>
+          <div class='desc'>
+            <p>You can explicitly identify a paragraph with <code>p. </code> (p-period-space) before the paragraph.</p>
+          </div>
+          <div class='input'>
+            <div class='type'>Textile</div>
+            <pre>p. This is one paragraph.&#x000A;&#x000A;p. This is another.</pre>
+          </div>
+          <div class='html' style='display:none'>
+            <div class='type'>HTML</div>
+            <pre>&lt;p&gt;This is one paragraph.&lt;/p&gt;&#x000A;&lt;p&gt;This is another.&lt;/p&gt;</pre>
+          </div>
+          <div class='output'>
+            <div class='type'>Browser</div>
+            <div class='output-inner'>
+              <p>This is one paragraph.</p>
+              <p>This is another.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='example-group'>
+        <h2>Line breaks</h2>
+        <div class='example clearfix' id='Line-breaks'>
+          <div class='desc'>
+            <p>Lines that don&#8217;t have a blank line in between are part of the same paragraph.</p>
+          </div>
+          <div class='input'>
+            <div class='type'>Textile</div>
+            <pre>Roses are red,&#x000A;Violets are blue,&#x000A;I'd like a sandwich;&#x000A;Perhaps even two.</pre>
+          </div>
+          <div class='html' style='display:none'>
+            <div class='type'>HTML</div>
+            <pre>&lt;p&gt;Roses are red,&lt;br /&gt;&#x000A;Violets are blue,&lt;br /&gt;&#x000A;I&amp;#8217;d like a sandwich;&lt;br /&gt;&#x000A;Perhaps even two.&lt;/p&gt;</pre>
+          </div>
+          <div class='output'>
+            <div class='type'>Browser</div>
+            <div class='output-inner'>
+              <p>Roses are red,<br />
+              Violets are blue,<br />
+              I&#8217;d like a sandwich;<br />
+              Perhaps even two.</p>
+            </div>
+          </div>
+        </div>
+        <h3>Line breaks in code</h3>
+        <div class='example clearfix' id='Line-breaks-in-code'>
+          <div class='desc'>
+            <p>Line breaks in preformatted sections don&#8217;t become <span class="caps">HTML</span> breaks.</p>
+          </div>
+          <div class='input'>
+            <div class='type'>Textile</div>
+            <pre>&lt;pre&gt;&#x000A;Mirror mirror&#x000A;on the wall...&#x000A;&lt;/pre&gt;</pre>
+          </div>
+          <div class='html' style='display:none'>
+            <div class='type'>HTML</div>
+            <pre>&lt;pre&gt;&#x000A;Mirror mirror&#x000A;on the wall...&#x000A;&lt;/pre&gt;</pre>
+          </div>
+          <div class='output'>
+            <div class='type'>Browser</div>
+            <div class='output-inner'><pre>&#x000A;Mirror mirror&#x000A;on the wall...</pre></div>
+          </div>
+        </div>
+      </div>
+      <div class='example-group'>
+        <h2>Typographer's quotes</h2>
+        <div class='example clearfix' id="Typographer's-quotes">
+          <div class='desc'>
+            <p>Straight quotation marks are converted into <abbr title='a.k.a. "curly quotes"'>typographer&#8217;s quotes</abbr>, which are easier on the eyes.</p>
+          </div>
+          <div class='input'>
+            <div class='type'>Textile</div>
+            <pre>&quot;I said, 'hold the mayo' twice!&quot;</pre>
+          </div>
+          <div class='html' style='display:none'>
+            <div class='type'>HTML</div>
+            <pre>&lt;p&gt;&amp;#8220;I said, &amp;#8216;hold the mayo&amp;#8217; twice!&amp;#8221;&lt;/p&gt;</pre>
+          </div>
+          <div class='output'>
+            <div class='type'>Browser</div>
+            <div class='output-inner'><p>&#8220;I said, &#8216;hold the mayo&#8217; twice!&#8221;</p></div>
+          </div>
+        </div>
+        <h3>Curly apostrophes</h3>
+        <div class='example clearfix' id='Curly-apostrophes'>
+          <div class='desc'>
+            <p>Apostrophes are also made curly.</p>
+          </div>
+          <div class='input'>
+            <div class='type'>Textile</div>
+            <pre>We went to Steven's mother's house for a party.</pre>
+          </div>
+          <div class='html' style='display:none'>
+            <div class='type'>HTML</div>
+            <pre>&lt;p&gt;We went to Steven&amp;#8217;s mother&amp;#8217;s house for a party.&lt;/p&gt;</pre>
+          </div>
+          <div class='output'>
+            <div class='type'>Browser</div>
+            <div class='output-inner'><p>We went to Steven&#8217;s mother&#8217;s house for a party.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class='example-group'>
+        <h2>Dashes</h2>
+        <div class='example clearfix' id='Dashes'>
+          <div class='desc'>
+            <p>Single hyphens between words become en dashes; double hyphens become em dashes.  Hyphenated words are left alone.</p>
+          </div>
+          <div class='input'>
+            <div class='type'>Textile</div>
+            <pre>I could be happy--fantastically happy--on twenty-one thousand a year if I only had to work 9 am - 1 pm.</pre>
+          </div>
+          <div class='html' style='display:none'>
+            <div class='type'>HTML</div>
+            <pre>&lt;p&gt;I could be happy&amp;#8212;fantastically happy&amp;#8212;on twenty-one thousand a year if I only had to work 9 am &amp;#8211; 1 pm.&lt;/p&gt;</pre>
+          </div>
+          <div class='output'>
+            <div class='type'>Browser</div>
+            <div class='output-inner'><p>I could be happy&#8212;fantastically happy&#8212;on twenty-one thousand a year if I only had to work 9 am &#8211; 1 pm.</p></div>
+          </div>
+        </div>
+        <h3>En dash must have spaces</h3>
+        <div class='example clearfix' id='En-dash-must-have-spaces'>
+          <div class='desc'>
+            <p>A dash, when it appears between words, must be surrounded by spaces.</p>
+          </div>
+          <div class='input'>
+            <div class='type'>Textile</div>
+            <pre>June - July 1967</pre>
+          </div>
+          <div class='html' style='display:none'>
+            <div class='type'>HTML</div>
+            <pre>&lt;p&gt;June &amp;#8211; July 1967&lt;/p&gt;</pre>
+          </div>
+          <div class='output'>
+            <div class='type'>Browser</div>
+            <div class='output-inner'><p>June &#8211; July 1967</p></div>
+          </div>
+        </div>
+        <h3>Em dash spaces optional</h3>
+        <div class='example clearfix' id='Em-dash-spaces-optional'>
+          <div class='desc'>
+            <p>Em dashes may be set open or closed.</p>
+            <blockquote cite="http://en.wikipedia.org/wiki/Dash#Em_dash">
+            <p>According to most American sources (e.g., <a href="http://en.wikipedia.org/wiki/The_Chicago_Manual_of_Style">The Chicago Manual of Style</a>) and to some British sources (e.g., <a href="http://en.wikipedia.org/wiki/Hart%27s_Rules">The Oxford Guide to Style</a>), an em dash should always be set closed (not surrounded by spaces). But the practice in many parts of the English-speaking world, also the style recommended by <a href="http://en.wikipedia.org/wiki/The_New_York_Times_Manual_of_Style_and_Usage">The New York Times Manual of Style and Usage</a>, sets it open (separates it from its surrounding words by using spaces) when it is being used parenthetically.</p>
+            </blockquote>
+          </div>
+          <div class='input'>
+            <div class='type'>Textile</div>
+            <pre>Please use the em dash closed--or open if you must -- but I prefer it closed.</pre>
+          </div>
+          <div class='html' style='display:none'>
+            <div class='type'>HTML</div>
+            <pre>&lt;p&gt;Please use the em dash closed&amp;#8212;or open if you must &amp;#8212; but I prefer it closed.&lt;/p&gt;</pre>
+          </div>
+          <div class='output'>
+            <div class='type'>Browser</div>
+            <div class='output-inner'><p>Please use the em dash closed&#8212;or open if you must &#8212; but I prefer it closed.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class='example-group'>
+        <h2>Ellipses</h2>
+        <div class='example clearfix' id='Ellipses'>
+          <div class='desc'>
+            <p>Three periods become the ellipsis character.</p>
+          </div>
+          <div class='input'>
+            <div class='type'>Textile</div>
+            <pre>He thought and thought ... and then thought some more.</pre>
+          </div>
+          <div class='html' style='display:none'>
+            <div class='type'>HTML</div>
+            <pre>&lt;p&gt;He thought and thought &amp;#8230; and then thought some more.&lt;/p&gt;</pre>
+          </div>
+          <div class='output'>
+            <div class='type'>Browser</div>
+            <div class='output-inner'><p>He thought and thought &#8230; and then thought some more.</p></div>
+          </div>
+        </div>
+        <h3>Ellipses without leading space</h3>
+        <div class='example clearfix' id='Ellipses-without-leading-space'>
+          <div class='desc'>
+            <p>Consult your style manual for proper use of ellipses in conjunction with spaces and other punctuation.</p>
+          </div>
+          <div class='input'>
+            <div class='type'>Textile</div>
+            <pre>&quot;Four score and seven years ago our fathers brought forth...a new nation...dedicated to the proposition that all men are created equal....&quot;</pre>
+          </div>
+          <div class='html' style='display:none'>
+            <div class='type'>HTML</div>
+            <pre>&lt;p&gt;&amp;#8220;Four score and seven years ago our fathers brought forth&amp;#8230;a new nation&amp;#8230;dedicated to the proposition that all men are created equal&amp;#8230;.&amp;#8221;&lt;/p&gt;</pre>
+          </div>
+          <div class='output'>
+            <div class='type'>Browser</div>
+            <div class='output-inner'><p>&#8220;Four score and seven years ago our fathers brought forth&#8230;a new nation&#8230;dedicated to the proposition that all men are created equal&#8230;.&#8221;</p></div>
+          </div>
+        </div>
+      </div>
+      <div class='example-group'>
+        <h2>Dimension sign</h2>
+        <div class='example clearfix' id='Dimension-sign'>
+          <div class='desc'>
+            <p>The lowercase letter x between numbers becomes a dimension sign.</p>
+          </div>
+          <div class='input'>
+            <div class='type'>Textile</div>
+            <pre>4 x 4 = 16</pre>
+          </div>
+          <div class='html' style='display:none'>
+            <div class='type'>HTML</div>
+            <pre>&lt;p&gt;4 &amp;#215; 4 = 16&lt;/p&gt;</pre>
+          </div>
+          <div class='output'>
+            <div class='type'>Browser</div>
+            <div class='output-inner'><p>4 &#215; 4 = 16</p></div>
+          </div>
+        </div>
+        <h3>Dimension with quotes</h3>
+        <div class='example clearfix' id='Dimension-with-quotes'>
+          <div class='desc'>
+            <p>In Textile, quotes may be applied to the dimensions to represent feet and inches.</p>
+          </div>
+          <div class='input'>
+            <div class='type'>Textile</div>
+            <pre>My office measures 5' x 5'6&quot;.</pre>
+          </div>
+          <div class='html' style='display:none'>
+            <div class='type'>HTML</div>
+            <pre>&lt;p&gt;My office measures 5&amp;#8242; &amp;#215; 5&amp;#8242;6&amp;quot;.&lt;/p&gt;</pre>
+          </div>
+          <div class='output'>
+            <div class='type'>Browser</div>
+            <div class='output-inner'><p>My office measures 5&#8242; &#215; 5&#8242;6&quot;.</p></div>
+          </div>
+        </div>
+        <h3>Dimension spaces optional</h3>
+        <div class='example clearfix' id='Dimension-spaces-optional'>
+          <div class='desc'>
+            <p>Spaces between the numbers and the x are optional.</p>
+          </div>
+          <div class='input'>
+            <div class='type'>Textile</div>
+            <pre>4x4=16</pre>
+          </div>
+          <div class='html' style='display:none'>
+            <div class='type'>HTML</div>
+            <pre>&lt;p&gt;4&amp;#215;4=16&lt;/p&gt;</pre>
+          </div>
+          <div class='output'>
+            <div class='type'>Browser</div>
+            <div class='output-inner'><p>4&#215;4=16</p></div>
+          </div>
+        </div>
+      </div>
+      <div class='example-group'>
+        <h2>Registered, trademark, and copyright symbols</h2>
+        <div class='example clearfix' id='Registered,-trademark,-and-copyright-symbols'>
+          <div class='desc'>
+            <p>The copyright, registered, and trademark symbols can be produced by placing the letters in parentheses.</p>
+          </div>
+          <div class='input'>
+            <div class='type'>Textile</div>
+            <pre>RegisteredTrademark(r), Trademark(tm), and Copyright (c) 2011</pre>
+          </div>
+          <div class='html' style='display:none'>
+            <div class='type'>HTML</div>
+            <pre>&lt;p&gt;RegisteredTrademark&amp;#174;, Trademark&amp;#8482;, and Copyright &amp;#169; 2011&lt;/p&gt;</pre>
+          </div>
+          <div class='output'>
+            <div class='type'>Browser</div>
+            <div class='output-inner'><p>RegisteredTrademark&#174;, Trademark&#8482;, and Copyright &#169; 2011</p></div>
+          </div>
+        </div>
+      </div>
+      <div class='example-group'>
+        <h2>Acronyms</h2>
+        <div class='example clearfix' id='Acronyms'>
+          <div class='desc'>
+            <p>You can provide the definition for acronyms inside parentheses.</p>
+          </div>
+          <div class='input'>
+            <div class='type'>Textile</div>
+            <pre>The EPA(Environmental Protection Agency) is measuring GHG(greenhouse gas) emissions.</pre>
+          </div>
+          <div class='html' style='display:none'>
+            <div class='type'>HTML</div>
+            <pre>&lt;p&gt;The &lt;acronym title=&quot;Environmental Protection Agency&quot;&gt;&lt;span class=&quot;caps&quot;&gt;EPA&lt;/span&gt;&lt;/acronym&gt; is measuring &lt;acronym title=&quot;greenhouse gas&quot;&gt;&lt;span class=&quot;caps&quot;&gt;GHG&lt;/span&gt;&lt;/acronym&gt; emissions.&lt;/p&gt;</pre>
+          </div>
+          <div class='output'>
+            <div class='type'>Browser</div>
+            <div class='output-inner'><p>The <acronym title="Environmental Protection Agency"><span class="caps">EPA</span></acronym> is measuring <acronym title="greenhouse gas"><span class="caps">GHG</span></acronym> emissions.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class='example-group'>
+        <h2>Uppercase</h2>
+        <div class='example clearfix' id='Uppercase'>
+          <div class='desc'>
+            <p>Uppercase words are enclosed in a span element that can be styled to your liking.  Administrators can disable this feature with <code>:no_span_caps</code>.</p>
+          </div>
+          <div class='input'>
+            <div class='type'>Textile</div>
+            <pre>Many NASDAQ companies are ISO certified.</pre>
+          </div>
+          <div class='html' style='display:none'>
+            <div class='type'>HTML</div>
+            <pre>&lt;p&gt;Many &lt;span class=&quot;caps&quot;&gt;NASDAQ&lt;/span&gt; companies are &lt;span class=&quot;caps&quot;&gt;ISO&lt;/span&gt; certified.&lt;/p&gt;</pre>
+          </div>
+          <div class='output'>
+            <div class='type'>Browser</div>
+            <div class='output-inner'><p>Many <span class="caps">NASDAQ</span> companies are <span class="caps">ISO</span> certified.</p></div>
+          </div>
+        </div>
+      </div>
+    <div id='footer'>
+      <p id='legal'>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js' type='text/javascript'></script>
+        <script charset='utf-8' src='/javascripts/jquery.cookie.js' type='text/javascript'></script>
+        <script charset='utf-8' src='/javascripts/application.js' type='text/javascript'></script>
+      </p>
+    </div>
+  </body>
+</html>

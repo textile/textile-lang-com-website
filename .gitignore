@@ -1,0 +1,19 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Development files  #
+######################
+/composer.lock
+/node_modules
+/package-lock.json
+/npm-debug.log
+/yarn.lock
+/yarn-error.log

@@ -1,0 +1,99 @@
+.htmlbox, .input, .outbox, .inbox {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+.typein {
+  font-weight: bold;
+  text-align: right;
+  margin: -5px -5px 5px;
+}
+.inbox {
+  border: 1px solid #7F7F7F;
+  margin-right: 0;
+  padding-bottom: 0;
+}
+.inbox .typeout {
+  color: #555;
+  font-weight: bold;
+  text-align: right;
+}
+.inbox p img {
+  float:none;
+  margin:0;
+}
+.outbox {
+  border: 1px solid #7F7F7F;
+  background-color: #E0E0E0;
+  margin-right: 0;
+  padding-bottom: 0;
+}
+.outbox .typeout {
+  color: #555;
+  font-weight: bold;
+  text-align: right;
+}
+.outbox p img {
+  float:none;
+  margin:0;
+}
+.htmlbox {
+  background-color: #FFC;
+  border: 1px solid #7F7F7F;
+}
+.htmlbox .typeout {
+  color: #555;
+  font-weight: bold;
+  text-align: right;
+}
+
+pre, code {
+  background-color: #FFC;
+  color: #000000;
+  margin-bottom: 1.0em !important;
+  border: 0px;
+}
+active {
+  font-weight:bold;
+}
+#try-textile {
+  margin-bottom: 1em;
+}
+#try-textile-form {
+  width: 100%;
+  float:left;
+}
+#try-textile textarea#text_field {
+  margin-top:0;
+  width: 100%;
+  height:300px;
+  padding: 10px;
+}
+#try-textile textarea#text_in {
+  margin-top:0;
+  width: 100%;
+  height:250px;
+}
+.try-options {
+  margin-right:1em;
+}
+.pun pre {
+  font-size: 1.0em;
+  margin: 1.5em 0;
+  padding: 10px;
+}
+.offsetup {
+  margin-top: -340px;
+}
+img.align-right {
+  float: right;
+}
+p.align-right {
+  text-align: right;
+}
+table { margin: 1em; }
+td, th { padding: .3em; border: 1px #ccc solid; }
+
+/*tools section settings*/
+#settings h5 { font-size: 13px; line-height: 26px; }
+#settings p { font-size: 13px; line-height: 26px; }
+#settings td { border: 0px; padding-right: 2em; }

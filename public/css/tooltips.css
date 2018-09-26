@@ -1,0 +1,468 @@
+
+        <div id="tooltip-container">The tooltip!</div>
+        <div id="tooltip-text-1">
+            <h1>What Textile Does</h1>
+            <ul>
+                <li>Replace single and double primes (<code>'</code> and <code>"</code>) used as quotation marks with <acronym title="HyperText Markup Language"><span class="caps">HTML</span></acronym> entities for opening and closing quotation marks (<code>‘’</code> and <code>“”</code>) in readable text, while leaving untouched the primes required within <span class="caps">HTML</span> tags.</li>
+                <li>Replace double hyphens (--) with an em-dash (—) entity.</li>
+                <li>Replace single hyphens surrounded by spaces with an en-dash (–) entity.</li>
+                <li>Replace triplets of periods (...) with an ellipsis (…) entity.</li>
+                <li>Convert many nonstandard characters (ŸúßŠπŒ) to browser-safe entities corresponding to keyboard input.</li>
+                <li>Apply block- and phrase-level structural tags automatically and at the discretion of the writer via quick tags.</li>
+                <li>Allow the quick creation of simple and complex tables.</li>
+                <li>Allow the simple application of style, class, id, language and alignment attributes to elements.</li>
+                <li>Create hyperlinks and insert images via quick tags.</li>
+                <li>Define acronyms via quick tags.</li>
+                <li>Wrap an <acronym> tag around runs of three or more capital letters automatically.</acronym></li>
+                <li>Convert <code>(TM)</code>, <code>(R)</code>, and <code>(C)</code> to ™, ®, and ©.</li>
+                <li>Convert the letter x to a dimension sign: <code>2x4</code> to 2×4 and <code>8x10</code> to 8×10.</li>
+            </ul>
+        </div>
+        <div id="tooltip-text-2">
+            <h1>Headers</h1>
+
+            <p>To make an entire paragraph into a Header, place “h<em>n</em>. ” at its beginning, where <em>n</em> is a number from 1–6.</p>
+
+            <p>Examples:</p>
+
+            <p>h1. Header 1</p>
+
+            <p>h2. Header 2</p>
+
+            <p>h3. Header 3</p>
+
+            <p>Will become:</p>
+
+            <p>&lt;h1&gt;Header 1&lt;/h1&gt;</p>
+
+            <p>&lt;h2&gt;Header 2&lt;/h2&gt;</p>
+
+            <p>&lt;h3&gt;Header 3&lt;/h3&gt;</p>
+
+            <p>Which, when rendered by a browser, will appear like this:</p>
+
+            <h1>Header 1</h1>
+
+            <h2>Header 2</h2>
+
+            <h3>Header 3</h3>
+
+            <p><small>NB: Unmodified paragraphs will be wrapped in &lt;p&gt; tags.</small></p>
+
+
+        </div>
+        <div id="tooltip-text-3">
+            <h1>Block Quotes</h1>
+
+            <p>To make an entire paragraph into a block quotation, place “bq. ” before it.</p>
+
+            <p>Example</p>
+
+            <blockquote>Any old text.</blockquote>
+
+            <blockquote>bq. A block quotation.</blockquote>
+
+            <blockquote>Any old text.</blockquote>
+
+            <p>Will become:</p>
+
+            <blockquote>Any old text.</blockquote>
+
+            <blockquote>A block quotation.</blockquote>
+
+            <blockquote>Any old text.</blockquote>
+
+            <p>Which, when rendered by a browser, will appear like this:</p>
+
+            <p>Any old text.</p>
+
+            <blockquote>A block quotation.</blockquote>
+
+            <p>Any old text.</p>
+
+            <p><small>NB: Unmodified paragraphs will be wrapped in &lt;p&gt; tags.</small></p>
+
+
+        </div>
+        <div id="tooltip-text-4">
+
+            <h1>Footnotes</h1>
+
+            <p>Numeric references within text to footnotes appear between square brackets:</p>
+
+            <p>This is covered elsewhere[1].</p>
+
+            <p><em>becomes</em></p>
+
+            <p>This is covered elsewhere&lt;sup&gt;&lt;a href="#fn1"&gt;1&lt;/a&gt;&lt;/sup&gt;</p>
+
+            <p><em>which is rendered</em></p>
+
+            <p>This is covered elsewhere<sup><a href="#fn1">1</a></sup>.</p>
+
+            <p></p><p style="text-align:center">* * *</p><p></p>
+
+            <p>To create the footnote that corresponds to its reference within the text, begin a new paragraph with <em>fn</em> and the footnote’s number, followed by a dot and a space:</p>
+
+            <p>fn1. Down here, in fact.</p>
+
+            <p><em>becomes</em></p>
+
+            <p>&lt;p id="fn1"&gt;&lt;sup&gt;1&lt;/sup&gt; Down here, in fact.&lt;/p&gt;</p>
+
+            <p><em>which is rendered</em></p>
+
+            <p></p><p id="fn1"><sup>1</sup> Down here, in fact.</p><p></p>
+
+        </div>
+        <div id="tooltip-text-5">
+
+            <h1>Numeric Lists</h1>
+
+            <p>To make a numbered list, place each item in its own paragraph, preceded by “# ”.</p>
+
+            <p>Example</p>
+
+<pre># A first item
+# A second item
+# A third item
+# A fourth item
+</pre>
+
+            <p>Will become:</p>
+
+            <p>&lt;ol&gt;<br>
+                &lt;li&gt;A first item&lt;/li&gt;<br>
+                &lt;li&gt;A second item&lt;/li&gt;<br>
+                &lt;li&gt;A third item&lt;/li&gt;<br>
+                &lt;li&gt;A fourth item&lt;/li&gt;<br>
+                &lt;/ol&gt;</p>
+
+            <p>Which, when rendered by a browser, will appear like this:</p>
+
+            <p></p><ol><p></p>
+            <p></p><li>A first item</li><br>
+            <li>A second item</li><br>
+            <li>A third item</li><br>
+            <li>A fourth item</li><br>
+        </ol><p></p>
+
+            <p><small>NB: Unmodified paragraphs will be wrapped in &lt;p&gt; tags.</small></p>
+
+
+        </div>
+        <div id="tooltip-text-6">
+
+            <h1>Bulleted Lists</h1>
+
+            <p>To make a bulleted (point form) list, place each item in its own paragraph, preceded by “* “.</p>
+
+            <p>Example</p>
+
+<pre>  * A first item
+  * A second item
+  * A third item
+  * A fourth item
+</pre>
+
+            <p>Will become:</p>
+
+            <p>&lt;ul&gt;<br>
+                &lt;li&gt;A first item&lt;/li&gt;<br>
+                &lt;li&gt;A second item&lt;/li&gt;<br>
+                &lt;li&gt;A third item&lt;/li&gt;<br>
+                &lt;li&gt;A fourth item&lt;/li&gt;<br>
+                &lt;/ul&gt;</p>
+
+            <p>Which, when rendered by a browser, will appear like this:</p>
+
+            <ul>
+            <li>A first item</li>
+            <li>A second item</li>
+            <li>A third item</li>
+            <li>A fourth item</li>
+        </ul>
+
+            <p><small>NB: Unmodified paragraphs will be wrapped in &lt;p&gt; tags.</small></p>
+
+        </div>
+        <div id="tooltip-text-7">
+            <h1>Emphasis</h1>
+
+            <p>Use _underscores_ around text to be <em>emphasized.</em></p>
+
+            <p>The &lt;em&gt; <acronym title="HyperText Markup Language"><span class="caps">HTM</span>L</acronym> tag is applied:</p>
+
+            <p>_a phrase_&nbsp;&nbsp;→&nbsp;&nbsp;&lt;em&gt;a phrase&lt;/em&gt; → <em>a phrase</em></p>
+
+            <p>If the text is not meant to have structural emphasis, but simply to be styled in italic (e.g., a phrase in a foreign language) use double underscores:</p>
+
+            <p>__a phrase__ → &lt;i&gt;a phrase&lt;/i&gt; → <i>a phrase</i></p>
+
+            <p>NB: quick tags must open and close within a single paragraph to produce valid markup.</p>
+        </div>
+        <div id="tooltip-text-8">
+
+            <h1>Strong Emphasis</h1>
+
+            <p>Use *asterisks* for text to be <strong>strongly emphasized</strong>.</p>
+
+            <p>The &lt;strong&gt; <span class="caps">HTML</span> tag is applied:</p>
+
+            <blockquote><strong>a phrase</strong> → &lt;strong&gt;a phrase&lt;/strong&gt; → <strong>a phrase</strong></blockquote>
+
+            <p>If the text is not meant to have <strong>structural</strong> emphasis, but simply to be styled in <b>bold</b> (e.g., as a design element) use double asterisks:</p>
+
+            <blockquote>**a phrase** → &lt;b&gt;a phrase&lt;/b&gt; → <b>a phrase</b></blockquote>
+
+            <p><small>NB: quick tags must open and close within a single paragraph to produce valid markup.</small></p>
+
+        </div>
+        <div id="tooltip-text-9">
+
+            <h1>Cite</h1>
+
+            <p>Use ??double question marks?? around <cite>citations,</cite> such as the title of a work being cited.</p>
+
+            <p>The &lt;cite&gt; <span class="caps">HTML</span> tag is applied:</p>
+
+            <p>Nabokov’s ??Pnin?? → Nabokov’s &lt;cite&gt;Pnin&lt;/cite&gt; → Nabokov’s <cite>Pnin</cite></p>
+
+            <p><small>NB: quick tags must open and close within a single paragraph to produce valid markup.</small></p>
+
+        </div>
+        <div id="tooltip-text-10">
+
+            <h1>Deleted Text</h1>
+
+            <p>Use -hyphens- around text that has been <del>deleted</del>. This is useful in marking changes from one version of a document to the next.</p>
+
+            <p>The &lt;del&gt; <acronym title="Hypertext Markup Language"><span class="caps">HTM</span>L</acronym> tag is applied:</p>
+
+            <p>-a phrase- → &lt;del&gt;a phrase&lt;/del&gt; → <del>a phrase</del></p>
+
+            <p><small>NB: quick tags must open and close within a single paragraph to produce valid markup.</small></p>
+
+        </div>
+        <div id="tooltip-text-11">
+
+            <h1>Inserted Text</h1>
+
+            <p>Use +pluses+ around text that has been <ins>inserted</ins>. This is useful in marking changes from one version of a document to the next.</p>
+
+            <p>The &lt;ins&gt; <acronym title="Hypertext Markup Language"><span class="caps">HTM</span>L</acronym> tag is applied:</p>
+
+            <p>+a phrase+ → &lt;ins&gt;a phrase&lt;/ins&gt; → <ins>a phrase</ins></p>
+
+            <p><small>NB: quick tags must open and close within a single paragraph to produce valid markup.</small></p>
+
+
+        </div>
+        <div id="tooltip-text-12">
+
+            <h1>Superscript</h1>
+
+            <p>Use ^carets^ for text to be rendered <sup>superscript</sup>.</p>
+
+            <p>The &lt;sup&gt; <span class="caps">HTML</span> tag is applied:</p>
+
+            <p>^a phrase^ → &lt;sup&gt;a phrase&lt;/sup&gt; → <sup>a phrase</sup></p>
+
+            <p><small>NB: quick tags must open and close within a single paragraph to produce valid markup.</small></p>
+
+        </div>
+        <div id="tooltip-text-14">
+            <h1>Span</h1>
+
+            <p>Use the %per cent symbol% to indicate a span.</p>
+
+            <p>The &lt;span&gt; <span class="caps">HTML</span> tag is applied, along with whatever class, style, id or language attributes are specified between the opening per cent and the first character of the phrase:</p>
+
+            <p>%(caps)SPAN% → &lt;span class="caps"&gt;SPAN&lt;/span&gt; → <span class="caps"><span class="caps">SPAN</span></span></p>
+
+            <p>%{color:red}red% → &lt;span style="color:red"&gt;red&lt;/span&gt; → <span style="color:red">red</span></p>
+
+        </div>
+        <div id="tooltip-text-15">
+            <h1>Attributes</h1>
+
+            <p>Syntax:</p>
+
+            <p>(class)<br>
+                (#id)<br>
+                (class#id) can be combined<br>
+                {style}<br>
+                [language]</p>
+
+            <p><strong>Attributes in phrase elements</strong></p>
+
+            <p>%{color:red}red% → &lt;span style="color:red"&gt;red&lt;/span&gt;</p>
+
+            <p>%[fr]rouge% → &lt;span lang="fr"&gt;rouge&lt;/span&gt;</p>
+
+            <p>_(big)red_ → &lt;em class="big"&gt;red&lt;/em&gt;</p>
+
+            <p><strong>Attributes in block elements</strong></p>
+
+            <p>p(bob). A paragraph → &lt;p class="bob"&gt;A paragraph&lt;/p&gt;</p>
+
+            <p>p{color:#ddd}. A paragraph → &lt;p style="color:#ddd"&gt;A paragraph&lt;/p&gt;</p>
+
+            <p>p[fr]. A paragraph → &lt;p lang="fr"&gt;A paragraph&lt;/p&gt;</p>
+
+            <p><strong>Block attribute shorthand</strong></p>
+
+            <p>p&lt;. <em>align left</em><br>
+                p&gt;. <em>align right</em><br>
+                p=. <em>centered</em><br>
+                p&lt;&gt;. <em>justified</em><br>
+                p(., p((.  <em>left indent 1em, 2em, etc.</em><br>
+                p). <em>right indent 1em</em></p>
+
+            <p>Examples:</p>
+
+            <p>h2()&gt;. <em>right-aligned header 2, indented 1em both sides</em><br>
+                h3=. <em>centered header 3</em><br>
+                !&gt;/image.gif! <em>right-aligned image</em><br>
+                p[no]{color:red}. <em>A Norse of a different colour</em></p>
+        </div>
+        <div id="tooltip-text-16">
+            <h1>Tables</h1>
+
+            <p>Table cells are divided with a vertical bar | </p>
+
+            <pre>|This|is|a|simple|table|
+            |This|is|a|simple|row|
+            </pre>
+
+            <p><strong>Table attribute syntax</strong></p>
+
+            <p>(class)<br>
+                (#id)<br>
+                {style}<br>
+                [lang]<br>
+                &lt; align left<br>
+                &gt; align left<br>
+                = center<br>
+                &lt;&gt; justify<br>
+                ^ top – middle<br>
+                ~ bottom</p>
+
+            <p>_ header cell</p>
+
+            <p>\2, \3 etc. column span<br>
+                /2, /3 etc. row span</p>
+
+            <p>A set of attributes to be applied to an entire table must appear immediately before the table, on its own line, followed by a dot:</p>
+
+            <pre>table{border:1px solid black}.
+            |This|is|a|row|
+            |This|is|a|row|
+            </pre>
+
+                        <p>Attributes to be applied to an entire row must appear at the beginning of the row’s line, followed by a dot and a space:</p>
+
+            <pre>{background:#ddd}. |This|is|a|row|
+            </pre>
+
+                        <p>Cell attributes must fall between the left cell divider and a dot-space:</p>
+
+            <pre>|{background:#ddd}. Cell with gray background|
+            </pre>
+
+            <pre>|\2. Cell spanning 2 columns|
+            </pre>
+
+            <pre>|/3. Cell spanning 3 rows|
+            </pre>
+
+            <pre>|&gt;. Right-aligned cell|
+            </pre>
+
+        </div>
+        <div id="tooltip-text-17">
+            <h1>Links</h1>
+
+            <p>To make a hypertext link, put the link text in "quotation marks" followed immediately by a colon and the <acronym title="Universal Resource Locator"><span class="caps">URL</span></acronym> of the link.</p>
+
+            <p>Optional: text in (parentheses) following the link text, but before the closing quotation mark, will become a Title attribute for the link, visible as a tool tip when a cursor is above it.</p>
+
+            <p>Example:</p>
+
+            <p>"This is a link (This is a title) ":http://www.textism.com</p>
+
+            <p>Will become:</p>
+
+            <p>&lt;a href="http://www.textism.com" title="This is a title"&gt;This is a link&lt;/a&gt;</p>
+
+            <p>Which, when displayed in a browser, will look like this:</p>
+
+            <p><a href="#" title="This is a title" style="color:blue">This is a link</a></p>
+
+            <p><strong>New</strong> in Textile 2.0 is the ability to store long ugly urls outside of the text you’re working in, and reference them with aliases of your choosing.</p>
+
+            <p>Simply store the url anywhere in the document,  such as at the end, using this syntax:</p>
+
+            <p>[alias (optional title)]http://url</p>
+
+            <p>Each referenced url must begin on a new line.</p>
+
+            <p>Example text:<br>
+                This is a "link":bob to Bob’s website.</p>
+
+            <p>So long as this appears elsewhere in the document:<br>
+                [bob]http://itsbob.com/index.html</p>
+
+            <p>...the final output will be:<br>
+                This is a &lt;a href="http://itsbob.com/index.html"&gt;link&lt;/a&gt; to Bob’s website.</p>
+
+        </div>
+        <div id="tooltip-text-18">
+            <h1>Images</h1>
+
+            <p>To insert an image, put the <acronym title="Universal Resource Locator">URL</acronym> for the image inside exclamation marks.</p>
+
+            <p>Optional: text that immediately follows the <span class="caps">URL</span> in (parentheses) will be used as the Alt text for the image. Images on the web should always have descriptive Alt text for the benefit of readers using non-graphical browsers.</p>
+
+            <p>Optional: place a colon followed by a <span class="caps">URL</span> immediately after the closing ! to make the image into a link.</p>
+
+            <p>Example:</p>
+            !http://www.textism.com/common/textist.gif(Textist)!
+
+            <p>With a link:</p>
+
+            !/common/textist.gif(Textist)!:http://textism.com
+
+            <p>Will become:</p>
+
+            <p>&lt;img src="http://www.textism.com/common/textist.gif" alt="Textist" /&gt;</p>
+
+            <p>With a link:</p>
+
+            <p>&lt;a href="http://textism.com"&gt;&lt;img src="/common/textist.gif" alt="Textist" /&gt;&lt;/a&gt;</p>
+
+
+
+
+
+        </div>
+        <div id="tooltip-text-19">
+            <h1>Defining Acronyms</h1>
+
+            <p><acronym title="HyperText Markup Language"><span class="caps">HTM</span>L</acronym> allows authors to define acronyms via the  tag. The definition appears as a tool tip when a cursor hovers over the acronym. A crucial aid to clear writing, this should be used at least once for each acronym in documents where they appear. </p>
+
+            <p>To quickly define an acronym in Textile, place the full text in (parentheses) immediately following the acronym.</p>
+
+            <p>Example:</p>
+
+            <blockquote>ACLU(American Civil Liberties Union)</blockquote>
+
+            <p>Will become:</p>
+
+            <blockquote>&lt;acronym title="American Civil Liberties Union"&gt;ACLU&lt;/acronym&gt;</blockquote>
+
+            <p>Which, when displayed in a browser, will look like this (move your cursor over the text):</p>
+
+            <blockquote><acronym title="American Civil Liberties Union"><span class="caps">ACL</span>U</acronym></blockquote>
+
+            <p><small>NB: Textile automatically wraps a string of three or more capital letters in the &lt;acronym&gt; tag, even if it has no definition.</small></p>
