@@ -1,0 +1,43 @@
+{
+  "name": "textile/textile-lang-com-website",
+  "description": "Official website of the Textile markup language.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/textile/textile-lang-com-website"
+  },
+  "bugs": {
+    "url": "https://github.com/textile/textile-lang-com-website/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "9.1.5",
+    "cssnano": "4.1.4",
+    "dart-sass": "1.14.1",
+    "fibers": "3.0.0",
+    "grunt": "~1",
+    "grunt-cli": "~1",
+    "grunt-concurrent": "2.3.1",
+    "grunt-contrib-clean": "2.0.0",
+    "grunt-contrib-copy": "1.0.0",
+    "grunt-contrib-jshint": "2.0.0",
+    "grunt-contrib-uglify": "4.0.0",
+    "grunt-contrib-watch": "1.1.0",
+    "grunt-postcss": "0.9.0",
+    "grunt-replace": "1.0.1",
+    "grunt-sass": "3.0.2",
+    "grunt-sass-lint": "0.2.4",
+    "load-grunt-tasks": "~4",
+    "sass-lint": "1.12.1"
+  },
+  "dependencies": {
+    "textile-mark": "1.0.0"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "not ie < 11"
+  ],
+  "scripts": {
+    "test": "grunt travis --verbose"
+  },
+  "license": "GPL-2.0"
+}
