@@ -1,0 +1,12 @@
+<txp:output_form form="header" />
+
+      <div class="row">
+        <div class="col-md-12">
+
+<h2 style="border-bottom: 1px solid #999;"><txp:permlink><txp:title /></txp:permlink></h2>
+<txp:body />
+
+        </div><!-- md12-->
+      </div><!-- row-->
+
+<txp:output_form form="footer" />

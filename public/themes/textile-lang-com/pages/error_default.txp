@@ -1,0 +1,13 @@
+<txp:output_form form="header" />
+
+      <div class="row">
+        <div class="col-md-12">
+
+<h2 style="border-bottom: 1px solid #FFFFFF;"><txp:error_status /></h2>
+<br />
+<h3><txp:error_message /></h3>
+
+        </div><!-- col-md-12-->
+      </div><!-- row-->
+
+<txp:output_form form="footer" />

@@ -1,0 +1,9 @@
+<txp:php> 
+  include_once(txpath.'/lib/classTextile.php');
+  $textile = new Textpattern_Textile_Parser();
+if(isset($_POST['text'])) {
+  $text = trim($_POST['text']);
+  $result = $textile->TextileThis($text);
+  echo $result;
+}
+</txp:php>

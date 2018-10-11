@@ -1,0 +1,160 @@
+<txp:output_form form="header" />
+
+<txp:if_category>
+
+      <div class="row">
+        <div class="col-md-12">
+
+<h2 style="border-bottom: 1px solid #999;"><txp:category title="1" link="0" /></h2>
+
+        </div><!-- col-md-12-->
+      </div><!-- row-->
+
+<txp:article_custom category='<txp:category />' wraptag="div" break="br" sort="custom_2">
+
+      <div class="row">
+        <div class="col-md-12">
+
+<h3><txp:permlink><txp:title /></txp:permlink></h3>
+
+        </div><!-- col-md-12-->
+      </div><!-- row-->
+      <div class="row">
+        <div class="col-md-6">
+
+<div class="inbox">
+   <div class="typein">Input</div>
+   <div id="result"><txp:pax_grep from="/\n/" to="<br />"><txp:body /></txp:pax_grep></div>
+</div>
+
+        </div><!-- col-md-12-->
+        <div class="col-md-6">
+
+<txp:hide>
+<div class="outbox">
+   <div class="typeout">Browser</div>
+   <div id="result"><txp:pax_grep from="/\n\n/" to="<br />"><txp:pax_grep from="/<\/?p>/,/\t/" to=""><txp:upm_textile><txp:body /></txp:upm_textile></txp:pax_grep></txp:pax_grep></div>
+</div>
+</txp:hide>
+
+<div class="outbox">
+   <div class="typeout">Browser</div>
+   <div id="result"><txp:upm_textile><txp:body /></txp:upm_textile></div>
+</div>
+
+        </div><!-- col-md-6-->
+      </div><!-- row-->
+
+</txp:article_custom>
+
+<txp:else />
+
+      <div class="row">
+        <div class="col-md-12">
+
+<txp:if_individual_article>
+
+<h2 style="border-bottom: 1px solid #999;"><txp:permlink><txp:title /></txp:permlink></h2>
+<p><txp:custom_field name="description" /></p><br /><br />
+
+<txp:else />
+
+<h2 style="border-bottom: 1px solid #999;">Blank input form</h2>
+<p>Try your Textile here.</p><br /><br />
+
+</txp:if_individual_article>
+
+        </div><!--col-md-12-->
+      </div><!-- row-->
+      <div class="row">
+        <div class="col-md-6">
+
+<div id="try-textile" class="clearfix">
+<div class="typein">Input (editable)</div>
+<form method="post" action="/try/" id="try-textile-form">
+<div>
+<textarea id="text_field" name="text" rows="25" cols="50">
+<txp:body />
+</textarea>
+
+<txp:hide>
+<div class="rtext" />
+<span class="try-options"><input id="toggle-html-output" type="checkbox" name="toggle-html-output"><label for="toggle-html-output">Show HTML output</label></span>
+<script type="text/javascript">
+  Event.observe($('toggle-html-output'), 'click', function(){
+   $$('div.htmlbox').each( function(node) {
+      if($('toggle-html-output').checked) {
+        node.show();
+      } else {
+        node.hide();
+      }
+    });
+  });
+</script>
+</div>
+
+<div class="htmlbox" style="display:none;" class="clearfix">
+<div class="typeout">HTML</div>
+<pre id="html-result"></pre>
+</div>
+</txp:hide>
+
+<p>
+<input id="submit" type="submit" class="try-options" />
+<input id="reset" type="reset" class="reset try-options" />
+</p>
+
+</div>
+</form>
+
+</div><!--#try-textile-->
+
+        </div><!-- col-md-6-->
+        <div class="col-md-6">
+
+<div class="outbox">
+<div class="typeout">Browser</div>
+<div id="result"></div>
+</div>
+
+<div class="htmlbox">
+<div class="typeout">HTML</div>
+<pre id="html-result"></pre>
+</div>
+
+<script type="text/javascript">
+document.observe("dom:loaded", function() {
+  new TryTextileObserver('text_field', 'result', 'html-result').parseTextile();
+  $('submit').hide();
+});
+</script>
+
+        </div><!-- col-md-6-->
+      </div><!-- row-->
+
+<txp:if_individual_article>
+
+      <div class="row">
+        <div class="col-md-12">
+
+<h3 style="border-bottom: 1px solid #999;">More about: <txp:title /></h3>
+<txp:if_excerpt>
+   <txp:excerpt />
+   <p style="text-align: right; font-weight:bold;">Paste <code>code</code> into the box above.</p>
+<txp:else />
+   No further examples.
+</txp:if_excerpt>
+
+<txp:if_custom_field name="references">
+<h3 style="border-bottom: 1px solid #999;">Further reading: <txp:title /></h3>
+<txp:linklist id="<txp:custom_field name="references" />" wraptag="ol" break="li" />
+</txp:if_custom_field >
+
+        </div><!-- col-md-12-->
+      </div><!-- row-->
+
+</txp:if_individual_article>
+
+</txp:if_category>
+
+<txp:output_form form="footer" />

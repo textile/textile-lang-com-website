@@ -1,0 +1,57 @@
+      <div class="row">
+        <div class="col-md-12">
+<hr style="height:2px;border:none;color:#bbb;background-color:#bbb;" />
+        </div>
+      </div><!-- row-->
+      <div class="row">
+        <div class="col-md-3">
+
+<strong>Categories</strong><br />
+<txp:category_list wraptag="" break="br" parent="syntax" children="1" exclude="syntax,introduction" sort="id">
+  <txp:category title="1" link="1" section="" />
+</txp:category_list>
+
+        </div><!-- col-md-3-->
+        <div class="col-md-3">
+
+<p style="text-align:left;"><strong>Further Information</strong><br />
+<txp:article_custom section="article" category="information" wraptag="" break="br" sort="Title">
+   <txp:permlink><txp:title /></txp:permlink>
+</txp:article_custom></p>
+
+<p style="text-align:left;"><strong>Tools</strong><br />
+<a href="https://txstyle.org/doc">Blank input form</a><br />
+<a href="https://txstyle.org/tools/50/data-converter">Table Data Converter</a></p>
+
+<p style="text-align:left;"><strong>Report Issues</strong><br /><a href="https://github.com/textile/php-textile/issues"> Issues on PHP Textile (GitHub)</a><br /></p>
+
+<txp:hide><a href="mailto:info@txstyle.org">Send me an email</a><br /><br />
+<a href="https://github.com/textile/php-textile/issues">Report issues</a><br />
+<a href="https://twitter.com/?status=@txstyler">Send me a tweet</a><br />
+<a href="https://webchat.freenode.net/?channels=#textile">Connect on IRC chat</a></txp:hide>
+
+        </div><!-- col-md-3-->
+        <div class="col-md-3" style="text-align:left;">
+
+<a href="https://github.com/textile/php-textile/blob/master/README.textile"><txp:thumbnail id="13" /></a><br /><br />
+<div style="font-size: 80%; line-height: 1;">PHP Textile v3.6.0</div><br />
+
+        </div><!-- col-md-3-->
+        <div class="col-md-3" style="text-align:right;">
+<txp:hide>
+<p style="text-align:center;"><a href="https://metahash.org/#whatis"><txp:thumbnail id="14" /></a></p><br />
+
+        </div><!-- col-md-3-->
+</txp:hide>
+      </div><!-- row-->
+
+      <div class="row">
+        <div class="col-md-12">
+<hr style="height:1px;border:none;color:#bbb;background-color:#bbb;" />
+        </div><!-- col-md-12-->
+      </div><!-- row-->
+
+    </div><!-- fluid-container-->
+
+</body>
+</html>

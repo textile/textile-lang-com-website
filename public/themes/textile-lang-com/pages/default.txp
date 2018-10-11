@@ -1,0 +1,132 @@
+<txp:output_form form="header" />
+
+<txp:if_category>
+
+      <div class="row">
+        <div class="col-md-12">
+
+<h2 style="border-bottom: 1px solid #999;"><txp:category title="1" link="0" /></h2>
+
+        </div><!-- col-md-12-->
+      </div><!-- row-->
+
+<txp:article_custom category='<txp:category />' wraptag="div" break="br" sort="custom_2">
+
+      <div class="row">
+        <div class="col-md-12">
+
+<h3><txp:permlink><txp:title /></txp:permlink></h3>
+
+        </div><!-- col-md-12-->
+      </div><!-- row-->
+      <div class="row">
+        <div class="col-md-6">
+
+<div class="inbox">
+   <div class="typein">Input</div>
+   <div id="result"><txp:pax_grep from="/\n/" to="<br />"><txp:body /></txp:pax_grep></div>
+</div>
+
+        </div><!-- col-md-6-->
+        <div class="col-md-6">
+
+<txp:hide>
+<div class="outbox">
+   <div class="typeout">Browser</div>
+   <div id="result"><txp:pax_grep from="/\n\n/" to="<br />"><txp:pax_grep from="/<\/?p>/,/\t/" to=""><txp:upm_textile><txp:body /></txp:upm_textile></txp:pax_grep></txp:pax_grep></div>
+</div>
+</txp:hide>
+
+<div class="outbox">
+   <div class="typeout">Browser</div>
+   <div id="result"><txp:upm_textile><txp:body /></txp:upm_textile></div>
+</div>
+
+        </div><!-- col-md-6-->
+      </div><!-- row-->
+
+</txp:article_custom>
+
+<txp:else />
+
+      <div class="row">
+        <div class="col-md-5">
+
+<txp:category_list categories="introduction" exclude="introduction" wraptag="div" break="" sort="id">
+<h2><txp:category title="1" link="0" /></h2>
+<txp:article_custom category='<txp:category />' wraptag="ul" break="li" sort="custom_2">
+   <txp:permlink><txp:title /></txp:permlink>
+</txp:article_custom>
+</txp:category_list>
+
+<txp:category_list parent="syntax" exclude="syntax,introduction" wraptag="div" break="" sort="id">
+<h2><txp:category title="1" link="0" /></h2>
+<txp:article_custom category='<txp:category />' wraptag="ul" break="li" sort="custom_2">
+   <txp:permlink><txp:title /></txp:permlink>
+</txp:article_custom>
+</txp:category_list>
+
+        </div><!-- md5-->
+        <div class="col-md-7">
+
+<h2>Try Textile here:</h2>
+<div id="try-textile" class="clearfix">
+<form method="post" action="/try/" id="try-textile-form">
+<div>
+<textarea id="text_in" name="text" rows="20" cols="50">
+h2. Textile
+
+* is a _shorthand syntax_ used to generate valid HTML,
+* is *easy* to read and *easy* to write,
+* can generate complex pages,
+* including headers, quotes, lists, tables, and figures.
+
+p{font-size:0.8em}. *TxStyle* is a documentation project of Textile for "Textpattern CMS":http://textpattern.com.
+</textarea>
+
+<p>
+<input id="submit" type="submit" class="try-options" />
+</p>
+
+</div>
+</form>
+</div><!--#try-textile-->
+
+<h2>Output:</h2>
+<div class="outbox">
+<div id="result"></div>
+</div>
+
+<div class="rtext">
+<span class="try-options"><input id="toggle-html-output" type="checkbox" name="toggle-html-output" /> <label for="toggle-html-output">Show HTML output</label></span>
+<script type="text/javascript">
+  Event.observe($('toggle-html-output'), 'click', function(){
+   $$('div.htmlbox').each( function(node) {
+      if($('toggle-html-output').checked) {
+        node.show();
+      } else {
+        node.hide();
+      }
+    });
+  });
+</script>
+</div>
+
+<div class="htmlbox" style="display:none;">
+<div class="typeout">HTML</div>
+<pre id="html-result"></pre>
+</div>
+
+<script type="text/javascript">
+document.observe("dom:loaded", function() {
+  new TryTextileObserver('text_in', 'result', 'html-result').parseTextile();
+  $('submit').hide();
+});
+</script>
+
+        </div><!-- md7-->
+      </div><!-- row-->
+
+</txp:if_category>
+
+<txp:output_form form="footer" />
