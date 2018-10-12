@@ -9,43 +9,44 @@
 
 <txp:if_category>
 
-<h2><txp:category title="1" link="0" /></h2>
+    <h2><txp:category title="1" link="0" /></h2>
 
-<txp:article_custom category='<txp:category />' wraptag="div" break="br" sort="custom_2">
+    <txp:article_custom category='<txp:category />' wraptag="div" break="br" sort="custom_2">
+        <h3><txp:permlink><txp:title /></txp:permlink></h3>
 
-<h3><txp:permlink><txp:title /></txp:permlink></h3>
+        <div class="inbox">
+            <h3 class="typein">Input</h3>
+            <div id="result"><txp:pax_grep from="/\n/" to="<br />"><txp:body /></txp:pax_grep></div>
+        </div>
 
-<div class="inbox">
-    <div class="typein">Input</div>
-    <div id="result"><txp:pax_grep from="/\n/" to="<br />"><txp:body /></txp:pax_grep></div>
-</div>
-
-<div class="outbox">
-    <div class="typeout">Browser</div>
-    <div id="result"><txp:upm_textile><txp:body /></txp:upm_textile></div>
-</div>
-
-</txp:article_custom>
+        <div class="outbox">
+            <h3 class="typeout">Browser</h3>
+            <div id="result"><txp:upm_textile><txp:body /></txp:upm_textile></div>
+        </div>
+    </txp:article_custom>
 
 <txp:else />
 
 <txp:if_individual_article>
 
-<h2><txp:permlink><txp:title /></txp:permlink></h2>
-<p><txp:custom_field name="description" /></p><br /><br />
+    <article itemscope itemtype="https://schema.org/Article">
+        <h2 itemprop="name headline"><txp:title /></h2>
+        <div itemprop="description">
+            <p><txp:meta_description format="" /></p>
+        </div>
 
 <txp:else />
 
-<h2>Blank input form</h2>
-<p>Try your Textile here.</p><br /><br />
+    <h2>Blank input form</h2>
+    <p>Try your Textile here.</p>
 
 </txp:if_individual_article>
 
 <div id="try-textile" class="clearfix">
-    <div class="typein">Input (editable)</div>
+    <h3 class="typein">Input (editable)</h3>
     <form method="post" action="/try/" id="try-textile-form">
         <div>
-            <textarea id="text_field" name="text" rows="25" cols="50"><txp:body /></textarea>
+            <textarea id="text_field" name="text" rows="10" cols="60"><txp:body /></textarea>
 
 <txp:hide>
 <div class="rtext" />
@@ -64,7 +65,7 @@
 </div>
 
 <div class="htmlbox" style="display:none;" class="clearfix">
-<div class="typeout">HTML</div>
+<h3 class="typeout">HTML</h3>
 <pre id="html-result"></pre>
 </div>
 </txp:hide>
@@ -80,13 +81,13 @@
 </div><!--#try-textile-->
 
 <div class="outbox">
-<div class="typeout">Browser</div>
-<div id="result"></div>
+    <h3 class="typeout">Browser</h3>
+    <div id="result"></div>
 </div>
 
 <div class="htmlbox">
-<div class="typeout">HTML</div>
-<pre id="html-result"></pre>
+    <h3 class="typeout">HTML</h3>
+    <pre id="html-result"></pre>
 </div>
 
 <script type="text/javascript">
@@ -108,7 +109,9 @@ document.observe("dom:loaded", function() {
 <txp:if_custom_field name="references">
 <h3>Further reading: <txp:title /></h3>
 <txp:linklist id="<txp:custom_field name="references" />" wraptag="ol" break="li" />
-</txp:if_custom_field >
+</txp:if_custom_field>
+
+    </article>
 
 </txp:if_individual_article>
 
