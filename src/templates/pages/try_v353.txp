@@ -1,0 +1,12 @@
+<txp:php> 
+  require txpath.'/Netcarver/Textile/Parser.php';
+  require txpath.'/Netcarver/Textile/DataBag.php';
+  require txpath.'/Netcarver/Textile/Tag.php';
+  $textile = new \Netcarver\Textile\Parser();
+  $textile->setRelativeImagePrefix('user/uploads');
+if(isset($_POST['text'])) {
+  $text = trim($_POST['text']);
+  $result = $textile->TextileThis($text);
+  echo $result;
+}
+</txp:php>

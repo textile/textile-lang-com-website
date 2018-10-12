@@ -1,0 +1,85 @@
+/* Lists
+   ========================================================================== */
+
+/**
+ * Address paddings set differently.
+ */
+
+menu,
+ol,
+ul {
+    padding: 0 0 0 2em;
+}
+
+/**
+ * Remove margins from nested lists.
+ */
+
+li {
+    > ul,
+    > ol {
+        margin: 0;
+    }
+}
+
+/**
+ * Address margins set differently.
+ */
+
+dd {
+    margin: 0 0 0 2em;
+}
+
+/**
+ * Italicize definition terms.
+ */
+
+dt {
+    font-style: italic;
+}
+
+/**
+ * Have a list with no bullets/numerals.
+ *
+ * Example HTML:
+ *
+ * <ul class="list--no-bullets">
+ * <ol class="list--no-bullets">
+ */
+
+.list--no-bullets {
+    padding: 0;
+    list-style: none;
+}
+
+/**
+ * Have a numbered `ul` without the semantics implied by using an `ol`.
+ *
+ * Example HTML:
+ *
+ * <ul class="list--numbered">
+ */
+
+.list--numbered {
+    list-style-type: decimal;
+}
+
+/**
+ * Additional styling for article lists.
+ *
+ * Example HTML:
+ *
+ * <ul class="article-list">
+ */
+
+.article-list {
+    margin: 0 0 2em;
+    padding: 0;
+    border-top: 1px solid $color-border;
+    list-style: none;
+
+    li {
+        margin-bottom: 0;
+        border-bottom: 1px solid $color-border;
+    }
+}

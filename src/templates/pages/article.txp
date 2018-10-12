@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-GB-oxendict">
+<head>
+    <txp:output_form form="head" />
+</head>
+<body itemscope itemtype="https://schema.org/WebPage">
+    <txp:output_form form="body_header" />
+
+<txp:if_category>
+
+      <div class="row">
+        <div class="col-md-12">
+
+<h2 style="border-bottom: 1px solid #999;"><txp:category title="1" link="0" /></h2>
+
+        </div><!-- col-md-12-->
+      </div><!-- row-->
+
+<txp:article_custom category='<txp:category />' wraptag="div" break="br" sort="custom_2">
+
+      <div class="row">
+        <div class="col-md-12">
+
+<h3><txp:permlink><txp:title /></txp:permlink></h3>
+
+        </div><!-- col-md-12-->
+      </div><!-- row-->
+      <div class="row">
+        <div class="col-md-6">
+
+<div class="inbox">
+   <div class="typein">Input (editable)</div>
+   <div id="result"><txp:pax_grep from="/\n/" to="<br />"><txp:body /></txp:pax_grep></div>
+</div>
+
+        </div><!-- col-md-6-->
+        <div class="col-md-6">
+
+<txp:hide>
+<div class="outbox">
+   <div class="typeout">Browser</div>
+   <div id="result"><txp:pax_grep from="/\n\n/" to="<br />"><txp:pax_grep from="/<\/?p>/,/\t/" to=""><txp:upm_textile><txp:body /></txp:upm_textile></txp:pax_grep></txp:pax_grep></div>
+</div>
+</txp:hide>
+
+<div class="outbox">
+   <div class="typeout">Browser</div>
+   <div id="result"><txp:upm_textile><txp:body /></txp:upm_textile></div>
+</div>
+
+        </div><!-- col-md-6-->
+      </div><!-- row-->
+
+</txp:article_custom>
+
+<txp:else />
+
+      <div class="row">
+        <div class="col-md-8">
+
+<h2 style="border-bottom: 1px solid #999;"><txp:permlink><txp:title /></txp:permlink></h2>
+<txp:body />
+
+        </div><!-- md8-->
+        <div class="col-md-4">
+
+<div style="text-align:right;">
+<h2 style="border-bottom: 1px solid #FFFFFF;">Table of Contents</h2>
+<txp:category_list parent="syntax" exclude="syntax,introduction" wraptag="" break="" sort="id">
+<p style="font-weight:bold;"><txp:category title="1" link="0" /></p>
+<p><txp:article_custom category='<txp:category />' wraptag="" break="br" sort="custom_2">
+   <txp:permlink><txp:title /></txp:permlink>
+</txp:article_custom></p>
+</txp:category_list>
+</div>
+
+        </div><!-- col-md-4-->
+      </div><!-- row-->
+
+</txp:if_category>
+
+    <txp:output_form form="body_footer" />
+</body>
+</html>

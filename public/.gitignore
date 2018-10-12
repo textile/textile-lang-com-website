@@ -3,9 +3,9 @@
 /css.php
 /files
 /images
-/img
+/img-cms
 /index.php
-/mockups
+/themes/*/
 /textpattern
 /vendor
 /*.png

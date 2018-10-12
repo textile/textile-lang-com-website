@@ -1,0 +1,59 @@
+/* Reset
+   ========================================================================== */
+
+/**
+ * Add the correct display in Edge and Firefox.
+ */
+
+details {
+    display: block;
+}
+
+/**
+ * Add the correct display in all browsers.
+ */
+
+summary {
+    display: list-item;
+}
+
+/**
+ * Remove tap delay in modern browsers.
+ */
+
+a,
+input,
+button {
+    touch-action: manipulation;
+}
+
+
+/* Clearfix
+   ========================================================================== */
+
+/**
+ * Clearfix using the 'A new micro clearfix hack' method.
+ *
+ * More info: http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+
+header,
+footer,
+nav ul,
+nav ol,
+.clearfix,
+.paginator {
+    &::after {
+        display: table;
+        clear: both;
+        content: "";
+    }
+}
+
+/**
+ * Basic float clearer.
+ */
+
+.clear {
+    clear: both;
+}

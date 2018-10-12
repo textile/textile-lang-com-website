@@ -1,0 +1,123 @@
+/* Navigation
+   ========================================================================== */
+
+/**
+ * Style mobile first version of the navigation menu. Desktop version will
+ * override some rules with extra styling in subsequent breakpoint.
+ *
+ * Example HTML:
+ *
+ * <nav id="site-navigation">
+ *     <ul>
+ *         <li class="active"><a></li>
+ *         <li><a></li>
+ *         <li><a></li>
+ *     </ul>
+ * </nav>
+ */
+
+#site-navigation {
+    background-color: $color-gradient-to;
+    font-family: $font-sans-serif;
+    font-weight: bold;
+
+    .js & {
+        display: block;
+        max-height: 0;
+        transition: max-height 0.33s ease-in-out;
+        overflow: hidden;
+        clip: rect(0 0 0 0); // TODO: Deprecated - use `clip-path` when browser support is better.
+        //clip-path: inset(50%); // TODO: Currently causes severe performance issues in Chrome.
+    }
+
+    ul {
+        display: block;
+        max-width: $container-max-width;
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        transition: box-shadow 0.1s linear;
+        border-top: 1px solid $color-border;
+        background-color: $color-gradient-from;
+
+        &:hover {
+            background-color: lighten($color-gradient-from, 4%);
+        }
+
+        &:active {
+            @include gradient-linear(darken($color-gradient-to, 4%), darken($color-gradient-from, 4%));
+
+            box-shadow: inset 0 0.2em 0.25em rgba(#000000, 0.15);
+        }
+
+        &.active {
+            background-color: lighten($color-gradient-from, 8%);
+        }
+    }
+
+    a {
+        display: block;
+        padding: 0.5em 6%;
+        color: $color-text;
+
+        &:hover,
+        &:visited {
+            color: $color-text;
+            text-decoration: none;
+        }
+
+        &:active {
+            color: darken($color-text, 10%);
+            text-decoration: none;
+        }
+    }
+
+    &.site-navigation-open {
+        max-height: 16em;
+        transition: max-height 0.33s ease-in-out;
+    }
+}
+
+/**
+ * Navigation toggle show/hide button for mobile first navigation.
+ *
+ * 1. Disables the default bubble shown when you touch and hold a touch target.
+ *
+ * Example HTML:
+ *
+ * <a id="site-navigation-toggle">
+ */
+
+#site-navigation-toggle {
+    @include hide-text;
+
+    width: 32px;
+    height: 32px;
+    margin-right: 6%;
+    float: right;
+    border: 1px solid $color-border;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23333' d='M4 6h24v4H4zm0 8h24v4H4zm0 8h24v4H4z'/%3E%3C/svg%3E");
+    background-size: 32px 32px;
+    user-select: none;
+    -webkit-touch-callout: none; /* 1 */
+
+    &:hover {
+        background-color: $color-selected;
+    }
+
+    &.site-navigation-toggle-active {
+        background-color: $color-strong-highlight-box;
+    }
+
+    &:active {
+        background-color: $color-selecting;
+    }
+
+    &:focus {
+        border-color: $color-link-focus;
+        outline: 1px solid transparent; // Allows for repainting in high contrast modes.
+    }
+}

@@ -1,0 +1,83 @@
+/* Pagination links
+   ========================================================================== */
+
+/**
+ * Paginator (prev/next) navigation links on articles/article lists.
+ *
+ * Example HTML:
+ *
+ * <nav class="paginator">
+ *     <a rel="prev">
+ *     <a rel="next">
+ */
+
+.paginator {
+    margin: 1em 0;
+    padding-top: 1em;
+    clear: both;
+    border-top: 1px dashed $color-border;
+    text-align: center;
+
+    [rel="prev"] {
+        margin: 0 1em 0 0;
+        float: left;
+
+        &::before {
+            content: "\2190" "\00A0";
+        }
+    }
+
+    [rel="next"] {
+        margin: 0 0 0 1em;
+        float: right;
+
+        &::after {
+            content: "\00A0" "\2192";
+        }
+    }
+}
+
+/**
+ * Numerical pagination link lists.
+ *
+ * Example HTML:
+ *
+ * <ul class="pagination">
+ *     <li class="current">
+ *         <b title="Current page">1</b>
+ *     </li>
+ *     <li>
+ *         <a title="Go to page 2">2</a>
+ *     </li>
+ *     <li>
+ *         <a title="Go to page 3">3</a>
+ *     </li>
+ */
+
+.pagination {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        float: left;
+        border: 1px solid $color-background;
+
+        &.current {
+            border-color: $color-border;
+        }
+    }
+
+    a,
+    b {
+        display: block;
+        min-width: 1.25em;
+        padding: 0 0.1875em; // 3px / 16px
+    }
+
+    b {
+        font-weight: normal;
+        cursor: default;
+    }
+}

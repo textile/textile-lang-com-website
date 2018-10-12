@@ -1,0 +1,77 @@
+/* Links
+   ========================================================================== */
+
+/**
+ * 1. Specify link colour.
+ * 2. Remove default underline style from non-hover state links.
+ * 3. Interrupt the decoration line to let the shape of the text show through
+ *    in supported browsers.
+ */
+
+a {
+    color: $color-link; /* 1 */
+    text-decoration: none; /* 2 */
+    text-decoration-skip: ink; /* 3 */
+
+    &:hover,
+    &:active {
+        color: $color-link-hover;
+        text-decoration: underline;
+    }
+
+    &:focus {
+        outline: thin solid $color-link-focus;
+    }
+}
+
+/**
+ * Additional styling for heading links.
+ *
+ * 1. Expanded CSS level 3 `text-decoration-color` property in supported
+ *    browsers, older browsers ignore this addition.
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    a {
+        color: $color-text;
+
+        &:hover,
+        &:active {
+            color: $color-text;
+            text-decoration-color: rgba($color-text, 0.5);  /* 1 */
+        }
+    }
+}
+
+/**
+ * Images as links.
+ *
+ * Example HTML:
+ *
+ * <a class="a--img">
+ *     <img>
+ * </a>
+ */
+
+.a--img {
+    img {
+        border: solid 1px $color-border;
+    }
+
+    &:hover img {
+        border-color: $color-link-hover;
+    }
+
+    &:focus {
+        outline: 0;
+
+        img {
+            border-color: $color-link-focus;
+        }
+    }
+}

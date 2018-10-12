@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-GB-oxendict">
+<head>
+    <txp:output_form form="head" />
+</head>
+<body itemscope itemtype="https://schema.org/WebPage">
+    <txp:output_form form="body_header" />
+
+      <div class="row">
+        <div class="col-md-12">
+
+<h2 style="border-bottom: 1px solid #FFFFFF;"><txp:error_status /></h2>
+<br />
+<h3><txp:error_message /></h3>
+
+        </div><!-- col-md-12-->
+      </div><!-- row-->
+
+    <txp:output_form form="body_footer" />
+</body>
+</html>

@@ -1,0 +1,130 @@
+/* Layout
+   ========================================================================== */
+
+/**
+ * 1. Always force scrollbar padding so we don't get 'jumping'.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+
+html {
+    overflow-y: scroll; /* 1 */
+    text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * 1. Set `body` to `relative` to allow positioning of absolute elements.
+ * 2. Remove default margin.
+ */
+
+body {
+    position: relative; /* 1 */
+    margin: 0; /* 2 */
+    background: $color-background-box;
+}
+
+/**
+ * Force blocks.
+ */
+
+.block {
+    display: block;
+}
+
+/**
+ * Force inline blocks.
+ */
+
+.inline-block {
+    display: inline-block;
+}
+
+/**
+ * Outer wrapper for main layouts.
+ *
+ * Example HTML:
+ *
+ * <div class="wrapper">
+ *     <div class="container">
+ *         Content
+ *     </div>
+ * </div>
+ */
+
+.wrapper {
+    padding: 1px 0 1em;
+    border-top: 1px solid $color-border;
+    border-bottom: 1px solid $color-border;
+    background: $color-background;
+}
+
+/**
+ * Wrapper for layouts, and for site header/footer.
+ *
+ * Example HTML:
+ *
+ * <div class="wrapper">
+ *     <div class="container">
+ *         Content
+ *     </div>
+ * </div>
+ */
+
+.site-header,
+.site-footer,
+.container {
+    width: 88%;
+    max-width: $container-max-width;
+    margin: 0 auto;
+}
+
+/**
+ * Additional styling for child content within site header.
+ */
+
+.site-header {
+    padding: 1em 0;
+
+    h1 {
+        margin: 0;
+    }
+
+    h3 {
+        margin: 0.5em 0 0; // 12px margin top
+    }
+}
+
+/**
+ * Additional styling for child content within site footer.
+ */
+
+.site-footer {
+    padding: 0.5em 0;
+
+    a {
+        display: inline-block;
+    }
+}
+
+/**
+ * Prevent really, really long words in article from breaking layout.
+ */
+
+article {
+    word-wrap: break-word;
+}
+
+/**
+ * Extra pad above sections, useful when used as page anchors.
+ */
+
+.section {
+    margin-top: 2em;
+
+    &::before {
+        display: block;
+        height: 2em;
+        margin: -2em 0 0;
+        content: "";
+    }
+}

@@ -1,0 +1,35 @@
+</div>
+<div class="wrapper-footer">
+    <aside class="container complementary-content">
+
+
+<h4>Categories</h4>
+<txp:category_list wraptag="" break="br" parent="syntax" children="1" exclude="syntax,introduction" sort="id">
+    <txp:category title="1" link="1" section="" />
+</txp:category_list>
+
+<h4>Further Information</h4>
+
+<txp:article_custom section="article" category="information" wraptag="" break="br" sort="Title">
+    <txp:permlink><txp:title /></txp:permlink>
+</txp:article_custom>
+
+<h4>Tools</h4>
+<a href="https://txstyle.org/doc">Blank input form</a><br />
+<a href="https://txstyle.org/tools/50/data-converter">Table Data Converter</a></p>
+
+<h4>Report Issues</h4>
+
+<a href="https://github.com/textile/php-textile/issues"> Issues on PHP Textile (GitHub)</a></p>
+
+
+    </aside>
+    <footer class="site-footer">
+        <p class="legal">
+            Copyright 2003–<txp:php>echo date('Y');</txp:php> The Textile Language Development Team.
+            <a href="<txp:site_url />privacy">Privacy</a>.
+            <a href="<txp:site_url />humans.txt">Colophon</a>.
+            Textile is both free and open source. <a href="<txp:site_url />license">GPLv2 license</a>.
+        </p>
+    </footer>
+</div>

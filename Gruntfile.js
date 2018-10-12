@@ -18,7 +18,6 @@ module.exports = function (grunt)
                 fonts: 'src/assets/fonts/',
                 sass: 'src/assets/sass/',
                 js: 'src/assets/js/',
-                mockups: 'src/mockups/',
                 templates: 'src/templates/'
             },
             dest: {
@@ -26,7 +25,6 @@ module.exports = function (grunt)
                 fonts: 'public/assets/fonts/',
                 img: 'public/assets/img/',
                 js: 'public/assets/js/',
-                mockups: 'public/mockups/',
                 templates: 'public/themes/textile-lang-com/'
             }
         },
@@ -42,7 +40,6 @@ module.exports = function (grunt)
             '<%= paths.dest.fonts %>',
             '<%= paths.dest.img %>',
             '<%= paths.dest.js %>',
-            '<%= paths.dest.mockups %>*/',
             '<%= paths.dest.templates %>'
         ],
 
@@ -148,7 +145,7 @@ module.exports = function (grunt)
             }
         },
 
-        // Generate filename timestamps within templates/mockup files.
+        // Generate filename timestamps within templates files.
         replace: {
             theme: {
                 options: {
@@ -160,14 +157,7 @@ module.exports = function (grunt)
                     ]
                 },
                 files: [
-                    // Copy mockups to mockups directory.
-                    {
-                        expand: true,
-                        cwd: '<%= paths.src.mockups %>',
-                        src: '**',
-                        dest: '<%= paths.dest.mockups %>'
-                    },
-                    // Copy Textpattern templates to templates directory.
+                    // Copy Textpattern templates to themes directory.
                     {
                         expand: true,
                         cwd: '<%= paths.src.templates %>',
@@ -238,10 +228,7 @@ module.exports = function (grunt)
                 ]
             },
             html: {
-                files: [
-                    '<%= paths.src.mockups %>**',
-                    '<%= paths.src.templates %>**'
-                ],
+                files: '<%= paths.src.templates %>**',
                 tasks: 'replace'
             }
         }

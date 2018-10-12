@@ -1,0 +1,96 @@
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Make embedded elements responsive.
+ */
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/**
+ * Images.
+ *
+ * 1. Remove the gap between images and the bottom of their containers.
+ *
+ * Image alignment (compatible with Textile markup syntax).
+ *
+ * Example HTML:
+ *
+ * <img class="align-left">
+ * <img class="align-right">
+ * <img class="align-center">
+ */
+
+img {
+    vertical-align: middle; /* 1 */
+
+    &.align-left {
+        margin: 1em 1em 1em 0;
+        float: left;
+    }
+
+    &.align-right {
+        margin: 1em 0 1em 1em;
+        float: right;
+    }
+
+    &.align-center {
+        display: block;
+        margin: 1em auto;
+    }
+}
+
+/**
+ * Rounded corner images.
+ *
+ * Example HTML:
+ *
+ * <img class="img--rounded">
+ */
+
+.img--rounded {
+    border-radius: $border-radius;
+}
+
+/**
+ * Circular images.
+ *
+ * Example HTML:
+ *
+ * <img class="img--circular">
+ */
+
+.img--circular {
+    border-radius: 50%;
+}
+
+/**
+ * Consistent margins on `figure`.
+ */
+
+figure {
+    margin: 1em 0;
+}
+
+/**
+ * Reset fonts and sets background colour for Flowplayer video player.
+ *
+ * This rule can be removed if you are not using Flowplayer.
+ *
+ * Example HTML:
+ *
+ * <div class="videoplayer">
+ *     <video>
+ *         <source>
+ *     </video>
+ * </div>
+ */
+
+.videoplayer {
+    background-color: $color-text;
+    font-family: sans-serif;
+}
