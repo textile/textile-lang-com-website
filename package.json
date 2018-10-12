@@ -30,6 +30,7 @@
     "sass-lint": "1.12.1"
   },
   "dependencies": {
+    "prismjs": "1.15.0",
     "textile-mark": "1.0.0"
   },
   "browserslist": [
