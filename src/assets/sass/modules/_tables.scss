@@ -37,24 +37,50 @@ caption {
 }
 
 /**
- * Make table cells align top and left by default.
+ * Make table cells align top and left by default and include border.
  */
 
 th,
 td {
-    padding: 0.25em 0;
+    min-width: 6em; // 96px / 16px
+    padding: 0.5em; // 8px / 16px
+    border: 1px solid $color-border-light;
     text-align: left;
     vertical-align: top;
 }
 
 /**
- * Remove padding from top cells of table header.
+ * Emphasize table header.
  */
 
-thead tr:first-child {
+thead {
+    tr {
+        background-color: $color-gradient-from;
+    }
+
     th,
     td {
-        padding-top: 0;
+        border: 1px solid $color-border;
+    }
+}
+
+/**
+ * 'Zebra striping' of `tbody` rows.
+ */
+
+tbody {
+    tr {
+        &:nth-child(even) {
+            background-color: $color-background-box;
+        }
+
+        &.selected {
+            background-color: $color-selected;
+        }
+    }
+
+    th {
+        font-weight: normal;
     }
 }
 
@@ -65,14 +91,7 @@ thead tr:first-child {
 tfoot {
     th,
     td {
-        padding: 0.3333333em 0;
-    }
-
-    tr:last-child {
-        th,
-        td {
-            padding-bottom: 0;
-        }
+        padding: 0.6666667em; // 8px / 12px
     }
 }
 
@@ -98,54 +117,6 @@ tfoot {
 
 .numerical {
     text-align: right;
-}
-
-/**
- * Bordered tables.
- *
- * Example HTML:
- *
- * <table class="table--bordered">
- */
-
-.table--bordered {
-    th,
-    td {
-        padding: 0.25em;
-        border-bottom: 1px solid $color-border;
-
-        &:empty {
-            border: 0;
-        }
-    }
-
-    thead tr:last-child {
-        th,
-        td {
-            border-bottom: 2px solid $color-border;
-        }
-    }
-
-    tfoot {
-        th,
-        td {
-            padding: 0.3333333em;
-        }
-
-        tr:last-child {
-            th,
-            td {
-                border-bottom: 0;
-            }
-        }
-    }
-
-    tbody tr:first-child {
-        td,
-        th {
-            border-top: 1px solid $color-border;
-        }
-    }
 }
 
 /**
