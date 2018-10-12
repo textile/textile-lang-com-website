@@ -1,14 +1,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-<link rel="stylesheet" href="<txp:page_url type="theme_path" />/styles/bootstrap3min.css">
-<link rel="stylesheet" href="<txp:page_url type="theme_path" />/styles/txstyle2.css">
-
+<link rel="stylesheet" href="/assets/css/style.css">
+<!-- <link rel="stylesheet" href="<txp:page_url type="theme_path" />/styles/bootstrap3min.css"> -->
+<!-- <link rel="stylesheet" href="<txp:page_url type="theme_path" />/styles/txstyle2.css"> -->
+<link rel="manifest" href="/site.webmanifest">
 <link rel="icon" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" sizes="16x16" href="/favicon-16x16.png">
 <meta name="generator" content="Textpattern CMS">
 <meta name="application-name" content="Textpattern">
 
-<meta name="robots" content="The Textile Markup Reference for Textpattern">
 <txp:if_category><title>Textile &middot; <txp:category title="1" /></title><txp:else /><txp:if_section name="default"><title>Textile Syntax Documentation and Sandbox</title><txp:else /><title>Textile &middot; <txp:title /></title></txp:if_section></txp:if_category>
 
 <txp:if_section name="tools">
