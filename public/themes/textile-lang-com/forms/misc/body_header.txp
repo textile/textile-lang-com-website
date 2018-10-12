@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+<h1 style="font-weight:bold; text-align:left;"><a href="<txp:site_url />">TxStyle &#183; Textile Documentation</a></h1>
+<p><txp:site_slogan /></p>
+        </div><!-- md10-->
+        <div class="col-md-2">
+<div style="vertical-align:bottom; text-align:right;">
+   <img alt="" width="93" height="91" src="<txp:site_url />img/txstyle5.png" />
+</div>
+        </div><!-- md2-->
+      </div><!-- row-->
+      <div class="row">
+        <div class="col-md-12">
+<hr style="height:1px;border:none;color:#bbb;background-color:#bbb;" />
+        </div><!-- md12-->
+      </div><!-- row-->

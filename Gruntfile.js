@@ -79,25 +79,25 @@ module.exports = function (grunt)
                     },
                     {
                         expand: true,
-                        cwd: 'node_modules/textile-mark/assets/img/',
+                        cwd: 'node_modules/textile-mark/assets/',
                         src: ['**'],
                         dest: '<%= paths.dest.img %>branding/'
                     },
                     {
                         expand: true,
-                        cwd: 'node_modules/textile-mark/assets/img/apple-touch-icon/',
+                        cwd: 'node_modules/textile-mark/assets/apple-touch-icon/',
                         src: ['**'],
                         dest: 'public/'
                     },
                     {
                         expand: true,
-                        cwd: 'node_modules/textile-mark/assets/img/favicon/',
+                        cwd: 'node_modules/textile-mark/assets/favicon/',
                         src: ['**'],
                         dest: 'public/'
                     },
                     {
                         expand: true,
-                        cwd: 'node_modules/textile-mark/assets/img/windows-site-tile/',
+                        cwd: 'node_modules/textile-mark/assets/windows-site-tile/',
                         src: ['**'],
                         dest: 'public/'
                     }

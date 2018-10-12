@@ -1,4 +1,10 @@
-<txp:output_form form="header" />
+<!DOCTYPE html>
+<html lang="en-GB-oxendict">
+<head>
+    <txp:output_form form="head" />
+</head>
+<body itemscope itemtype="https://schema.org/WebPage">
+    <txp:output_form form="body_header" />
 
       <div class="row">
         <div class="col-md-12">
@@ -9,4 +15,6 @@
         </div><!-- md12-->
       </div><!-- row-->
 
-<txp:output_form form="footer" />
+    <txp:output_form form="body_footer" />
+</body>
+</html>
