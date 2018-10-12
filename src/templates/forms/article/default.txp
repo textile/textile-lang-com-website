@@ -1,9 +1,9 @@
 <h3><txp:title /></h3>
 <div class="input">
-<div class="typein">Input</div>
-<pre><code><txp:body /></code></pre>
+    <div class="typein">Input</div>
+    <pre><code><txp:body /></code></pre>
 </div>
 <div class="output">
-<div class="typeout">Browser</div>
-<txp:excerpt />
+    <div class="typeout">Browser</div>
+    <txp:excerpt />
 </div>
