@@ -1,0 +1,26 @@
+{
+    "name": "rah/php-textile-sandbox",
+    "description": "Sandbox endpoint for PHP Textile parser",
+    "keywords": ["textile", "parser", "humane", "web", "text", "generator"],
+    "homepage": "https://github.com/gocom/php-textile-sandbox",
+    "license": "MIT",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Jukka Svahn",
+            "homepage": "http://rahforum.biz",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/gocom/php-textile-sandbox/issues",
+        "source": "https://github.com/gocom/php-textile-sandbox"
+    },
+    "autoload": {
+        "psr-0": {"Rah\\Textile" : "src/"}
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "netcarver/textile": "*"
+    }
+}

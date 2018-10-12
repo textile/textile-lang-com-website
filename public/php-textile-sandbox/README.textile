@@ -1,0 +1,52 @@
+h1. PHP-Textile sandbox
+
+Simple public sandbox for "PHP-Textile":https://github.com/textile/php-textile. Send in a HTTP request, get Textile as response, wrapped in a JSON or JSON-P envelope.
+
+h2. Installing
+
+bc. $ git clone https://github.com/gocom/php-textile-sandbox.git && cd php-textile-sandbox
+$ composer install
+
+h2. Usage
+
+The sandbox accepts requests from both GET and POST request methods. Both are 'read' only.
+
+h3. Request parameters
+
+* *method* Parsing method, either @unrestricted@ or @restricted@ (default), or an array of both.
+* *text* Textile input to parse.
+* *doctype* Output document type. Either @html5@ (default) or @xhtml@.
+* *lite* Enable lite mode, either @true@ or @false@ (default).
+* *noimage* Disable image tags, either @true@ (default) or @false@.
+* *rel* Rel attribute applied to links.
+* *callback* JSON-P callback function.
+
+
+h3. Example request
+
+bc. $ curl http://php-textile-sandbox.test/?text=h1.%20Hello%20World
+
+Response headers:
+
+bc. HTTP/1.1 200 OK
+Date: Thu, 14 Nov 2013 07:48:01 GMT
+Access-Control-Allow-Origin: *
+X-Robots-Tag: noindex
+Content-Type: application/json; charset=utf-8
+
+Response body:
+
+bc. {
+    "options": {
+        "method": ["restricted"],
+        "text": "h1. Hello World",
+        "doctype": "html5",
+        "lite": false,
+        "noimage": true,
+        "rel": "nofollow",
+        "callback" : ""
+    },
+    "output": {
+        "restricted": "<h1>Hello World<\/h1>"
+    }
+}

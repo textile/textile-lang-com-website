@@ -5,8 +5,8 @@
   <meta name="generator" content="Textpattern CMS" />
   <meta name="robots" content="The Textile Markup Reference for Textpattern">
   <txp:if_category><title>Textile &middot; <txp:category title="1" /></title><txp:else /><txp:if_section name="default"><title>Textile Syntax Documentation and Sandbox</title><txp:else /><title>Textile &middot; <txp:title /></title></txp:if_section></txp:if_category>
-  <txp:rvm_css format="link" name="bootstrap3min" />
-  <txp:rvm_css format="link" name="txstyle2" media="screen"/>
+  <link rel="stylesheet" href="<txp:page_url type="theme_path" />/styles/bootstrap3min.css">
+  <link rel="stylesheet" href="<txp:page_url type="theme_path" />/styles/txstyle2.css">
 <txp:if_section name="tools">
   <txp:spf_js name="jquery_min" type="1" />
   <txp:spf_js name="CSVParser" type="1" />
