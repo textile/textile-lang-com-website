@@ -7,8 +7,8 @@
 
 <header class="site-header" itemscope itemtype="https://schema.org/Organization">
     <h1 class="masthead" itemprop="name"><a rel="home" itemprop="url" href="<txp:site_url />" title="Go to the Textile homepage"><txp:site_name /></a></h1>
+    <h3 class="stable-version"><span class="accessibility">Latest stable release:</span> v3.6.0</h3>
     <meta itemprop="logo" content="<txp:site_url />assets/img/branding/wordmark/textile-wordmark.svg">
-    <h3>v3.6.0</h3>
 </header>
 
 <div class="wrapper">
