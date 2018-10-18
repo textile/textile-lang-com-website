@@ -1,6 +1,5 @@
 h1. Textile website
 
-!https://badges.greenkeeper.io/textpattern/textpattern-com-website.svg(Greenkeeper badge)!:https://greenkeeper.io/
-!https://img.shields.io/travis/textpattern/textpattern-com-website.svg(Build Status)!:https://travis-ci.org/textpattern/textpattern-com-website
+!https://badges.greenkeeper.io/textile/textile-lang-com-website.svg(Greenkeeper badge)!:https://greenkeeper.io/ !https://img.shields.io/travis/textile/textile-lang-com-website.svg(Build Status)!:https://travis-ci.org/textile/textile-lang-com-website
 
 *Under construction.*
