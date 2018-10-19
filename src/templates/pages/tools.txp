@@ -6,14 +6,8 @@
 <body itemscope itemtype="https://schema.org/WebPage">
     <txp:output_form form="body_header" />
 
-      <div class="row">
-        <div class="col-md-12">
-
-<h2><txp:permlink><txp:title /></txp:permlink></h2>
-<txp:body />
-
-        </div><!-- md12-->
-      </div><!-- row-->
+    <h2><txp:permlink><txp:title /></txp:permlink></h2>
+    <txp:body />
 
     <txp:output_form form="body_footer" />
 </body>

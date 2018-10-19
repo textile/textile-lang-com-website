@@ -32,12 +32,12 @@
 <h2><txp:permlink><txp:title /></txp:permlink></h2>
 <txp:body />
 
-<div style="text-align:right;">
+<div>
 
-    <h2 style="border-bottom: 1px solid #FFFFFF;">Table of Contents</h2>
+    <h2>Table of Contents</h2>
 
     <txp:category_list parent="syntax" exclude="syntax,introduction" wraptag="" break="" sort="id">
-        <p style="font-weight:bold;"><txp:category title="1" link="0" /></p>
+        <p><txp:category title="1" link="0" /></p>
         <p>
             <txp:article_custom category='<txp:category />' wraptag="" break="br" sort="custom_2">
                 <txp:permlink><txp:title /></txp:permlink>
