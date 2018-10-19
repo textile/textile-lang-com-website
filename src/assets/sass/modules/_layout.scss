@@ -107,15 +107,15 @@ body {
 }
 
 .stable-version {
-    position: relative;
     display: inline-block;
+    position: relative;
     top: 1.5em;
     margin: 0;
     padding: 0.25em 0.5em;
     border-radius: 0.25em;
-    font-size: 1rem;
-    color: #ffe7ac;
     background-color: $color-text;
+    color: #ffe7ac;
+    font-size: 1rem;
 }
 
 /**
@@ -151,4 +151,10 @@ article {
         margin: -2em 0 0;
         content: "";
     }
+}
+
+.result-textile {
+    padding: 0.25em 0.1875em; // 8px / 16px + 3px / 16px
+    border: 1px solid $color-border;
+    background: $color-background-form;
 }

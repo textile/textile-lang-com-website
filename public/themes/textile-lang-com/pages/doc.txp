@@ -5,7 +5,8 @@
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
     <txp:output_form form="body_header" />
-
+    <div class="layout-container">
+        <div class="layout-3col-2span">
 
 <txp:if_category>
 
@@ -82,12 +83,12 @@
 
 <div class="outbox">
     <h3 class="typeout">Browser</h3>
-    <div id="result"></div>
+    <div class="result-textile" id="result"></div>
 </div>
 
 <div class="htmlbox">
     <h3 class="typeout">HTML</h3>
-    <pre id="html-result"></pre>
+    <pre class="result-html" id="html-result"></pre>
 </div>
 
 <script type="text/javascript">
@@ -98,6 +99,8 @@ document.observe("dom:loaded", function() {
 </script>
 
 <txp:if_individual_article>
+
+<hr>
 
 <h3>More about: <txp:title /></h3>
 <txp:if_excerpt>
@@ -117,7 +120,32 @@ document.observe("dom:loaded", function() {
 
 </txp:if_category>
 
-        <p class="alert-block information footnote report-issues">See something wrong in this document? Outdated info, a broken link, faulty code example, or whatever? Please <a rel="external" href="https://github.com/textile/textile-lang-com-website/issues">write an issue</a> and we’ll fix it.</p>
+            <p class="alert-block information footnote report-issues">See something wrong in this document? Outdated info, a broken link, faulty code example, or whatever? Please <a rel="external" href="https://github.com/textile/textile-lang-com-website/issues">write an issue</a> and we’ll fix it.</p>
+
+        </div><!-- /layout-3col-2span -->
+        <div class="layout-3col">
+
+            <nav aria-label="Site navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                <txp:category_list categories="introduction" break="" sort="id">
+                    <h4><txp:category title="1" link="0" /></h4>
+
+                    <txp:article_custom category='<txp:category />' wraptag="ul" break="li" sort="custom_2">
+                        <txp:permlink><txp:title /></txp:permlink>
+                    </txp:article_custom>
+                </txp:category_list>
+
+                <txp:category_list parent="syntax" exclude="syntax,introduction" break="" sort="id">
+                    <h4><txp:category title="1" link="0" /></h4>
+
+                    <txp:article_custom category='<txp:category />' wraptag="ul" break="li" sort="custom_2">
+                        <txp:permlink><txp:title /></txp:permlink>
+                    </txp:article_custom>
+                </txp:category_list>
+            </nav>
+
+        </div><!-- /layout-3col -->
+
+    </div><!-- /layout-container -->
     <txp:output_form form="body_footer" />
 </body>
 </html>
