@@ -47,28 +47,8 @@
      */
 
     #site-navigation {
-        border-top: 1px solid $color-border;
-
         .js & {
             max-height: none;
-        }
-
-        ul {
-            width: 88%;
-        }
-
-        li {
-            float: left;
-            border-top: 0;
-            border-right: solid 1px $color-gradient-border;
-
-            &:first-child {
-                border-left: solid 1px $color-gradient-border;
-            }
-        }
-
-        a {
-            padding: 0.5em 1em;
         }
     }
 

@@ -115,6 +115,7 @@ module.exports = function (grunt)
                     define: true,
                     module: true,
                     require: true,
+                    autosize: true,
                     Prism: true,
                     i: true
                 },
@@ -197,6 +198,7 @@ module.exports = function (grunt)
                 files: [
                     {
                         '<%= paths.dest.js %>app.js': [
+                            'node_modules/autosize/dist/autosize.js',
                             // Prism: Core.
                             'node_modules/prismjs/prism.js',
                             // Prism: Plugins.

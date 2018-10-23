@@ -9,6 +9,7 @@
     // Load objects as variables.
 
     var code = document.querySelectorAll('pre code'),
+        fields = document.querySelectorAll('textarea'),
         navmenu = document.getElementById('site-navigation');
 
     // Syntax highlighting, via 'Prism'.
@@ -24,6 +25,14 @@
         });
 
         Prism.highlightAll();
+    }
+
+    // Auto-growing textareas, via 'Autosize'.
+    // Allows dynamic resizing of textarea height, so that it grows as based
+    // on visitor input. More info - https://github.com/jackmoore/autosize.
+
+    if (fields.length) {
+        autosize(fields);
     }
 
     // Responsive navigation menu.
