@@ -35,8 +35,8 @@ $color-border-light:                  #d4d4d4 !default;
 
 // neutral colours
 
-$color-background:                    #ffffff !default;
-$color-background-box:                #f7f7f7 !default;
+$color-background:                    #f7f7f7 !default;
+$color-background-box:                #ffffff !default;
 $color-background-form:               #ffffff !default;
 $color-background-form-disabled:      #eeeeee !default;
 $color-gradient-from:                 #eeeeee !default;
@@ -45,18 +45,15 @@ $color-gradient-border:               darken($color-gradient-from, 13.5%) !defau
 
 // accent colours
 
-$color-highlight:                     #ffda44 !default;
+$color-highlight:                     #ffe7ac !default;
 $color-strong-highlight-box:          tint($color-highlight, 36%) !default;
 $color-highlight-box:                 tint($color-highlight, 84%) !default;
 
 // button colours
 
-$color-button-gradient-from:          $color-gradient-from !default;
-$color-button-gradient-to:            darken($color-button-gradient-from, 6.5%) !default;
-$color-button-border:                 darken($color-button-gradient-to, 7%) !default;
-$color-button-selected-gradient-from: tint($color-link-hover, 90%) !default;
-$color-button-selected-gradient-to:   tint($color-link-hover, 80%) !default;
-$color-button-selected-border:        darken($color-button-selected-gradient-to, 10.5%) !default;
+$color-button-background:             $color-highlight !default;
+$color-button-border:                 shade($color-button-background, 20%) !default;
+$color-button-shadow:                 rgba($color-button-border, 0.5) !default;
 
 // alert colours
 

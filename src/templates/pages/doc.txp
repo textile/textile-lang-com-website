@@ -120,20 +120,20 @@ document.observe("dom:loaded", function() {
 
 </txp:if_category>
 
-            <p class="alert-block information footnote report-issues">See something wrong in this document? Outdated info, a broken link, faulty code example, or whatever? Please <a rel="external" href="https://github.com/textile/textile-lang-com-website/issues">write an issue</a> and we’ll fix it.</p>
+            <p class="alert-block information footnote report-issues">See something wrong in this page? Outdated info, a broken link, faulty code example, or whatever? Please <a rel="external" href="https://github.com/textile/textile-lang-com-website/issues">write an issue</a> and we’ll fix it.</p>
 
         </div><!-- /layout-3col-2span -->
         <div class="layout-3col">
             <nav id="site-navigation" aria-label="Site navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
                 <ul>
                     <li>
-                        <h4>Introduction</h4>
+                        <h5>Introduction</h5>
                         <txp:article_custom category="introduction" wraptag="ol" break="" sort="custom_1">
                             <li><a itemprop="url" href="<txp:permlink />"><txp:title /></a></li>
                         </txp:article_custom>
                     </li>
                     <txp:category_list parent="syntax" exclude="syntax,introduction" break="li" sort="id">
-                        <h4><txp:category title="1" link="0" /></h4>
+                        <h5><txp:category title="1" link="0" /></h5>
                         <txp:article_custom category='<txp:category />' wraptag="ol" break="" sort="custom_1">
                             <li><a itemprop="url" href="<txp:permlink />"><txp:title /></a></li>
                         </txp:article_custom>

@@ -30,6 +30,15 @@
         max-height: 16em;
         transition: max-height 0.33s ease-in-out;
     }
+
+    h5 {
+        margin-bottom: 0;
+    }
+
+    ul {
+        padding: 0;
+        list-style: none;
+    }
 }
 
 /**
