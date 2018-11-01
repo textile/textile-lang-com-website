@@ -30,9 +30,9 @@
 
         <div class="layout-3col-2span">
 
-            <h2>Try Textile here:</h2>
+            <h2>Try Textile</h2>
 
-            <div id="try-textile" class="clearfix">
+            <div id="try-textile">
                 <form method="post" action="/try/" id="try-textile-form">
                     <div>
                         <textarea id="text_in" name="text" rows="10" cols="60">h2. Textile
@@ -43,46 +43,25 @@
 * including headers, quotes, lists, tables, and figures.
 
 *TxStyle* is a documentation project of Textile for "Textpattern CMS":https://textpattern.com.</textarea>
-
                         <p><input id="submit" type="submit" class="try-options"></p>
                     </div>
                 </form>
             </div><!--#try-textile-->
 
-            <div class="outbox">
-                <h3>Output:</h3>
+            <section class="outbox">
+                <h4>Browser output</h4>
                 <div class="result-textile" id="result"></div>
-            </div>
-
-            <div class="rtext">
-                <p class="try-options">
-                    <input id="toggle-html-output" name="toggle-html-output" type="checkbox">
-                    <label for="toggle-html-output">Show HTML output</label>
-                </p>
+            </section>
+            <section class="htmlbox">
+                <h4>HTML output</h4>
+                <pre class="result-html"><code id="html-result"></code></pre>
+            </section>
 
 <script type="text/javascript">
-  Event.observe($('toggle-html-output'), 'click', function(){
-   $$('div.htmlbox').each( function(node) {
-      if($('toggle-html-output').checked) {
-        node.show();
-      } else {
-        node.hide();
-      }
+    document.observe("dom:loaded", function() {
+        new TryTextileObserver('text_in', 'result', 'html-result').parseTextile();
+        $('submit').hide();
     });
-  });
-</script>
-            </div>
-
-            <div class="htmlbox" style="display:none;">
-                <h3>HTML</h3>
-                <pre class="result-html" id="html-result"></pre>
-            </div>
-
-<script type="text/javascript">
-document.observe("dom:loaded", function() {
-  new TryTextileObserver('text_in', 'result', 'html-result').parseTextile();
-  $('submit').hide();
-});
 </script>
 
         </div><!-- /layout-3col-2span -->

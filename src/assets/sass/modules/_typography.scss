@@ -98,10 +98,11 @@ address {
 
 blockquote {
     margin: 0.8em 0; // 16px / 20px
+    padding: 0 0 0 0.8em;
+    border-left: 0.25em solid $color-border;
     font-size: 1.25rem; // 20px / 16px
     font-style: italic;
     line-height: 1.4; // 28px / 20px
-    text-align: center;
 }
 
 /**
@@ -162,7 +163,7 @@ samp {
  */
 
 pre {
-    padding: 0.5714286em ; // 8px / 14px
+    padding: 0.5714286em; // 8px / 14px
     word-wrap: normal; /* 1 */
     overflow-x: auto; /* 2 */
     tab-size: 4; /* 3 */
@@ -179,6 +180,16 @@ pre {
         word-wrap: normal;
         direction: ltr;
         hyphens: none;
+    }
+}
+
+.result-textile {
+    pre,
+    code,
+    kbd,
+    samp {
+        border-color: $color-border;
+        background-color: shade($color-highlight-box, 3.5%);
     }
 }
 

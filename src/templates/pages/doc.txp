@@ -43,7 +43,7 @@
 
 </txp:if_individual_article>
 
-<div id="try-textile" class="clearfix">
+<div id="try-textile">
     <h3 class="typein">Input (editable)</h3>
     <form method="post" action="/try/" id="try-textile-form">
         <div>
@@ -65,8 +65,8 @@
 </script>
 </div>
 
-<div class="htmlbox" style="display:none;" class="clearfix">
-<h3 class="typeout">HTML</h3>
+<div class="htmlbox" style="display:none;">
+<h3 class="typeout">HTML output:</h3>
 <pre id="html-result"></pre>
 </div>
 </txp:hide>
@@ -81,21 +81,20 @@
     </form>
 </div><!--#try-textile-->
 
-<div class="outbox">
-    <h3 class="typeout">Browser</h3>
-    <div class="result-textile" id="result"></div>
-</div>
-
-<div class="htmlbox">
-    <h3 class="typeout">HTML</h3>
-    <pre class="result-html" id="html-result"></pre>
-</div>
+            <section class="outbox">
+                <h4>Browser output</h4>
+                <div class="result-textile" id="result"></div>
+            </section>
+            <section class="htmlbox">
+                <h4>HTML output</h4>
+                <pre class="result-html"><code id="html-result"></code></pre>
+            </section>
 
 <script type="text/javascript">
-document.observe("dom:loaded", function() {
-  new TryTextileObserver('text_field', 'result', 'html-result').parseTextile();
-  $('submit').hide();
-});
+    document.observe("dom:loaded", function() {
+        new TryTextileObserver('text_field', 'result', 'html-result').parseTextile();
+        $('submit').hide();
+    });
 </script>
 
 <txp:if_individual_article>

@@ -5,7 +5,8 @@
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
     <txp:output_form form="body_header" />
-
+    <div class="layout-container">
+        <div class="layout-3col-2span">
 
 <txp:if_category>
 
@@ -32,24 +33,29 @@
 <h2><txp:permlink><txp:title /></txp:permlink></h2>
 <txp:body />
 
-<div>
-
-    <h2>Table of Contents</h2>
-
-    <txp:category_list parent="syntax" exclude="syntax,introduction" wraptag="" break="" sort="id">
-        <p><txp:category title="1" link="0" /></p>
-        <p>
-            <txp:article_custom category='<txp:category />' wraptag="" break="br" sort="custom_1">
-                <txp:permlink><txp:title /></txp:permlink>
-            </txp:article_custom>
-        </p>
-    </txp:category_list>
-
-</div>
-
 </txp:if_category>
 
+        </div><!-- /layout-3col-2span -->
+        <div class="layout-3col">
+            <nav id="site-navigation" aria-label="Site navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                <ul>
+                    <li>
+                        <h5>Introduction</h5>
+                        <txp:article_custom category="introduction" wraptag="ol" break="" sort="custom_1">
+                            <li><a itemprop="url" href="<txp:permlink />"><txp:title /></a></li>
+                        </txp:article_custom>
+                    </li>
+                    <txp:category_list parent="syntax" exclude="syntax,introduction" break="li" sort="id">
+                        <h5><txp:category title="1" link="0" /></h5>
+                        <txp:article_custom category='<txp:category />' wraptag="ol" break="" sort="custom_1">
+                            <li><a itemprop="url" href="<txp:permlink />"><txp:title /></a></li>
+                        </txp:article_custom>
+                    </txp:category_list>
+                </ul>
+            </nav>
+        </div><!-- /layout-3col -->
 
+    </div><!-- /layout-container -->
     <txp:output_form form="body_footer" />
 </body>
 </html>

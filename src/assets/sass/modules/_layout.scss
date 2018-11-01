@@ -154,7 +154,19 @@ article {
 }
 
 .result-textile {
-    padding: 0.25em 0.5em; // 4px / 16px + 8px / 16px
+    padding: 0.5em; // 8px / 16px
     border: 1px solid $color-border;
-    background: $color-background-form;
+    background: $color-highlight-box;
+
+    > :first-child {
+        margin-top: 0;
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.result-html {
+    background: $color-highlight-box;
 }
