@@ -39,6 +39,21 @@
         padding: 0;
         list-style: none;
     }
+
+    .active {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            left: -2em;
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 0.25em;
+            background: rgba($color-link-focus, 0.25);
+            content: "";
+            z-index: 2001;
+        }
+    }
 }
 
 /**

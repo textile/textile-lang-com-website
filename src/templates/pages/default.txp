@@ -30,6 +30,10 @@
 
         <div class="layout-3col-2span">
 
+            <div class="article-description" itemprop="description">
+                <p><txp:meta_description format="" /></p>
+            </div>
+
             <h2>Try Textile</h2>
 
             <div id="try-textile">

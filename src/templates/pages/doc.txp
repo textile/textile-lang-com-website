@@ -32,7 +32,7 @@
 
     <article itemscope itemtype="https://schema.org/Article">
         <h2 itemprop="name headline"><txp:title /></h2>
-        <div itemprop="description">
+        <div class="article-description" itemprop="description">
             <p><txp:meta_description format="" /></p>
         </div>
 
@@ -128,13 +128,13 @@
                     <li>
                         <h5>Introduction</h5>
                         <txp:article_custom category="introduction" wraptag="ol" break="" sort="custom_1">
-                            <li><a itemprop="url" href="<txp:permlink />"><txp:title /></a></li>
+                            <li<txp:if_article_id> class="active"</txp:if_article_id>><a itemprop="url" href="<txp:permlink />"><txp:title /></a></li>
                         </txp:article_custom>
                     </li>
                     <txp:category_list parent="syntax" exclude="syntax,introduction" break="li" sort="id">
                         <h5><txp:category title="1" link="0" /></h5>
                         <txp:article_custom category='<txp:category />' wraptag="ol" break="" sort="custom_1">
-                            <li><a itemprop="url" href="<txp:permlink />"><txp:title /></a></li>
+                            <li<txp:if_article_id> class="active"</txp:if_article_id>><a itemprop="url" href="<txp:permlink />"><txp:title /></a></li>
                         </txp:article_custom>
                     </txp:category_list>
                 </ul>
