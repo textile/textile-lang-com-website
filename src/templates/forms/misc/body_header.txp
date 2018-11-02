@@ -7,7 +7,8 @@
 
 <header class="site-header" itemscope itemtype="https://schema.org/Organization">
     <h1 class="masthead" itemprop="name"><a rel="home" itemprop="url" href="<txp:site_url />" title="Go to the Textile homepage"><txp:site_name /></a></h1>
-    <txp:php>
+    <txp:etc_cache id="github-latest-tag" time="-86400">
+        <txp:php>
 $curl1 = curl_init();
 
 curl_setopt_array($curl1, array(
@@ -22,11 +23,12 @@ if (curl_error($curl1)) {
     // Do nothing.
 } else {
     $json = json_decode($response1);
-    echo '<h3 class="stable-version"><a href="'.$json->html_url.'" rel="external"><span class="accessibility">Latest stable release:</span> '.$json->tag_name.'</a></h3>';
+    echo '<p class="stable-version"><a href="'.$json->html_url.'" rel="external"><span class="accessibility">Latest stable release:</span> '.$json->tag_name.'</a></p>';
 }
 
 curl_close($curl1);
-    </txp:php>
+        </txp:php>
+    </txp:etc_cache>
     <meta itemprop="logo" content="<txp:site_url />assets/img/branding/wordmark/textile-wordmark.svg">
 </header>
 

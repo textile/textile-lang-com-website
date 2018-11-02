@@ -115,7 +115,17 @@ body {
     border-radius: 0.25em;
     background-color: $color-text;
     color: #ffe7ac;
-    font-size: 1rem;
+    font-family: $font-sans-serif;
+
+    a {
+        color: #ffe7ac;
+
+        &:hover,
+        &:active {
+            color: #ffe7ac;
+            filter: brightness(1.05);
+        }
+    }
 }
 
 /**

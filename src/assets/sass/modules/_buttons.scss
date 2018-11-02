@@ -40,9 +40,9 @@ button,
 
     &:hover {
         border-color: darken($color-button-border, 13%);
-        background-color: lighten($color-button-background, 2%);
         color: $color-text-button-hover;
         text-decoration: none;
+        filter: brightness(1.05);
     }
 
     &:active {
