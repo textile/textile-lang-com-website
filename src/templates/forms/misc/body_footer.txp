@@ -30,7 +30,7 @@
             Copyright 2003–<txp:php>echo date('Y');</txp:php> The Textile Language Development Team.
             <a href="<txp:site_url />privacy">Privacy</a>.
             <a href="<txp:site_url />humans.txt">Colophon</a>.
-            Textile is both free and open source. <a href="<txp:site_url />license">GPLv2 license</a>.
+            Textile is both free and open source. <a href="<txp:site_url />license">BSD 3-Clause license</a>.
         </p>
     </footer>
 </div>
