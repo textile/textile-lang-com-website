@@ -1,17 +1,4 @@
-User-agent: scooter
-Disallow: /
-
-User-agent: wget
-Disallow: /
-
-User-agent: HTTrack
-Disallow: /
-
-User-agent: webzip
-Disallow: /
-
-User-agent: WebStripper
-Disallow: /
-
-User-agent: WebCapture
-Disallow: /
+User-agent: *
+Disallow: /file_download/
+Disallow: /textpattern/
+Sitemap: https://textile-lang.com/sitemap.xml
