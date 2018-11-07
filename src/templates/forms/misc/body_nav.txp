@@ -1,4 +1,4 @@
-<nav id="site-navigation" aria-label="Site navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+<nav class="layout-3col" id="site-navigation" aria-label="Site navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
     <ul>
         <li>
             <h5>Introduction</h5>

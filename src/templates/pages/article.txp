@@ -6,7 +6,7 @@
 <body itemscope itemtype="https://schema.org/WebPage">
     <txp:output_form form="body_header" />
     <div class="layout-container">
-        <div class="layout-3col-2span">
+        <main class="layout-3col-2span">
 
 <txp:if_category>
 
@@ -35,11 +35,8 @@
 
 </txp:if_category>
 
-        </div><!-- /layout-3col-2span -->
-        <div class="layout-3col">
-            <txp:output_form form="body_nav" />
-        </div>
-
+        </main>
+        <txp:output_form form="body_nav" />
     </div><!-- /layout-container -->
     <txp:output_form form="body_footer" />
 </body>

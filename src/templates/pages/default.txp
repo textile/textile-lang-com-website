@@ -69,9 +69,7 @@
 </script>
 
         </div><!-- /layout-3col-2span -->
-        <div class="layout-3col">
-            <txp:output_form form="body_nav" />
-        </div>
+        <txp:output_form form="body_nav" />
 
     </txp:if_category>
 
