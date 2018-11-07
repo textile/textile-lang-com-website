@@ -49,6 +49,24 @@ h6 {
 }
 
 /**
+ * Additional styling for links within complementary content and site footer.
+ */
+
+.complementary-content a:not(.button),
+.site-footer a {
+    color: $color-selecting;
+
+    &:hover,
+    &:active {
+        color: $color-selected;
+    }
+
+    &:focus {
+        outline: 1px solid $color-selecting;
+    }
+}
+
+/**
  * Images as links.
  *
  * Example HTML:

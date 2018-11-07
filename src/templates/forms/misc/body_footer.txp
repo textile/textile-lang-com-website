@@ -1,34 +1,11 @@
         </div><!-- /.container -->
     </div><!-- /.wrapper -->
-<div class="wrapper-footer">
-    <aside class="container complementary-content">
-        <section class="layout-2col" itemscope itemtype="https://schema.org/Organization">
-            <h4>Social channels</h4>
-            <meta itemprop="name" content="Textile">
-            <meta itemprop="sameAs" content="https://en.wikipedia.org/wiki/Textile_(markup_language)">
-            <ul class="social-channels">
-                <li><a class="twitter" rel="external" itemprop="sameAs" href="https://twitter.com/textileit" title="Follow us on Twitter">Twitter</a></li>
-                <li><a class="github" rel="external" itemprop="sameAs" href="https://github.com/textile" title="Follow us on GitHub">GitHub</a></li>
-            </ul>
-            <h4>Report issues</h4>
-            <ul class="list--no-bullets">
-                <li><a rel="external" href="https://github.com/textile/php-textile/issues"> Issues on PHP Textile (GitHub)</a></li>
-                <li><a rel="external" href="https://github.com/textile/php-textile/issues"> Issues on this website (GitHub)</a></li>
-            </ul>
-            <h4 class="accessibility">Host details</h4>
-            <p>
-                <small>
-                    Kindly hosted by<br>
-                    <a class="digitalocean" rel="external" href="https://www.digitalocean.com/?utm_source=opensource&amp;utm_campaign=textpattern" title="Go to the DigitalOcean website">DigitalOcean</a>
-                </small>
-            </p>
-        </section>
+<div class="container">
+    <aside class="layout-container complementary-content">
 
 
-<h4>Categories</h4>
-<txp:category_list wraptag="" break="br" parent="syntax" children="1" exclude="syntax,introduction" sort="id">
-    <txp:category title="1" link="1" section="" />
-</txp:category_list>
+
+        <section class="layout-3col">
 
 <h4>Further Information</h4>
 
@@ -40,10 +17,30 @@
 <a href="https://txstyle.org/doc">Blank input form</a><br />
 <a href="https://txstyle.org/tools/50/data-converter">Table Data Converter</a></p>
 
-
-
-
-
+        </section>
+        <section class="layout-3col">
+            <h4>Report issues</h4>
+            <ul class="list--no-bullets">
+                <li><a rel="external" href="https://github.com/textile/php-textile/issues"> Issues on PHP Textile (GitHub)</a></li>
+                <li><a rel="external" href="https://github.com/textile/php-textile/issues"> Issues on this website (GitHub)</a></li>
+            </ul>
+        </section>
+        <section class="layout-3col" itemscope itemtype="https://schema.org/Organization">
+            <h4>Social channels</h4>
+            <meta itemprop="name" content="Textile">
+            <meta itemprop="sameAs" content="https://en.wikipedia.org/wiki/Textile_(markup_language)">
+            <ul class="social-channels">
+                <li><a class="twitter" rel="external" itemprop="sameAs" href="https://twitter.com/textileit" title="Follow us on Twitter">Twitter</a></li>
+                <li><a class="github" rel="external" itemprop="sameAs" href="https://github.com/textile" title="Follow us on GitHub">GitHub</a></li>
+            </ul>
+            <h4 class="accessibility">Host details</h4>
+            <p>
+                <small>
+                    Kindly hosted by<br>
+                    <a class="digitalocean" rel="external" href="https://www.digitalocean.com/?utm_source=opensource&amp;utm_campaign=textpattern" title="Go to the DigitalOcean website">DigitalOcean</a>
+                </small>
+            </p>
+        </section>
     </aside>
     <footer class="site-footer">
         <p>

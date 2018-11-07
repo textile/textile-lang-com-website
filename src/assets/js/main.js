@@ -9,8 +9,7 @@
     // Load objects as variables.
 
     var code = document.querySelectorAll('pre code'),
-        fields = document.querySelectorAll('textarea'),
-        navmenu = document.getElementById('site-navigation');
+        fields = document.querySelectorAll('textarea');
 
     // Syntax highlighting, via 'Prism'.
     // Applies syntax highlighting to `code` HTML elements.
@@ -33,19 +32,6 @@
 
     if (fields.length) {
         autosize(fields);
-    }
-
-    // Responsive navigation menu.
-
-    if (navmenu) {
-        var navtoggle = document.getElementById('site-navigation-toggle');
-
-        navtoggle.addEventListener('click', function(e)
-        {
-            e.preventDefault();
-            navtoggle.classList.toggle('site-navigation-toggle-active');
-            navmenu.classList.toggle('site-navigation-open');
-        });
     }
 
 })();

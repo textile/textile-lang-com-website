@@ -14,7 +14,7 @@ $color-text:                          #333333 !default;
 $color-text-button:                   $color-text !default;
 $color-text-button-hover:             $color-text-button !default;
 $color-text-button-active:            darken($color-text-button, 10%) !default;
-$color-text-form:                     #000000 !default;
+$color-text-form:                     #333333 !default;
 $color-text-form-disabled:            #aaaaaa !default;
 $color-text-footnote:                 #585858 !default;
 $color-text-inverse:                  #ffffff !default;
@@ -25,18 +25,19 @@ $color-text-print:                    #000000 !default; // solid black prints fa
 $color-link:                          #004cbf !default;
 $color-link-hover:                    #0066ff !default;
 $color-link-focus:                    $color-link-hover !default;
-$color-selecting:                     tint($color-link-hover, 80%) !default;
-$color-selected:                      tint($color-link-hover, 90%) !default;
+$color-selecting:                     tint($color-link-hover, 70%) !default;
+$color-selected:                      tint($color-link-hover, 80%) !default;
 
 // borders
 
-$color-border:                        #cccccc !default;
-$color-border-light:                  #d4d4d4 !default;
+$color-border:                        #bbbbbb !default;
+$color-border-light:                  #dddddd !default;
 
 // neutral colours
 
-$color-background:                    #ffffff !default;
-$color-background-box:                #f7f7f7 !default;
+$color-body:                          #555555 !default;
+$color-background:                    #f8f8f8 !default;
+$color-background-box:                #eeeeee !default;
 $color-background-form:               #ffffff !default;
 $color-background-form-disabled:      #eeeeee !default;
 $color-gradient-from:                 #eeeeee !default;
@@ -46,8 +47,7 @@ $color-gradient-border:               darken($color-gradient-from, 13.5%) !defau
 // accent colours
 
 $color-highlight:                     #ffe7ac !default;
-$color-strong-highlight-box:          tint($color-highlight, 36%) !default;
-$color-highlight-box:                 tint($color-highlight, 84%) !default;
+$color-highlight-box:                 tint($color-highlight, 75%) !default;
 
 // button colours
 
