@@ -23,13 +23,17 @@
 
 <a href="https://github.com/textile/php-textile/issues"> Issues on PHP Textile (GitHub)</a></p>
 
+                    <h4 class="accessibility">Host details</h4>
+                    <p>
+                        <small>
+                            Kindly hosted by<br>
+                            <a class="digitalocean" rel="external" href="https://www.digitalocean.com/?utm_source=opensource&amp;utm_campaign=textpattern" title="Go to the DigitalOcean website">DigitalOcean</a>
+                        </small>
+                    </p>
 
     </aside>
     <footer class="site-footer">
-        <p class="legal">
-            Copyright 2003–<txp:php>echo date('Y');</txp:php> The Textile Language Development Team.
-            Textile is both free and open source. <a rel="external" href="https://raw.githubusercontent.com/textile/php-textile/master/LICENSE">BSD 3-Clause license</a>.
-        </p>
+        <p><small>Copyright 2003–<txp:php>echo date('Y');</txp:php> The Textile Language Development Team. Textile is both free and open source. <a rel="external" href="https://raw.githubusercontent.com/textile/php-textile/master/LICENSE">BSD 3-Clause license</a>.</small></p>
     </footer>
 </div>
 <script async src="/assets/js/app.@@timestamp.js"></script>
