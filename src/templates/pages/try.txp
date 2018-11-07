@@ -1,4 +1,4 @@
-<txp:php> 
+<txp:php>
   require txpath.'/Netcarver/Textile/Parser.php';
   require txpath.'/Netcarver/Textile/DataBag.php';
   require txpath.'/Netcarver/Textile/Tag.php';

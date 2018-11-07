@@ -4,6 +4,17 @@
     <aside class="container complementary-content">
 
 
+                        <section class="layout-2col" itemscope itemtype="https://schema.org/Organization">
+                            <h4>Social channels</h4>
+                            <meta itemprop="name" content="Textpattern CMS">
+                            <meta itemprop="sameAs" content="https://en.wikipedia.org/wiki/Textpattern">
+                            <ul class="social-channels">
+                                <li><a class="twitter" rel="external" itemprop="sameAs" href="https://twitter.com/textpattern" title="Follow us on Twitter">Twitter</a></li>
+                                <li><a class="github" rel="external" itemprop="sameAs" href="https://github.com/textpattern" title="Follow us on GitHub">GitHub</a></li>
+                            </ul>
+                        </section>
+
+
 <h4>Categories</h4>
 <txp:category_list wraptag="" break="br" parent="syntax" children="1" exclude="syntax,introduction" sort="id">
     <txp:category title="1" link="1" section="" />

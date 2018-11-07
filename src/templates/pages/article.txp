@@ -37,7 +37,7 @@
 
         </main>
         <txp:output_form form="body_nav" />
-    </div><!-- /layout-container -->
+    </div>
     <txp:output_form form="body_footer" />
 </body>
 </html>
