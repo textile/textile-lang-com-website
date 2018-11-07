@@ -28,12 +28,9 @@
     <footer class="site-footer">
         <p class="legal">
             Copyright 2003–<txp:php>echo date('Y');</txp:php> The Textile Language Development Team.
-            <a href="<txp:site_url />privacy">Privacy</a>.
-            <a href="<txp:site_url />humans.txt">Colophon</a>.
-            Textile is both free and open source. <a href="<txp:site_url />license">BSD 3-Clause license</a>.
+            Textile is both free and open source. <a rel="external" href="https://raw.githubusercontent.com/textile/php-textile/master/LICENSE">BSD 3-Clause license</a>.
         </p>
     </footer>
 </div>
-
 <script async src="/assets/js/app.@@timestamp.js"></script>
 <noscript>JavaScript is currently disabled in your browser - please activate it for the best experience.</noscript>

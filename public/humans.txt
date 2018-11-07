@@ -1,44 +1,29 @@
-/* the humans responsible & colophon */
-/* humanstxt.org */
+# http://humanstxt.org
+# The humans responsible and
+# technology colophon
 
-/* TEAM */
-  Site: txstyle.org
-  Twitter: @txstyler
+# TEAM
 
-/* THANKS */
-  Names (& URL): All Textpattern developers, now and past. 
+  Site: https://textile-lang.com/
+  Twitter: https://twitter.com/textileit
+  GitHub: https://github.com/textile
+  Location: Everywhere
 
-/* SITE */
+# THANKS
+
+  Names (& URL):
+    All Textile developers, now and past.
+
+# TECHNOLOGY COLOPHON
+
   Standards: HTML5, CSS3
-  Components: Textpattern CMS
-
-
-
-                .ttTTttx
-               xPXTTTTTtt-                     xppx
-             pPPTTTTTTTTXxx                  px    xp
-           .tPTTTTTTTTTTTTt-               .t-      .t-
-          xPXTTTTTTTTTTTTTp               px          xx
-        -tPTTTTTTTTTTTTTt                -x          -t
-      .tPTTTTTTTTTTTTTT.                -x         .t-
-     xtXTTTTTTTTTTTTTTTt-              xx         xx
-    PxTTTTTTTTTTTTTTTt..-t.          -t.     .pttx.
-    xxXTTTTTTTTTTTTTPpp.- px        xp     xXTt-
-     -tPTTTTTTTTxTTTXppp... xx    px     pTTx
-       xtPTTTTf   tTTTxp-... .t-.t.    .XTt.
-        .xxXX-     -XTTPxp.- ..Pp     tTX-
-                     tTTTtp--xt     pTTx
-                      -XTTXtt-    .PTP.
-                        xTTp     xTTTx
-                        pt     pTTTP-.t.
-                      .t-    .PTTTP-   xx
-                     xx     xTTTTTXp-.  .t.
-                   -t.    -XTx xTTTTt--.  px
-                 .t-    .PTP.   .tTTTTx--.. xp
-                xx     xTTp       .PTTTP--.  -t.
-              -t.    -XTt           pTTTTt.-.  px
-            .t-   ..PTX.              xTTTTp--.. xp
-           px    .xTTp                 .PTTTP----..t-
-         px.   .-XTt                     pTTTTx.p.. -t.
-        -p.    tTX-                        tTTTXp-p.. px
-         -xxppTT.                            -xTTP--.-p
+  Server: Nginx, Percona Server for MySQL, PHP
+  Components:
+    Textpattern CMS: https://textpattern.com/
+    Prism: http://prismjs.com/
+  Software:
+    Node.js: https://nodejs.org/
+    Grunt.js: https://gruntjs.com/
+    Composer: https://getcomposer.org/
+    git: https://git-scm.com/
+  Source: https://github.com/textile/textile-lang-com-website
