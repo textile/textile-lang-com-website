@@ -42,22 +42,19 @@
 <body itemscope itemtype="https://schema.org/WebPage">
     <txp:output_form form="body_header" />
     <div class="layout-container">
-
-
-    <txp:if_variable name="homepage" value="1">
-
         <txp:output_form form="body_nav" />
-        <main class="layout-3col-2span">
-            <div class="article-description" itemprop="description">
-                <p><txp:meta_description format="" /></p>
-            </div>
+        <txp:if_variable name="homepage" value="1">
 
-            <h2>Try Textile</h2>
-
-            <div id="try-textile">
-                <form method="post" action="/try/" id="try-textile-form">
-                    <div>
-                        <textarea id="text_in" name="text" rows="10" cols="60">h2. Textile
+            <main class="layout-3col-2span">
+                <article class="layout-4col-3span" itemscope itemtype="https://schema.org/Article">
+                    <div class="article-description" itemprop="description">
+                        <p><txp:meta_description format="" /></p>
+                    </div>
+                    <section>
+                        <h4>Try Textile (editable)</h4>
+                        <form method="post" action="/try/" id="try-textile-form">
+                            <div>
+                                <textarea id="text_in" name="text" rows="10" cols="60">h2. Textile
 
 * is a _shorthand syntax_ used to generate valid HTML,
 * is *easy* to read and *easy* to write,
@@ -65,19 +62,21 @@
 * including headers, quotes, lists, tables, and figures.
 
 *TxStyle* is a documentation project of Textile for "Textpattern CMS":https://textpattern.com.</textarea>
-                        <p><input id="submit" type="submit" class="try-options"></p>
-                    </div>
-                </form>
-            </div><!--#try-textile-->
-
-            <section class="outbox">
-                <h4>Browser output</h4>
-                <div class="result-textile" id="result"></div>
-            </section>
-            <section class="htmlbox">
-                <h4>HTML output</h4>
-                <pre class="result-html"><code id="html-result"></code></pre>
-            </section>
+                                <p><input id="submit" type="submit" class="try-options"></p>
+                            </div>
+                        </form>
+                    </section>
+                    <section>
+                        <h4>Browser output</h4>
+                        <div class="result-textile" id="result"></div>
+                    </section>
+                    <section>
+                        <h4>HTML output</h4>
+                        <pre class="result-html"><code id="html-result"></code></pre>
+                    </section>
+                    <txp:article id="1" />
+                </article>
+            </main><!-- /layout-3col-2span -->
 
 <script type="text/javascript">
     document.observe("dom:loaded", function() {
@@ -86,33 +85,28 @@
     });
 </script>
 
-            <txp:article id="1" />
-        </main><!-- /layout-3col-2span -->
+        <txp:else />
 
-    <txp:else />
+            <h2><txp:category title="1" link="0" /></h2>
 
-        <h2><txp:category title="1" link="0" /></h2>
+            <txp:article_custom category='<txp:category />' wraptag="nav" break="br" sort="custom_1">
 
-        <txp:article_custom category='<txp:category />' wraptag="nav" break="br" sort="custom_1">
+                <h3><txp:permlink><txp:title /></txp:permlink></h3>
 
-            <h3><txp:permlink><txp:title /></txp:permlink></h3>
+                <div class="inbox">
+                    <div class="typein">Input</div>
+                    <div id="result"><txp:pax_grep from="/\n/" to="<br />"><txp:body /></txp:pax_grep></div>
+                </div>
 
-            <div class="inbox">
-                <div class="typein">Input</div>
-                <div id="result"><txp:pax_grep from="/\n/" to="<br />"><txp:body /></txp:pax_grep></div>
-            </div>
+                <div class="outbox">
+                    <div class="typeout">Browser</div>
+                    <div id="result"><txp:body /></div>
+                </div>
 
-            <div class="outbox">
-                <div class="typeout">Browser</div>
-                <div id="result"><txp:body /></div>
-            </div>
+            </txp:article_custom>
 
-        </txp:article_custom>
-
-    </txp:if_variable>
-
-
-    </div><!-- /layout-container -->
+        </txp:if_variable>
+    </div>
     <txp:output_form form="body_footer" />
 </body>
 </html>

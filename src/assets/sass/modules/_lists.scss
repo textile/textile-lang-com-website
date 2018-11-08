@@ -53,18 +53,6 @@ dt {
 }
 
 /**
- * Have a numbered `ul` without the semantics implied by using an `ol`.
- *
- * Example HTML:
- *
- * <ul class="list--numbered">
- */
-
-.list--numbered {
-    list-style-type: decimal;
-}
-
-/**
  * Additional styling for article lists.
  *
  * Example HTML:

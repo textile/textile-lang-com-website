@@ -24,22 +24,6 @@ body {
 }
 
 /**
- * Force blocks.
- */
-
-.block {
-    display: block;
-}
-
-/**
- * Force inline blocks.
- */
-
-.inline-block {
-    display: inline-block;
-}
-
-/**
  * Hide items targetted at large screens. Overrode in second breakpoint.
  */
 
@@ -94,7 +78,6 @@ body {
 .masthead {
     display: inline-block;
     margin: 0;
-    font-size: 1rem;
 
     a {
         @include hide-text;
@@ -113,8 +96,6 @@ body {
 
 .stable-version {
     display: inline-block;
-    position: relative;
-    top: 1.5em;
     margin: 0;
     padding: 0.25em 0.5em;
     border-radius: 0.25em;
@@ -161,19 +142,8 @@ article {
 }
 
 /**
- * Extra pad above sections, useful when used as page anchors.
+ * Additonal styling for Textile resukts output fields.
  */
-
-.section {
-    margin-top: 2em;
-
-    &::before {
-        display: block;
-        height: 2em;
-        margin: -2em 0 0;
-        content: "";
-    }
-}
 
 .result-textile {
     padding: 0.5em; // 8px / 16px
@@ -193,4 +163,12 @@ article {
     border: 1px solid $color-border;
     border-radius: 0;
     background: $color-highlight-box;
+}
+
+/**
+ * Additonal margin above and below issue report box.
+ */
+
+.report-issues {
+    margin: 1.5rem 0;
 }
