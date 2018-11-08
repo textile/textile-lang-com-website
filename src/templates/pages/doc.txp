@@ -23,7 +23,7 @@
 
         <div class="outbox">
             <h3 class="typeout">Browser</h3>
-            <div id="result"><txp:upm_textile><txp:body /></txp:upm_textile></div>
+            <div id="result"><txp:body /></div>
         </div>
     </txp:article_custom>
 
