@@ -4,7 +4,7 @@ h1. Textile website
 
 *Under construction.*
 
-Official 2018+ website of the "Textile Markup Language":# project. *Requires Textpattern 4.7.1 or later.*
+Official 2018+ website of the "Textile Markup Language":https://textle-lang.com/ project. *Requires Textpattern 4.7.1 or later.*
 
 h2. Supported web browsers
 
@@ -28,9 +28,7 @@ h3. Installing required tools
 
 The project uses "Grunt":https://gruntjs.com/ to run tasks and "Sass":http://sass-lang.com/ for CSS pre-processing. First make sure you have base dependencies installed: "Node.js":https://nodejs.org/ and "Grunt":https://gruntjs.com/. You can install Node using the "installer":https://nodejs.org/, Composer using the "installer":https://getcomposer.org/, and Grunt with npm:
 
-```ShellSession
-$ npm install -g grunt-cli
-```
+bc. $ npm install -g grunt-cli
 
 Consult the Grunt documentation for more instructions if necessary.
 
@@ -38,7 +36,7 @@ h3. Installing dependencies
 
 After you have the base dependencies taken care of, you can install the project's dependencies. Navigate to the project's directory, and run the dependency manager:
 
-bc(highlight highlight-text-shell-session). $ cd textpattern-com-website
+bc. $ cd textpattern-com-website
 $ npm install
 $ composer install
 
@@ -48,7 +46,7 @@ h2. Building
 
 This repository hosts sources and needs to be built before it can be used. After you have installed all dependencies, you will be able to run tasks using Grunt, including building:
 
-bc(highlight highlight-text-shell-session). $ grunt @task@
+bc. $ grunt @task@
 
 Where the <code>@task@</code> is either @build@ or @watch@.
 
