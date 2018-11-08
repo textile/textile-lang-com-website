@@ -43,30 +43,11 @@
     <txp:output_form form="body_header" />
     <div class="layout-container">
 
-    <txp:if_category>
-        <h2><txp:category title="1" link="0" /></h2>
 
-        <txp:article_custom category='<txp:category />' wraptag="nav" break="br" sort="custom_1">
-
-            <h3><txp:permlink><txp:title /></txp:permlink></h3>
-
-            <div class="inbox">
-                <div class="typein">Input</div>
-                <div id="result"><txp:pax_grep from="/\n/" to="<br />"><txp:body /></txp:pax_grep></div>
-            </div>
-
-            <div class="outbox">
-                <div class="typeout">Browser</div>
-                <div id="result"><txp:upm_textile><txp:body /></txp:upm_textile></div>
-            </div>
-
-        </txp:article_custom>
-
-    <txp:else />
+    <txp:if_variable name="homepage" value="1">
 
         <txp:output_form form="body_nav" />
-        <div class="layout-3col-2span">
-
+        <main class="layout-3col-2span">
             <div class="article-description" itemprop="description">
                 <p><txp:meta_description format="" /></p>
             </div>
@@ -105,9 +86,31 @@
     });
 </script>
 
-        </div><!-- /layout-3col-2span -->
+            <txp:article id="1" />
+        </main><!-- /layout-3col-2span -->
 
-    </txp:if_category>
+    <txp:else />
+
+        <h2><txp:category title="1" link="0" /></h2>
+
+        <txp:article_custom category='<txp:category />' wraptag="nav" break="br" sort="custom_1">
+
+            <h3><txp:permlink><txp:title /></txp:permlink></h3>
+
+            <div class="inbox">
+                <div class="typein">Input</div>
+                <div id="result"><txp:pax_grep from="/\n/" to="<br />"><txp:body /></txp:pax_grep></div>
+            </div>
+
+            <div class="outbox">
+                <div class="typeout">Browser</div>
+                <div id="result"><txp:upm_textile><txp:body /></txp:upm_textile></div>
+            </div>
+
+        </txp:article_custom>
+
+    </txp:if_variable>
+
 
     </div><!-- /layout-container -->
     <txp:output_form form="body_footer" />

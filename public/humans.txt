@@ -12,7 +12,11 @@
 # THANKS
 
   Names (& URL):
-    All Textile developers, now and past.
+    All Textile developers, now and past
+    Peter Sinn
+    Phil Wareham (https://www.designhive.com)
+    Brad Choate (https://bradchoate.com)
+    Destry Wion (https://wion.com)
 
 # TECHNOLOGY COLOPHON
 

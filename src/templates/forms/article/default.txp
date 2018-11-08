@@ -1,9 +1,14 @@
-<h3><txp:title /></h3>
-<div class="input">
-    <div class="typein">Input</div>
-    <pre><code><txp:body /></code></pre>
-</div>
-<div class="output">
-    <div class="typeout">Browser</div>
-    <txp:excerpt />
+<h2 itemprop="headline"><txp:title /></h2>
+<meta itemprop="datePublished" content="<txp:posted format="iso8601" />">
+<meta itemprop="dateModified" content="<txp:modified format="iso8601" />">
+<txp:if_description>
+    <div class="article-description" itemprop="description">
+        <p><txp:meta_description format="" /></p>
+    </div>
+</txp:if_description>
+<meta itemprop="image" content="<txp:site_url />assets/img/com/textile-wordmark-og.png">
+<meta itemprop="width" content="1200">
+<meta itemprop="height" content="1200">
+<div class="article-body" itemprop="articleBody">
+    <txp:body />
 </div>
