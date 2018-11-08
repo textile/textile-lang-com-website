@@ -3,3 +3,60 @@ h1. Textile website
 !https://badges.greenkeeper.io/textile/textile-lang-com-website.svg(Greenkeeper)!:https://greenkeeper.io/ !https://travis-ci.org/textile/textile-lang-com-website.svg(Build Status)!:https://travis-ci.org/textile/textile-lang-com-website
 
 *Under construction.*
+
+Official 2018+ website of the "Textile Markup Language":# project. *Requires Textpattern 4.7.1 or later.*
+
+h2. Supported web browsers
+
+* Internet Explorer 11.
+* Chrome, Edge, Firefox, Safari and Opera the last two recent stable releases.
+* Firefox ESR latest major point release.
+
+Older versions of the above and other browsers may work, but these are the ones we verify.
+
+h2. Requirements
+
+Building this repository requires:
+
+* "Node.js":https://nodejs.org/
+* "Grunt":https://gruntjs.com/
+* "Composer":https://getcomposer.org/
+
+h2. Setup
+
+h3. Installing required tools
+
+The project uses "Grunt":https://gruntjs.com/ to run tasks and "Sass":http://sass-lang.com/ for CSS pre-processing. First make sure you have base dependencies installed: "Node.js":https://nodejs.org/ and "Grunt":https://gruntjs.com/. You can install Node using the "installer":https://nodejs.org/, Composer using the "installer":https://getcomposer.org/, and Grunt with npm:
+
+```ShellSession
+$ npm install -g grunt-cli
+```
+
+Consult the Grunt documentation for more instructions if necessary.
+
+h3. Installing dependencies
+
+After you have the base dependencies taken care of, you can install the project's dependencies. Navigate to the project's directory, and run the dependency manager:
+
+bc(highlight highlight-text-shell-session). $ cd textpattern-com-website
+$ npm install
+$ composer install
+
+*npm* installs Node modules for Grunt and *composer* installs PHP libraries.
+
+h2. Building
+
+This repository hosts sources and needs to be built before it can be used. After you have installed all dependencies, you will be able to run tasks using Grunt, including building:
+
+bc(highlight highlight-text-shell-session). $ grunt @task@
+
+Where the <code>@task@</code> is either @build@ or @watch@.
+
+* The @build@ task builds the project.
+* The @watch@ task will launch a task that watches for file changes; the project is then automatically built if a source file is modified.
+
+h2. Plugins used
+
+All plugins we use are installed via Composer:
+
+* "@etc_cache@":https://github.com/etc-plugins/etc_cache ✓ Composer
