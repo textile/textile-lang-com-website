@@ -2,6 +2,42 @@
 <html lang="en-GB-oxendict">
 <head>
     <txp:output_form form="head" />
+    <txp:if_category>
+        <title>Category: <txp:category title /> / Textile Markup Language Documentation</title>
+        <meta name="description" content="Blog article ‘<txp:category title />’ category archive.">
+        <meta name="robots" content="noindex, follow">
+    <txp:else />
+        <title>Textile Markup Language Documentation</title>
+        <meta name="description" content="The official documentation for Textile Markup Language - A humane web text generator.">
+        <meta name="keywords" content="textile, markup language, documentation, open source, blogs, blogging, cms, content management, web design, web site design, web development, web site development">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="<txp:site_url />">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@textileit">
+        <meta name="twitter:title" content="Textile Markup Language Documentation">
+        <meta name="twitter:description" content="The official documentation for Textile Markup Language - A humane web text generator.">
+        <meta name="twitter:image:src" content="<txp:site_url />apple-touch-icon-180x180.png">
+        <meta name="twitter:url" content="<txp:site_url />">
+        <meta property="og:site_name" content="Textile Markup Language">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Textile Markup Language Documentation">
+        <meta property="og:description" content="The official documentation for Textile Markup Language - A humane web text generator.">
+        <meta property="og:image" content="<txp:site_url />assets/img/com/textile-wordmark-og.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="1200">
+        <meta property="og:image:alt" content="Textile logo">
+        <meta property="og:url" content="<txp:site_url />">
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "headline": "Textile Markup Language Documentation",
+                "description": "The official documentation for Textile Markup Language - A humane web text generator.",
+                "url": "<txp:site_url escape="json" />"
+            }
+        </script>
+        <txp:variable name="homepage" value="1" />
+    </txp:if_category>
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
     <txp:output_form form="body_header" />
@@ -28,6 +64,7 @@
 
     <txp:else />
 
+        <txp:output_form form="body_nav" />
         <div class="layout-3col-2span">
 
             <div class="article-description" itemprop="description">
@@ -69,7 +106,6 @@
 </script>
 
         </div><!-- /layout-3col-2span -->
-        <txp:output_form form="body_nav" />
 
     </txp:if_category>
 

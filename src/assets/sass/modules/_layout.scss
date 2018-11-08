@@ -40,6 +40,14 @@ body {
 }
 
 /**
+ * Hide items targetted at large screens. Overrode in second breakpoint.
+ */
+
+.screen-large {
+    display: none;
+}
+
+/**
  * Outer wrapper for main layouts.
  *
  * Example HTML:
@@ -52,7 +60,7 @@ body {
  */
 
 .wrapper {
-    padding: 1px 0 1em;
+    padding: 1px 0;
     background: $color-background;
 }
 

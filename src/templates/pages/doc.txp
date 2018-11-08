@@ -6,6 +6,7 @@
 <body itemscope itemtype="https://schema.org/WebPage">
     <txp:output_form form="body_header" />
     <div class="layout-container">
+        <txp:output_form form="body_nav" />
         <main class="layout-3col-2span">
 
 <txp:if_category>
@@ -108,9 +109,9 @@
     No further examples.
 </txp:if_excerpt>
 
-<txp:if_custom_field name="references">
+<txp:if_custom_field name="linked-references">
 <h3>Further reading: <txp:title /></h3>
-<txp:linklist id="<txp:custom_field name="references" />" wraptag="ol" break="li" />
+<txp:linklist id="<txp:custom_field name="linked-references" />" wraptag="ol" break="li" />
 </txp:if_custom_field>
 
     </article>
@@ -122,7 +123,6 @@
             <p class="alert-block information footnote report-issues">See something wrong in this page? Outdated info, a broken link, faulty code example, or whatever? Please <a rel="external" href="https://github.com/textile/textile-lang-com-website/issues">write an issue</a> and we’ll fix it.</p>
 
         </main>
-        <txp:output_form form="body_nav" />
     </div><!-- /layout-container -->
     <txp:output_form form="body_footer" />
 </body>

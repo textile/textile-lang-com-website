@@ -5,9 +5,7 @@
 <link rel="icon" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" sizes="16x16" href="/favicon-16x16.png">
 <meta name="generator" content="Textpattern CMS">
-<meta name="application-name" content="Textpattern">
-
-<txp:if_category><title>Textile &middot; <txp:category title="1" /></title><txp:else /><txp:if_section name="default"><title>Textile Syntax Documentation and Sandbox</title><txp:else /><title>Textile &middot; <txp:title /></title></txp:if_section></txp:if_category>
+<meta name="application-name" content="Textile Markup Language">
 
 <txp:if_section name="tools">
     <txp:spf_js name="jquery_min" type="1" />

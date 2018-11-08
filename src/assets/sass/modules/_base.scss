@@ -37,17 +37,10 @@ button {
  * More info: http://nicolasgallagher.com/micro-clearfix-hack/
  */
 
-header,
-footer,
-nav ul,
-nav ol,
-.clearfix,
-.paginator {
-    &::after {
-        display: table;
-        clear: both;
-        content: "";
-    }
+.clearfix::after {
+    display: table;
+    clear: both;
+    content: "";
 }
 
 /**

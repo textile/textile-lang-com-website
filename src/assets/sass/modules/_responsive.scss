@@ -22,6 +22,14 @@
 @media screen and (min-width: $breakpoint-2) {
 
     /**
+     * Screen size-specific elements.
+     */
+
+    .screen-large {
+        display: block; // TODO: use `display: revert` when browser support is widespread.
+    }
+
+    /**
      * Cells for 2 column and 3 column layouts are generated.
      *
      * Example HTML:
@@ -40,24 +48,6 @@
 
     .layout-3col-2span {
         grid-column: span 8;
-    }
-
-    /**
-     * Navigation layout changes.
-     */
-
-    #site-navigation {
-        .js & {
-            max-height: none;
-        }
-    }
-
-    /**
-     * Remove navigation toggle show/hide button for navigation.
-     */
-
-    #site-navigation-toggle {
-        display: none;
     }
 
 }
