@@ -2,37 +2,33 @@
     </div>
 <div class="container">
     <aside class="layout-container complementary-content">
-
         <section class="layout-3col">
-
-<h4>Further Information</h4>
-
-<txp:article_custom section="article" category="information" wraptag="" break="br" sort="Title">
-    <txp:permlink><txp:title /></txp:permlink>
-</txp:article_custom>
-
-            <h4>Tools</h4>
+            <h5>Tools</h5>
             <ul class="list--no-bullets">
                 <li><a href="<txp:site_url />doc">Blank Textile input form</a></li>
                 <li><a href="<txp:site_url />tools/data-converter">Table Data Converter</a></li>
             </ul>
-        </section>
-        <section class="layout-3col">
-            <h4>Report issues</h4>
+            <h5>Report issues</h5>
             <ul class="list--no-bullets">
                 <li><a rel="external" href="https://github.com/textile/php-textile/issues"> Issues on PHP Textile (GitHub)</a></li>
                 <li><a rel="external" href="https://github.com/textile/php-textile/issues"> Issues on this website (GitHub)</a></li>
             </ul>
         </section>
+        <section class="layout-3col">
+            <h5>Further information</h5>
+            <txp:article_custom section="article" wraptag="ul" break="li" sort="custom_1" class="list--no-bullets">
+                <txp:permlink><txp:title /></txp:permlink>
+            </txp:article_custom>
+        </section>
         <section class="layout-3col" itemscope itemtype="https://schema.org/Organization">
-            <h4>Social channels</h4>
+            <h5>Social channels</h5>
             <meta itemprop="name" content="Textile">
             <meta itemprop="sameAs" content="https://en.wikipedia.org/wiki/Textile_(markup_language)">
             <ul class="social-channels">
                 <li><a class="twitter" rel="external" itemprop="sameAs" href="https://twitter.com/textileit" title="Follow us on Twitter">Twitter</a></li>
                 <li><a class="github" rel="external" itemprop="sameAs" href="https://github.com/textile" title="Follow us on GitHub">GitHub</a></li>
             </ul>
-            <h4 class="accessibility">Host details</h4>
+            <h5 class="accessibility">Host details</h5>
             <p>
                 <small>
                     Kindly hosted by<br>
