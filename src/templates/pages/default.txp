@@ -43,9 +43,9 @@
     <txp:output_form form="body_header" />
     <div class="layout-container">
         <txp:output_form form="body_nav" />
-        <txp:if_variable name="homepage" value="1">
-            <main class="layout-3col-2span">
-                <article class="layout-4col-3span" itemscope itemtype="https://schema.org/Article">
+        <main class="layout-3col-2span">
+            <txp:if_variable name="homepage" value="1">
+                <article itemscope itemtype="https://schema.org/Article">
                     <div class="article-description" itemprop="description">
                         <p><txp:meta_description format="" /></p>
                     </div>
@@ -75,24 +75,22 @@ Textile integrations are available for "a wide range platforms":/article/.</text
                         <txp:article id="1" />
                     </txp:etc_cache>
                 </article>
-            </main><!-- /layout-3col-2span -->
-            <script type="text/javascript">
-                document.observe("dom:loaded", function() {
-                    new TryTextileObserver('text_in', 'result', 'html-result').parseTextile();
-                    $('submit').hide();
-                });
-            </script>
-        <txp:else />
-
-            <h2><txp:category title="1" link="0" /></h2>
-
-            <txp:article_custom category='<txp:category />' wraptag="ul" break="li" sort="custom_1">
-
-                TODO
-
-            </txp:article_custom>
-
-        </txp:if_variable>
+                <script type="text/javascript">
+                    document.observe("dom:loaded", function() {
+                        new TryTextileObserver('text_in', 'result', 'html-result').parseTextile();
+                        $('submit').hide();
+                    });
+                </script>
+            <txp:else />
+                <h2>Category: <txp:category title /></h2>
+                <div class="article-description" itemprop="description">
+                    <p><txp:meta_description format="" /></p>
+                </div>
+                <div class="teaser-container">
+                    <txp:article_custom category='<txp:category />' form="article_listing" limit="99" sort="custom_1 asc" />
+                </div>
+            </txp:if_variable>
+        </main>
     </div>
     <txp:output_form form="body_footer" />
 </body>
