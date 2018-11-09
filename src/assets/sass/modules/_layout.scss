@@ -142,6 +142,19 @@ article {
 }
 
 /**
+ * Article teasers.
+ */
+
+.teaser {
+    padding-bottom: 0.5em;
+    border-bottom: 2px dashed $color-border;
+}
+
+.teaser-container {
+    border-top: 2px dashed $color-border;
+}
+
+/**
  * Additonal styling for Textile resukts output fields.
  */
 
