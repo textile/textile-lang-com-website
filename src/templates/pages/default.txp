@@ -44,7 +44,6 @@
     <div class="layout-container">
         <txp:output_form form="body_nav" />
         <txp:if_variable name="homepage" value="1">
-
             <main class="layout-3col-2span">
                 <article class="layout-4col-3span" itemscope itemtype="https://schema.org/Article">
                     <div class="article-description" itemprop="description">
@@ -53,8 +52,7 @@
                     <section>
                         <h4>Try Textile (editable)</h4>
                         <form method="post" action="/try/" id="try-textile-form">
-                            <div>
-                                <textarea id="text_in" name="text" rows="10" cols="60">h2. Textile
+                            <textarea id="text_in" name="text" rows="10" cols="60">h2. Textile
 
 * is a _shorthand syntax_ used to generate valid HTML,
 * is *easy* to read and *easy* to write,
@@ -62,8 +60,7 @@
 * including headers, quotes, lists, tables, and figures.
 
 Textile integrations are available for "a wide range platforms":https://textile-lang.com/integrations.</textarea>
-                                <p><input id="submit" type="submit" class="try-options"></p>
-                            </div>
+                        <p><input id="submit" type="submit"> <input id="reset" type="reset"></p>
                         </form>
                     </section>
                     <section>
@@ -77,14 +74,12 @@ Textile integrations are available for "a wide range platforms":https://textile-
                     <txp:article id="1" />
                 </article>
             </main><!-- /layout-3col-2span -->
-
-<script type="text/javascript">
-    document.observe("dom:loaded", function() {
-        new TryTextileObserver('text_in', 'result', 'html-result').parseTextile();
-        $('submit').hide();
-    });
-</script>
-
+            <script type="text/javascript">
+                document.observe("dom:loaded", function() {
+                    new TryTextileObserver('text_in', 'result', 'html-result').parseTextile();
+                    $('submit').hide();
+                });
+            </script>
         <txp:else />
 
             <h2><txp:category title="1" link="0" /></h2>

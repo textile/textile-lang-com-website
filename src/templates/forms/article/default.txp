@@ -9,6 +9,8 @@
 <meta itemprop="image" content="<txp:site_url />assets/img/com/textile-wordmark-og.png">
 <meta itemprop="width" content="1200">
 <meta itemprop="height" content="1200">
-<div class="article-body" itemprop="articleBody">
-    <txp:body />
-</div>
+<txp:if_section not section="doc">
+    <div class="article-body" itemprop="articleBody">
+        <txp:body />
+    </div>
+</txp:if_section>

@@ -68,62 +68,50 @@
     <div class="layout-container">
         <txp:output_form form="body_nav" />
         <main class="layout-3col-2span">
-            <article itemscope itemtype="https://schema.org/Article">
-                <h2 itemprop="name headline"><txp:title /></h2>
+            <txp:if_individual_article>
+                <article itemscope itemtype="https://schema.org/Article">
+                <txp:article />
+            <txp:else />
+                <h2>Blank Textile input form</h2>
                 <div class="article-description" itemprop="description">
-                    <p><txp:meta_description format="" /></p>
+                    <p>Try your own Textile markup here.</p>
                 </div>
-
-
-
-
-
-<div id="try-textile">
-    <h4>Textile input (editable)</h4>
-    <form method="post" action="/try/" id="try-textile-form">
-        <div>
-            <textarea id="text_field" name="text" rows="10" cols="60"><txp:body /></textarea>
-
-<p>
-<input id="submit" type="submit" class="try-options" />
-<input id="reset" type="reset" class="reset try-options" />
-</p>
-
-</div>
-
-    </form>
-</div><!--#try-textile-->
-
-            <section class="outbox">
+            </txp:if_individual_article>
+            <section>
+                <h4>Textile input (editable)</h4>
+                <form method="post" action="/try/" id="try-textile-form">
+                    <textarea id="text_in" name="text" rows="10" cols="60"><txp:if_individual_article><txp:body /><txp:else />Go...</txp:if_individual_article></textarea>
+                    <p><input id="submit" type="submit"> <input id="reset" type="reset"></p>
+                </form>
+            </section>
+            <section>
                 <h4>Browser output</h4>
                 <div class="result-textile" id="result"></div>
             </section>
-            <section class="htmlbox">
+            <section>
                 <h4>HTML output</h4>
                 <pre class="result-html"><code id="html-result"></code></pre>
             </section>
-
-<script type="text/javascript">
-    document.observe("dom:loaded", function() {
-        new TryTextileObserver('text_field', 'result', 'html-result').parseTextile();
-        $('submit').hide();
-    });
-</script>
-
-                <txp:if_individual_article>
-                    <hr>
-                    <h3>More about: <txp:title /></h3>
-                    <txp:if_excerpt>
-                        <txp:excerpt />
-                    <txp:else />
-                        No further examples.
-                    </txp:if_excerpt>
-                    <txp:if_custom_field name="linked-references">
-                        <h3>Further reading: <txp:title /></h3>
-                        <txp:linklist id="<txp:custom_field name="linked-references" />" wraptag="ol" break="li" />
-                    </txp:if_custom_field>
-                </txp:if_individual_article>
-            </article>
+            <script>
+                document.observe('dom:loaded', function() {
+                    new TryTextileObserver('text_in', 'result', 'html-result').parseTextile();
+                    $('submit').hide();
+                });
+            </script>
+            <txp:if_individual_article>
+                <hr>
+                <h3>More about: <txp:title /></h3>
+                <txp:if_excerpt>
+                    <txp:excerpt />
+                <txp:else />
+                    No further examples.
+                </txp:if_excerpt>
+                <txp:if_custom_field name="linked-references">
+                    <h3>Further reading: <txp:title /></h3>
+                    <txp:linklist id="<txp:custom_field name="linked-references" />" wraptag="ol" break="li" />
+                </txp:if_custom_field>
+                </article>
+            </txp:if_individual_article>
             <p class="alert-block information footnote report-issues">See something wrong in this page? Outdated info, a broken link, faulty code example, or whatever? Please <a rel="external" href="https://github.com/textile/textile-lang-com-website/issues">write an issue</a> and we’ll fix it.</p>
         </main>
     </div>

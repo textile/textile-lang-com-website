@@ -1,9 +1,7 @@
-        </div><!-- /.container -->
-    </div><!-- /.wrapper -->
+        </div>
+    </div>
 <div class="container">
     <aside class="layout-container complementary-content">
-
-
 
         <section class="layout-3col">
 
@@ -13,10 +11,11 @@
     <txp:permlink><txp:title /></txp:permlink>
 </txp:article_custom>
 
-<h4>Tools</h4>
-<a href="<txp:site_url />doc">Blank input form</a><br />
-<a href="<txp:site_url />tools/data-converter">Table Data Converter</a></p>
-
+            <h4>Tools</h4>
+            <ul class="list--no-bullets">
+                <li><a href="<txp:site_url />doc">Blank Textile input form</a></li>
+                <li><a href="<txp:site_url />tools/data-converter">Table Data Converter</a></li>
+            </ul>
         </section>
         <section class="layout-3col">
             <h4>Report issues</h4>
