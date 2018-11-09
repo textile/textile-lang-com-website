@@ -6,7 +6,7 @@
             <h5>Tools</h5>
             <ul class="list--no-bullets">
                 <li><a href="<txp:site_url />doc">Blank Textile input form</a></li>
-                <li><a href="<txp:site_url />tools/data-converter">Table Data Converter</a></li>
+                <li><a href="<txp:site_url />tools/data-converter">Table data converter</a></li>
             </ul>
             <h5>Report issues</h5>
             <ul class="list--no-bullets">
