@@ -22,20 +22,13 @@
  *
  * <div class="layout-1col"></div>
  *
- * <div class="layout-2col">
- * <div class="layout-2col">
- *
- * <div class="layout-4col-3span"></div>
- * <div class="layout-4col"></div>
+ * <div class="layout-3col">
+ * <div class="layout-3col">
+ * <div class="layout-3col">
  */
 
 .layout-1col,
-.layout-2col,
 .layout-3col,
-.layout-3col-2span,
-.layout-4col,
-.layout-4col-alt,
-.layout-4col-2span,
-.layout-4col-3span {
+.layout-3col-2span {
     grid-column: span 12;
 }
