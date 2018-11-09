@@ -2,6 +2,13 @@
 <html lang="en-GB-oxendict">
 <head>
     <txp:output_form form="head" />
+
+    <txp:spf_js name="jquery_min" type="1" />
+    <txp:spf_js name="CSVParser" type="1" />
+    <txp:spf_js name="DataGridRenderer" type="1" />
+    <txp:spf_js name="Controller" type="1" />
+    <txp:spf_js name="converter" type="1" />
+
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
     <txp:output_form form="body_header" />
