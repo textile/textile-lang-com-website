@@ -16,9 +16,11 @@
         </section>
         <section class="layout-3col">
             <h5>Further information</h5>
-            <txp:article_custom section="article" wraptag="ul" break="li" sort="custom_1" class="list--no-bullets">
-                <txp:permlink><txp:title /></txp:permlink>
-            </txp:article_custom>
+            <txp:etc_cache id="footer-article-list">
+                <txp:article_custom section="article" wraptag="ul" break="li" sort="custom_1" class="list--no-bullets">
+                    <txp:permlink><txp:title /></txp:permlink>
+                </txp:article_custom>
+            </txp:etc_cache>
         </section>
         <section class="layout-3col" itemscope itemtype="https://schema.org/Organization">
             <h5>Social channels</h5>

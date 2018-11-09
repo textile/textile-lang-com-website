@@ -71,7 +71,9 @@ Textile integrations are available for "a wide range platforms":https://textile-
                         <h4>HTML output</h4>
                         <pre class="result-html"><code id="html-result"></code></pre>
                     </section>
-                    <txp:article id="1" />
+                    <txp:etc_cache id="homepage-article">
+                        <txp:article id="1" />
+                    </txp:etc_cache>
                 </article>
             </main><!-- /layout-3col-2span -->
             <script type="text/javascript">
@@ -84,19 +86,9 @@ Textile integrations are available for "a wide range platforms":https://textile-
 
             <h2><txp:category title="1" link="0" /></h2>
 
-            <txp:article_custom category='<txp:category />' wraptag="nav" break="br" sort="custom_1">
+            <txp:article_custom category='<txp:category />' wraptag="ul" break="li" sort="custom_1">
 
-                <h3><txp:permlink><txp:title /></txp:permlink></h3>
-
-                <div class="inbox">
-                    <div class="typein">Input</div>
-                    <div id="result"><txp:pax_grep from="/\n/" to="<br />"><txp:body /></txp:pax_grep></div>
-                </div>
-
-                <div class="outbox">
-                    <div class="typeout">Browser</div>
-                    <div id="result"><txp:body /></div>
-                </div>
+                TODO
 
             </txp:article_custom>
 
