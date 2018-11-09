@@ -59,7 +59,7 @@
 * can generate complex pages,
 * including headers, quotes, lists, tables, and figures.
 
-Textile integrations are available for "a wide range platforms":https://textile-lang.com/integrations.</textarea>
+Textile integrations are available for "a wide range platforms":https://textile-lang.com/article/.</textarea>
                         <p><input id="submit" type="submit"> <input id="reset" type="reset"></p>
                         </form>
                     </section>

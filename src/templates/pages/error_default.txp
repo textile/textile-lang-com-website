@@ -2,6 +2,9 @@
 <html lang="en-GB-oxendict">
 <head>
     <txp:output_form form="head" />
+    <title><txp:error_status /> / Textile Markup Language Documentation</title>
+    <meta name="description" content="<txp:error_message/>">
+    <meta name="robots" content="none">
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
     <txp:output_form form="body_header" />
