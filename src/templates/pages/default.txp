@@ -61,7 +61,7 @@
 * can generate complex pages,
 * including headers, quotes, lists, tables, and figures.
 
-*TxStyle* is a documentation project of Textile for "Textpattern CMS":https://textpattern.com.</textarea>
+Textile integrations are available for "a wide range platforms":https://textile-lang.com/integrations.</textarea>
                                 <p><input id="submit" type="submit" class="try-options"></p>
                             </div>
                         </form>

@@ -14,8 +14,8 @@
 </txp:article_custom>
 
 <h4>Tools</h4>
-<a href="https://txstyle.org/doc">Blank input form</a><br />
-<a href="https://txstyle.org/tools/50/data-converter">Table Data Converter</a></p>
+<a href="<txp:site_url />doc">Blank input form</a><br />
+<a href="<txp:site_url />tools/data-converter">Table Data Converter</a></p>
 
         </section>
         <section class="layout-3col">

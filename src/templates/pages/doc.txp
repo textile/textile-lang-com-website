@@ -9,27 +9,8 @@
         <txp:output_form form="body_nav" />
         <main class="layout-3col-2span">
 
-<txp:if_category>
 
-    <h2><txp:category title="1" link="0" /></h2>
-
-    <txp:article_custom category='<txp:category />' wraptag="div" break="br" sort="custom_1">
-        <h3><txp:permlink><txp:title /></txp:permlink></h3>
-
-        <div class="inbox">
-            <h3 class="typein">Input</h3>
-            <div id="result"><txp:pax_grep from="/\n/" to="<br />"><txp:body /></txp:pax_grep></div>
-        </div>
-
-        <div class="outbox">
-            <h3 class="typeout">Browser</h3>
-            <div id="result"><txp:body /></div>
-        </div>
-    </txp:article_custom>
-
-<txp:else />
-
-<txp:if_individual_article>
+        <txp:if_individual_article>
 
     <article itemscope itemtype="https://schema.org/Article">
         <h2 itemprop="name headline"><txp:title /></h2>
@@ -49,28 +30,6 @@
     <form method="post" action="/try/" id="try-textile-form">
         <div>
             <textarea id="text_field" name="text" rows="10" cols="60"><txp:body /></textarea>
-
-<txp:hide>
-<div class="rtext" />
-<span class="try-options"><input id="toggle-html-output" type="checkbox" name="toggle-html-output"><label for="toggle-html-output">Show HTML output</label></span>
-<script type="text/javascript">
-  Event.observe($('toggle-html-output'), 'click', function(){
-   $$('div.htmlbox').each( function(node) {
-      if($('toggle-html-output').checked) {
-        node.show();
-      } else {
-        node.hide();
-      }
-    });
-  });
-</script>
-</div>
-
-<div class="htmlbox" style="display:none;">
-<h3 class="typeout">HTML output:</h3>
-<pre id="html-result"></pre>
-</div>
-</txp:hide>
 
 <p>
 <input id="submit" type="submit" class="try-options" />
@@ -116,14 +75,11 @@
 
     </article>
 
-</txp:if_individual_article>
 
-</txp:if_category>
-
+            </txp:if_individual_article>
             <p class="alert-block information footnote report-issues">See something wrong in this page? Outdated info, a broken link, faulty code example, or whatever? Please <a rel="external" href="https://github.com/textile/textile-lang-com-website/issues">write an issue</a> and we’ll fix it.</p>
-
         </main>
-    </div><!-- /layout-container -->
+    </div>
     <txp:output_form form="body_footer" />
 </body>
 </html>
