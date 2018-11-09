@@ -2,31 +2,84 @@
 <html lang="en-GB-oxendict">
 <head>
     <txp:output_form form="head" />
+    <txp:if_individual_article>
+        <title><txp:title /> / Textile Markup Language Documentation</title>
+        <txp:meta_description />
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="<txp:permlink />">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@textileit">
+        <meta name="twitter:title" content="<txp:title />">
+        <meta name="twitter:image:src" content="<txp:site_url />apple-touch-icon-180x180.png">
+        <meta name="twitter:image:src" content="<txp:image_url />">
+        <meta name="twitter:url" content="<txp:permlink />">
+        <meta property="og:site_name" content="Textile Markup Language">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Textile Markup Language Documentation">
+        <meta property="og:description" content="<txp:meta_description format="" />">
+        <meta property="og:url" content="<txp:permlink />">
+        <meta property="og:image" content="<txp:site_url />assets/img/com/textile-wordmark-og.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="1200">
+        <meta property="og:image:alt" content="Textile logo">
+        <meta property="og:url" content="<txp:site_url />">
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "headline": "<txp:title escape="json" />",
+                "description": "<txp:meta_description format="" escape="json" />",
+                "url": "<txp:permlink escape="json" />"
+            }
+        </script>
+    <txp:else />
+        <title>Blank Textile input form / Textile Markup Language Documentation</title>
+        <txp:meta_description />
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="<txp:section url />">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@textileit">
+        <meta name="twitter:title" content="Blank Textile input form">
+        <meta name="twitter:description" content="<txp:meta_description format="" />">
+        <meta name="twitter:image:src" content="<txp:site_url />apple-touch-icon-180x180.png">
+        <meta name="twitter:url" content="<txp:section url />">
+        <meta property="og:site_name" content="Textile Markup Language">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Textile Markup Language Documentation">
+        <meta property="og:description" content="<txp:meta_description format="" />">
+        <meta property="og:image" content="<txp:site_url />assets/img/com/textile-wordmark-og.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="1200">
+        <meta property="og:image:alt" content="Textile logo">
+        <meta property="og:url" content="<txp:site_url />">
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "headline": "Blank Textile input form",
+                "description": "<txp:meta_description format="" escape="json" />",
+                "url": "<txp:section url escape="json" />"
+            }
+        </script>
+    </txp:if_individual_article>
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
     <txp:output_form form="body_header" />
     <div class="layout-container">
         <txp:output_form form="body_nav" />
         <main class="layout-3col-2span">
+            <article itemscope itemtype="https://schema.org/Article">
+                <h2 itemprop="name headline"><txp:title /></h2>
+                <div class="article-description" itemprop="description">
+                    <p><txp:meta_description format="" /></p>
+                </div>
 
 
-        <txp:if_individual_article>
 
-    <article itemscope itemtype="https://schema.org/Article">
-        <h2 itemprop="name headline"><txp:title /></h2>
-        <div class="article-description" itemprop="description">
-            <p><txp:meta_description format="" /></p>
-        </div>
 
-<txp:else />
-
-    <h2>Blank input form</h2>
-    <p>Try your Textile here.</p>
-
-</txp:if_individual_article>
 
 <div id="try-textile">
-    <h4>Input (editable)</h4>
+    <h4>Textile input (editable)</h4>
     <form method="post" action="/try/" id="try-textile-form">
         <div>
             <textarea id="text_field" name="text" rows="10" cols="60"><txp:body /></textarea>
@@ -57,26 +110,20 @@
     });
 </script>
 
-<txp:if_individual_article>
-
-<hr>
-
-<h3>More about: <txp:title /></h3>
-<txp:if_excerpt>
-    <txp:excerpt />
-<txp:else />
-    No further examples.
-</txp:if_excerpt>
-
-<txp:if_custom_field name="linked-references">
-<h3>Further reading: <txp:title /></h3>
-<txp:linklist id="<txp:custom_field name="linked-references" />" wraptag="ol" break="li" />
-</txp:if_custom_field>
-
-    </article>
-
-
-            </txp:if_individual_article>
+                <txp:if_individual_article>
+                    <hr>
+                    <h3>More about: <txp:title /></h3>
+                    <txp:if_excerpt>
+                        <txp:excerpt />
+                    <txp:else />
+                        No further examples.
+                    </txp:if_excerpt>
+                    <txp:if_custom_field name="linked-references">
+                        <h3>Further reading: <txp:title /></h3>
+                        <txp:linklist id="<txp:custom_field name="linked-references" />" wraptag="ol" break="li" />
+                    </txp:if_custom_field>
+                </txp:if_individual_article>
+            </article>
             <p class="alert-block information footnote report-issues">See something wrong in this page? Outdated info, a broken link, faulty code example, or whatever? Please <a rel="external" href="https://github.com/textile/textile-lang-com-website/issues">write an issue</a> and we’ll fix it.</p>
         </main>
     </div>
