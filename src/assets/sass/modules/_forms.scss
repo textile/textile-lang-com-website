@@ -425,47 +425,6 @@ span.disabled {
 }
 
 /**
- * Width display options for `input` fields.
- *
- * Example HTML:
- *
- * <input size="8">
- * <input size="16">
- * <input size="24">
- * <input size="32">
- */
-
-input {
-    &[size="8"] {
-        width: 25%;
-    }
-
-    &[size="16"] {
-        width: 50%;
-    }
-
-    &[size="24"] {
-        width: 75%;
-    }
-
-    &[size="32"] {
-        width: 100%;
-    }
-}
-
-/**
- * Styling for required field indicators.
- *
- * Example HTML:
- *
- * <span class="required" title="Required" aria-label="Required">●</span>
- */
-
-.required {
-    color: $color-warning-text;
-}
-
-/**
  * Styling for form field validation.
  */
 

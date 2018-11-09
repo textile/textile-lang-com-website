@@ -26,27 +26,3 @@ input,
 button {
     touch-action: manipulation;
 }
-
-
-/* Clearfix
-   ========================================================================== */
-
-/**
- * Clearfix using the 'A new micro clearfix hack' method.
- *
- * More info: http://nicolasgallagher.com/micro-clearfix-hack/
- */
-
-.clearfix::after {
-    display: table;
-    clear: both;
-    content: "";
-}
-
-/**
- * Basic float clearer.
- */
-
-.clear {
-    clear: both;
-}

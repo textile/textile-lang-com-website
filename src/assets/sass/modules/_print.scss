@@ -52,13 +52,8 @@ body {
  */
 
 nav,
-audio,
-video,
 form,
-#comments-form,
-.comments h4 a:last-child,
-.complementary-content,
-.paginator {
+.complementary-content {
     display: none;
 }
 
@@ -333,12 +328,4 @@ th,
 td {
     padding: 4pt 8pt;
     border-bottom: 1pt solid $color-text-print;
-}
-
-/**
- * Avoid user comments breaking across multiple pages.
- */
-
-.comments {
-    page-break-inside: avoid;
 }

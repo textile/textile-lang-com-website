@@ -5,8 +5,7 @@
  * Make embedded elements responsive.
  */
 
-img,
-video {
+img {
     max-width: 100%;
     height: auto;
 }
@@ -45,52 +44,9 @@ img {
 }
 
 /**
- * Rounded corner images.
- *
- * Example HTML:
- *
- * <img class="img--rounded">
- */
-
-.img--rounded {
-    border-radius: $border-radius;
-}
-
-/**
- * Circular images.
- *
- * Example HTML:
- *
- * <img class="img--circular">
- */
-
-.img--circular {
-    border-radius: 50%;
-}
-
-/**
  * Consistent margins on `figure`.
  */
 
 figure {
     margin: 1em 0;
-}
-
-/**
- * Reset fonts and sets background colour for Flowplayer video player.
- *
- * This rule can be removed if you are not using Flowplayer.
- *
- * Example HTML:
- *
- * <div class="videoplayer">
- *     <video>
- *         <source>
- *     </video>
- * </div>
- */
-
-.videoplayer {
-    background-color: $color-text;
-    font-family: sans-serif;
 }

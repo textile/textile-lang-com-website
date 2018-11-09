@@ -72,32 +72,6 @@ button::-moz-focus-inner,
 }
 
 /**
- * Larger buttons.
- *
- * Example HTML:
- *
- * <a class="button button-large">
- */
-
-.button-large {
-    height: 2.5em; // 40px / 16px
-    padding: 0.5em 1em; // 8px / 16px
-    border-radius: 1.25em;
-}
-
-/**
- * Smaller buttons.
- *
- * Example HTML:
- *
- * <a class="button button-small">
- */
-
-.button-small {
-    font-size: $small-font-size;
-}
-
-/**
  * Disbaled button additional styling.
  *
  * Example HTML:

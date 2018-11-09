@@ -6,43 +6,12 @@
  *
  * Example HTML:
  *
- * <span class="success">
- * <span class="error">
- * <strong class="success">
- * <strong class="error">
+ * <span class="information">
+ * <span class="information">
  */
-
-.success {
-    color: $color-success-text;
-}
-
-.warning {
-    color: $color-warning-text;
-}
-
-.error {
-    color: $color-error-text;
-}
 
 .information {
     color: $color-info-text;
-}
-
-/**
- * Highlighted background.
- *
- * Example HTML:
- *
- * <table>
- *     <tr>
- *         <td class="highlighted></td>
- *         <td></td>
- *     </tr>
- * </table>
- */
-
-.highlighted {
-    background: $color-highlight-box;
 }
 
 /**
@@ -52,8 +21,7 @@
  *
  * Example HTML:
  *
- * <p class="alert-block success">
- * <p class="alert-block error">
+ * <p class="alert-block information">
  */
 
 .alert-block {
@@ -61,21 +29,6 @@
     border: 1px solid;
     border-radius: $border-radius / 2;
     word-wrap: break-word; /* 1 */
-
-    &.success {
-        border-color: $color-success-border;
-        background: $color-success-background;
-    }
-
-    &.warning {
-        border-color: $color-warning-border;
-        background: $color-warning-background;
-    }
-
-    &.error {
-        border-color: $color-error-border;
-        background: $color-error-background;
-    }
 
     &.information {
         border-color: $color-info-border;
