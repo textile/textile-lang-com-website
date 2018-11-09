@@ -11,7 +11,6 @@
         <meta name="twitter:site" content="@textileit">
         <meta name="twitter:title" content="<txp:title />">
         <meta name="twitter:image:src" content="<txp:site_url />apple-touch-icon-180x180.png">
-        <meta name="twitter:image:src" content="<txp:image_url />">
         <meta name="twitter:url" content="<txp:permlink />">
         <meta property="og:site_name" content="Textile Markup Language">
         <meta property="og:type" content="article">

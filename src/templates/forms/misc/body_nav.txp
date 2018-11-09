@@ -7,4 +7,4 @@
         </txp:article_custom>
     </txp:category_list>
 </nav>
-</etc_cache>
+</txp:etc_cache>
