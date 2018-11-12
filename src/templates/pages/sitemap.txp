@@ -3,12 +3,12 @@
 <url>
     <loc><txp:site_url /></loc>
 </url>
-<txp:section_list break="" exclude="sitemap">
+<txp:section_list break="" exclude="introduction,sitemap,tools,try">
 <url>
     <loc><txp:section url="1" /></loc>
 </url>
 </txp:section_list>
-<txp:category_list section="doc" break="99">
+<txp:category_list section="doc" break="">
 <url>
     <loc><txp:site_url />category/<txp:category />/</loc>
 </url>
