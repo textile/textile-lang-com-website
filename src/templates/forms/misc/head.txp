@@ -7,6 +7,6 @@
 <meta name="generator" content="Textpattern CMS">
 <meta name="application-name" content="Textile Markup Language">
 <txp:if_section name=",doc">
-    <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.2.0/prototype.js"></script>
-    <txp:spf_js name="try" type="1" />
+    <script src="/js/prototype.js"></script>
+    <script src="/js/try.js"></script>
 </txp:if_section>

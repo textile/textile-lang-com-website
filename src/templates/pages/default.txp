@@ -72,7 +72,7 @@ Textile integrations are available for "a wide range platforms":/article/.</text
                         <pre class="result-html"><code id="html-result"></code></pre>
                     </section>
                     <txp:etc_cache id="homepage-article">
-                        <txp:article id="1" />
+                        <txp:article_custom id="1" />
                     </txp:etc_cache>
                 </article>
                 <script type="text/javascript">

@@ -3,12 +3,11 @@
 <head>
     <txp:output_form form="head" />
 
-    <txp:spf_js name="jquery_min" type="1" />
-    <txp:spf_js name="CSVParser" type="1" />
-    <txp:spf_js name="DataGridRenderer" type="1" />
-    <txp:spf_js name="Controller" type="1" />
-    <txp:spf_js name="converter" type="1" />
-
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/csvparser.js"></script>
+    <script src="/js/datagridrenderer.js"></script>
+    <script src="/js/controller.js"></script>
+    <script src="/js/converter.js"></script>
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
     <txp:output_form form="body_header" />

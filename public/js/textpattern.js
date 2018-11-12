@@ -33,7 +33,7 @@ function popWin(url, width, height, options)
 }
 
 // -------------------------------------------------------------
-// basic confirmation for potentially powerful choice 
+// basic confirmation for potentially powerful choice
 // (like deletion, for example)
 
 function verify(msg)
@@ -77,7 +77,7 @@ function selectrange()
 	var inrange = false;
 	var elem = window.document.longform.elements;
 	var cnt = elem.length;
-	
+
 	for (var i = 0; i < cnt; i++)
 	{
 		if (elem[i].name == 'selected[]')
