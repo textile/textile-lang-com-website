@@ -56,7 +56,7 @@
 
 * is a _shorthand syntax_ used to generate valid HTML
 * is *easy* to read and *easy* to write
-* can generate complex pages, including: headers, quotes, lists, tables and figures
+* can generate complex pages, including: headings, quotes, lists, tables and figures
 
 Textile integrations are available for "a wide range platforms":/article/.</textarea>
                         <p><input id="submit" type="submit"> <input id="reset" type="reset"></p>
