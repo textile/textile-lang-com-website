@@ -52,7 +52,7 @@
                     <section>
                         <h4>Try Textile (editable)</h4>
                         <form method="post" action="/try/" id="try-textile-form">
-                            <textarea id="text_in" name="text" rows="10" cols="60">h2. Textile
+                            <textarea id="text_in" name="text" rows="4" cols="64">h2. Textile
 
 * is a _shorthand syntax_ used to generate valid HTML,
 * is *easy* to read and *easy* to write,

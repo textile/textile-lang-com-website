@@ -79,7 +79,7 @@
             <section>
                 <h4>Textile input (editable)</h4>
                 <form method="post" action="/try/" id="try-textile-form">
-                    <textarea id="text_in" name="text" rows="10" cols="60"><txp:if_individual_article><txp:body /><txp:else />Go...</txp:if_individual_article></textarea>
+                    <textarea id="text_in" name="text" rows="4" cols="64"><txp:if_individual_article><txp:body /><txp:else />Go...</txp:if_individual_article></textarea>
                     <p><input id="submit" type="submit"> <input id="reset" type="reset"></p>
                 </form>
             </section>
