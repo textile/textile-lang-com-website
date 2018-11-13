@@ -74,7 +74,7 @@ Textile integrations are available for "a wide range platforms":/article/.</text
                         <txp:article_custom id="1" />
                     </txp:etc_cache>
                 </article>
-                <script type="text/javascript">
+                <script>
                     document.observe("dom:loaded", function() {
                         new TryTextileObserver('text_in', 'result', 'html-result').parseTextile();
                         $('submit').hide();

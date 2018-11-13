@@ -12,7 +12,7 @@
 # THANKS
 
   Names (& URL):
-    All Textile developers, now and past
+    All Textile Language Development Team members, now and past
     Phil Wareham (https://www.designhive.com)
     Brad Choate (https://bradchoate.com)
     Destry Wion (https://wion.com)
