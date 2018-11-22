@@ -7,6 +7,5 @@
 <meta name="generator" content="Textpattern CMS">
 <meta name="application-name" content="Textile Markup Language">
 <txp:if_section name=",doc">
-    <script src="/js/prototype.js"></script>
-    <script src="/js/try.js"></script>
+    <script src="/assets/js/try.@@timestamp.js"></script>
 </txp:if_section>
