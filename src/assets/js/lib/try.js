@@ -31,3 +31,7 @@ var TryTextileObserver = Class.create({
         });
     }
 });
+
+document.observe("dom:loaded", function() {
+    new TryTextileObserver('text_in', 'result', 'html-result').parseTextile();
+});

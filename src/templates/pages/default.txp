@@ -74,12 +74,6 @@ Textile integrations are available for "a wide range platforms":/article/.</text
                         <txp:article_custom id="1" />
                     </txp:etc_cache>
                 </article>
-                <script>
-                    document.observe("dom:loaded", function() {
-                        new TryTextileObserver('text_in', 'result', 'html-result').parseTextile();
-                        $('submit').hide();
-                    });
-                </script>
             <txp:else />
                 <h2>Category: <txp:category title /></h2>
                 <div class="article-description" itemprop="description">
@@ -92,5 +86,6 @@ Textile integrations are available for "a wide range platforms":/article/.</text
         </main>
     </div>
     <txp:output_form form="body_footer" />
+<txp:if_variable name="homepage" value="1"><script async src="/assets/js/try.@@timestamp.js"></script></txp:if_variable>
 </body>
 </html>

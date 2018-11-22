@@ -91,12 +91,6 @@
                 <h4>HTML output</h4>
                 <pre class="result-html"><code id="html-result"></code></pre>
             </section>
-            <script>
-                document.observe('dom:loaded', function() {
-                    new TryTextileObserver('text_in', 'result', 'html-result').parseTextile();
-                    $('submit').hide();
-                });
-            </script>
             <txp:if_individual_article>
                 <hr>
                 <h3>More about: <txp:title /></h3>
@@ -115,5 +109,6 @@
         </main>
     </div>
     <txp:output_form form="body_footer" />
+<script async src="/assets/js/try.@@timestamp.js"></script>
 </body>
 </html>

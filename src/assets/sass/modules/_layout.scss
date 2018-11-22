@@ -156,8 +156,12 @@ article {
 }
 
 /**
- * Additonal styling for Textile resukts output fields.
+ * Additonal styling for Textile results output fields.
  */
+
+#try-textile-form [type="submit"] {
+    display: none;
+}
 
 .result-textile {
     padding: 0.5em; // 8px / 16px

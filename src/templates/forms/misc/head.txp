@@ -6,6 +6,3 @@
 <link rel="icon" sizes="16x16" href="/favicon-16x16.png">
 <meta name="generator" content="Textpattern CMS">
 <meta name="application-name" content="Textile Markup Language">
-<txp:if_section name=",doc">
-    <script src="/assets/js/try.@@timestamp.js"></script>
-</txp:if_section>
