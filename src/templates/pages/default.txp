@@ -44,7 +44,7 @@
     <div class="layout-container">
         <txp:output_form form="body_nav" />
         <main class="layout-3col-2span">
-            <txp:if_variable name="homepage" value="1">
+            <txp:if_variable name="homepage">
                 <article itemscope itemtype="https://schema.org/Article">
                     <div class="article-description" itemprop="description">
                         <p><txp:meta_description format="" /></p>
