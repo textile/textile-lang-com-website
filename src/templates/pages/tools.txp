@@ -3,11 +3,73 @@
 <head>
     <txp:output_form form="head" />
 
-    <script src="/js/jquery.slim.min.js"></script>
-    <script src="/js/csvparser.js"></script>
-    <script src="/js/datagridrenderer.js"></script>
-    <script src="/js/controller.js"></script>
-    <script src="/js/converter.js"></script>
+
+    <txp:if_individual_article>
+        <title><txp:title /> / Textile Markup Language Documentation</title>
+        <txp:meta_description />
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="<txp:permlink />">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@textileit">
+        <meta name="twitter:title" content="<txp:title />">
+        <meta name="twitter:image:src" content="<txp:site_url />apple-touch-icon-180x180.png">
+        <meta name="twitter:url" content="<txp:permlink />">
+        <meta property="og:site_name" content="Textile Markup Language">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="<txp:title />">
+        <meta property="og:description" content="<txp:meta_description format="" />">
+        <meta property="og:url" content="<txp:permlink />">
+        <meta property="og:image" content="<txp:site_url />assets/img/com/textile-wordmark-og.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="1200">
+        <meta property="og:image:alt" content="Textile logo">
+        <meta property="og:url" content="<txp:site_url />">
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "headline": "<txp:title escape="json" />",
+                "description": "<txp:meta_description format="" escape="json" />",
+                "url": "<txp:permlink escape="json" />"
+            }
+        </script>
+    <txp:else />
+        <title><txp:section title /> / Textile Markup Language Documentation</title>
+        <txp:meta_description />
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="<txp:section url />">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@textileit">
+        <meta name="twitter:title" content="<txp:section title />">
+        <meta name="twitter:description" content="<txp:meta_description format="" />">
+        <meta name="twitter:image:src" content="<txp:site_url />apple-touch-icon-180x180.png">
+        <meta name="twitter:url" content="<txp:section url />">
+        <meta property="og:site_name" content="Textile Markup Language">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="<txp:section title />">
+        <meta property="og:description" content="<txp:meta_description format="" />">
+        <meta property="og:image" content="<txp:site_url />assets/img/com/textile-wordmark-og.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="1200">
+        <meta property="og:image:alt" content="Textile logo">
+        <meta property="og:url" content="<txp:site_url />">
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "headline": "<txp:section title escape="json" />",
+                "description": "<txp:meta_description format="" escape="json" />",
+                "url": "<txp:section url escape="json" />"
+            }
+        </script>
+    </txp:if_individual_article>
+    <txp:if_article_id id="38">
+        <script src="/js/jquery.slim.min.js"></script>
+        <script src="/js/csvparser.js"></script>
+        <script src="/js/datagridrenderer.js"></script>
+        <script src="/js/controller.js"></script>
+        <script src="/js/converter.js"></script>
+    </txp:if_article_id>
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
     <txp:output_form form="body_header" />
@@ -19,7 +81,13 @@
                     <txp:article />
                 </article>
             <txp:else />
-                TODO
+                <h2><txp:section title /></h2>
+                <div class="article-description" itemprop="description">
+                    <p><txp:meta_description format="" /></p>
+                </div>
+                <div class="teaser-container">
+                    <txp:article form="article_listing" limit="99" sort="custom_1 asc" />
+                </div>
             </txp:if_individual_article>
         </main>
     </div>
