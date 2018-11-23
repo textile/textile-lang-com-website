@@ -10,8 +10,8 @@ function DataConverter(nodeId) {
     this.nodeId                 = nodeId;
     this.node                   = $("#"+nodeId);
     this.outputDataTypes        = [
-                                    {"text":"Textile",                "id":"txtable",          "notes":""},
-                                    {"text":"HTML",                   "id":"html",             "notes":""}
+                                    {"text":"Textile", "id":"txtable", "notes":""},
+                                    {"text":"HTML", "id":"html", "notes":""}
                                 ];
     this.outputDataType         = "txtable";
     this.columnDelimiter        = "\t";
@@ -44,18 +44,18 @@ DataConverter.prototype.create = function(w,h) {
     var self = this;
 
     // build HTML for converter
-    this.inputHeader = $('<div class="groupHeader" id="inputHeader"><p class="groupHeadline">Input CSV or tab-delimited data. <span class="subhead"> Using Excel? Simply copy and paste. No data on hand? <a href="#" id="insertSample">Use sample</a></span>.</p></div>');
-    this.inputTextArea = $('<textarea class="textInputs" id="dataInput"></textarea>');
-    var outputHeaderText = '<div class="groupHeader" id="inputHeader"><p class="groupHeadline">Output as <select name="Data Types" id="dataSelector" >';
+    this.inputHeader = $('<p>Input CSV or tab-delimited data. Using Excel? Simply copy and paste. No data on hand? <a href="#" id="insertSample">Use sample</a>.</p>');
+    this.inputTextArea = $('<label for="dataInput">Input</label> <textarea id="dataInput" rows="8" cols="64"></textarea>');
+    var outputHeaderText = '<p><label for="dataSelector">Format as</label> <select id="dataSelector">';
 
     for (var i=0; i < this.outputDataTypes.length; i++) {
-        outputHeaderText += '<option value="'+this.outputDataTypes[i]["id"]+'" ' + (this.outputDataTypes[i]["id"] === this.outputDataType ? 'selected="selected"' : '') + '>' + this.outputDataTypes[i]["text"]+'</option>';
+        outputHeaderText += '<option value="' + this.outputDataTypes[i].id + '" ' + (this.outputDataTypes[i].id === this.outputDataType ? 'selected="selected"' : '') + '>' + this.outputDataTypes[i].text + '</option>';
     }
 
-    outputHeaderText += '</select><span class="subhead" id="outputNotes"></span></p></div>';
+    outputHeaderText += '</select></p>';
 
     this.outputHeader = $(outputHeaderText);
-    this.outputTextArea = $('<textarea class="textInputs" id="dataOutput"></textarea>');
+    this.outputTextArea = $('<label for="dataOutput">Output</label> <textarea id="dataOutput" rows="8" cols="64" readonly></textarea>');
 
     this.node.append(this.inputHeader);
     this.node.append(this.inputTextArea);

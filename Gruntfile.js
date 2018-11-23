@@ -222,11 +222,11 @@ module.exports = function (grunt)
                             '<%= paths.src.js %>main.js'
                         ],
                         '<%= paths.dest.js %>tableconverter.js': [
-                            'node_modules/jquery/jquery.slim.js',
-                            '<%= paths.src.js %>csvparser.js',
-                            '<%= paths.src.js %>datagridrenderer.js',
-                            '<%= paths.src.js %>controller.js',
-                            '<%= paths.src.js %>converter.js'
+                            'node_modules/jquery/dist/jquery.slim.js',
+                            '<%= paths.src.js %>lib/csvparser.js',
+                            '<%= paths.src.js %>lib/datagridrenderer.js',
+                            '<%= paths.src.js %>lib/controller.js',
+                            '<%= paths.src.js %>lib/converter.js'
                         ],
                     }
                 ]
