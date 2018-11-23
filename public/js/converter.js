@@ -5,8 +5,6 @@
 //  Created by Shan Carter on 2010-09-01.
 //
 
-
-
 function DataConverter(nodeId) {
 
   //---------------------------------------
@@ -17,22 +15,9 @@ function DataConverter(nodeId) {
   this.node                   = $("#"+nodeId);
 
   this.outputDataTypes        = [
-                                {"text":"Textile",                "id":"txtable",          "notes":""},
-                                {"text":"HTML",                   "id":"html",             "notes":""},
-                                {"text":"LaTex",                  "id":"latextable",       "notes":""},
-                                {"text":"Actionscript",           "id":"as",               "notes":""},
-                                {"text":"ASP/VBScript",           "id":"asp",              "notes":""},
-                                {"text":"JSON - Properties",      "id":"json",             "notes":""},
-                                {"text":"JSON - Column Arrays",   "id":"jsonArrayCols",    "notes":""},
-                                {"text":"JSON - Row Arrays",      "id":"jsonArrayRows",    "notes":""},
-                                {"text":"JSON - Dictionary",      "id":"jsonDict",         "notes":""},
-                                {"text":"MySQL",                  "id":"mysql",            "notes":""},
-                                {"text":"PHP",                    "id":"php",              "notes":""},
-                                {"text":"Python - Dict",          "id":"python",           "notes":""},
-                                {"text":"Ruby",                   "id":"ruby",             "notes":""},
-                                {"text":"XML - Properties",       "id":"xmlProperties",    "notes":""},
-                                {"text":"XML - Nodes",            "id":"xml",              "notes":""},
-                                {"text":"XML - Illustrator",      "id":"xmlIllustrator",   "notes":""}];
+                                    {"text":"Textile",                "id":"txtable",          "notes":""},
+                                    {"text":"HTML",                   "id":"html",             "notes":""}
+                                ];
   this.outputDataType         = "txtable";
 
   this.columnDelimiter        = "\t";
@@ -93,14 +78,6 @@ DataConverter.prototype.create = function(w,h) {
 
   this.dataSelect = this.outputHeader.find("#dataSelector");
 
-
-  //add event listeners
-
-  // $("#convertButton").bind('click',function(evt){
-  //   evt.preventDefault();
-  //   self.convert();
-  // });
-
   this.outputTextArea.click(function(evt){this.select();});
 
 
@@ -108,13 +85,11 @@ DataConverter.prototype.create = function(w,h) {
     evt.preventDefault();
     self.insertSampleData();
     self.convert();
-    _gaq.push(['_trackEvent', 'SampleData','InsertGeneric']);
   });
 
   $("#dataInput").keyup(function() {self.convert()});
   $("#dataInput").change(function() {
     self.convert();
-    _gaq.push(['_trackEvent', 'DataType',self.outputDataType]);
   });
 
   $("#dataSelector").bind('change',function(evt){
@@ -169,7 +144,6 @@ DataConverter.prototype.convert = function() {
 
   }; //end test for existence of input text
 }
-
 
 DataConverter.prototype.insertSampleData = function() {
   this.inputTextArea.val("NAME\tVALUE\tCOLOR\tDATE\nAlan\t12\tblue\tSep. 25, 2009\nShan\t13\t\"green\tblue\"\tSep. 27, 2009\nJohn\t45\torange\tSep. 29, 2009\nMinna\t27\tteal\tSep. 30, 2009");

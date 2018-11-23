@@ -3,7 +3,7 @@
 <head>
     <txp:output_form form="head" />
 
-    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.slim.min.js"></script>
     <script src="/js/csvparser.js"></script>
     <script src="/js/datagridrenderer.js"></script>
     <script src="/js/controller.js"></script>
