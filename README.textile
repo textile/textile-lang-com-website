@@ -36,7 +36,7 @@ h3. Installing dependencies
 
 After you have the base dependencies taken care of, you can install the project's dependencies. Navigate to the project's directory, and run the dependency manager:
 
-bc. $ cd textpattern-com-website
+bc. $ cd textile-lang-com-website
 $ npm install
 $ composer install
 
