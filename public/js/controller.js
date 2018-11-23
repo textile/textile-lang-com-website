@@ -11,7 +11,7 @@ $(document).ready(function() {
     $('.settingsElement').change(updateSettings);
 
     function updateSettings (evt) {
-        d.includeWhiteSpace = $('#includeWhiteSpaceCB').attr('checked');
+        d.includeWhiteSpace = $('#includeWhiteSpaceCB').prop('checked');
 
         if (d.includeWhiteSpace) {
             $('input[name="indentType"]').removeAttr('disabled');
@@ -26,7 +26,7 @@ $(document).ready(function() {
             $('input[name="indentType"]').attr('disabled', 'disabled');
         }
 
-        d.headersProvided = $('#headersProvidedCB').attr('checked');
+        d.headersProvided = $('#headersProvidedCB').prop('checked');
 
         if (d.headersProvided) {
             $('input[name="headerModifications"]').removeAttr('disabled');
