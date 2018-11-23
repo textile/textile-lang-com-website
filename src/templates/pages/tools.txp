@@ -3,7 +3,7 @@
 <head>
     <txp:output_form form="head" />
 
-    <script src="/js/jquery.slim.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
     <script src="/js/csvparser.js"></script>
     <script src="/js/datagridrenderer.js"></script>
     <script src="/js/controller.js"></script>
@@ -11,10 +11,18 @@
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
     <txp:output_form form="body_header" />
-
-    <h2><txp:permlink><txp:title /></txp:permlink></h2>
-    <txp:body />
-
+    <div class="layout-container">
+        <txp:output_form form="body_nav" />
+        <main class="layout-3col-2span">
+            <txp:if_individual_article>
+                <article itemscope itemtype="https://schema.org/Article">
+                    <txp:article />
+                </article>
+            <txp:else />
+                TODO
+            </txp:if_individual_article>
+        </main>
+    </div>
     <txp:output_form form="body_footer" />
 </body>
 </html>
