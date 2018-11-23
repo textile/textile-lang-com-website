@@ -75,7 +75,7 @@ var DataGridRenderer = {
       };
       outputText += " |" + newLine;
       outputText += "|-." + newLine;
-    };
+    }
 
     //begin render loop
     for (var i=0; i < numRows; i++) {
@@ -85,9 +85,9 @@ var DataGridRenderer = {
         if (j < (numColumns-1)) {outputText+=" | "};
       };
       outputText += " |" + newLine;
-    };
+    }
 
     return outputText;
   }
 
-}
+};

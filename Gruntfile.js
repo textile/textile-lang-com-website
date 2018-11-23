@@ -121,6 +121,7 @@ module.exports = function (grunt)
                 esversion: 6,
                 forin: true,
                 globals: {
+                    $: true,
                     define: true,
                     module: true,
                     require: true,
@@ -219,7 +220,14 @@ module.exports = function (grunt)
                             'node_modules/prismjs/components/prism-textile.js',
                             // Site-specific JavaScript.
                             '<%= paths.src.js %>main.js'
-                        ]
+                        ],
+                        '<%= paths.dest.js %>tableconverter.js': [
+                            'node_modules/jquery/jquery.slim.js',
+                            '<%= paths.src.js %>csvparser.js',
+                            '<%= paths.src.js %>datagridrenderer.js',
+                            '<%= paths.src.js %>controller.js',
+                            '<%= paths.src.js %>converter.js'
+                        ],
                     }
                 ]
             }
