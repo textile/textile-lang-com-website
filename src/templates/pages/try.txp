@@ -1,7 +1,7 @@
 <txp:php>
-    require txpath.'/Netcarver/Textile/Parser.php';
-    require txpath.'/Netcarver/Textile/DataBag.php';
-    require txpath.'/Netcarver/Textile/Tag.php';
+    require txpath.'/vendors/Netcarver/Textile/Parser.php';
+    require txpath.'/vendors/Netcarver/Textile/DataBag.php';
+    require txpath.'/vendors/Netcarver/Textile/Tag.php';
 
     $textile = new \Netcarver\Textile\Parser();
 
