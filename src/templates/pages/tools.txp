@@ -2,8 +2,6 @@
 <html lang="en-GB-oxendict">
 <head>
     <txp:output_form form="head" />
-
-
     <txp:if_individual_article>
         <title><txp:title /> / Textile Markup Language Documentation</title>
         <txp:meta_description />
@@ -63,13 +61,6 @@
             }
         </script>
     </txp:if_individual_article>
-    <txp:if_article_id id="38">
-        <script src="/js/jquery.slim.min.js"></script>
-        <script src="/js/csvparser.js"></script>
-        <script src="/js/datagridrenderer.js"></script>
-        <script src="/js/controller.js"></script>
-        <script src="/js/converter.js"></script>
-    </txp:if_article_id>
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
     <txp:output_form form="body_header" />
@@ -92,5 +83,12 @@
         </main>
     </div>
     <txp:output_form form="body_footer" />
+    <txp:if_article_id id="38">
+        <script src="/js/jquery.slim.min.js"></script>
+        <script src="/js/csvparser.js"></script>
+        <script src="/js/datagridrenderer.js"></script>
+        <script src="/js/controller.js"></script>
+        <script src="/js/converter.js"></script>
+    </txp:if_article_id>
 </body>
 </html>
