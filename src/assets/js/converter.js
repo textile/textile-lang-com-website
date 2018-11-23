@@ -1,9 +1,6 @@
-//
 //  converter.js
 //  Mr-Data-Converter
-//
 //  Created by Shan Carter on 2010-09-01.
-//
 
 function DataConverter(nodeId) {
 
@@ -38,7 +35,7 @@ function DataConverter(nodeId) {
 
   this.commentLine            = "//";
   this.commentLineEnd         = "";
-  this.tableName              = "MrDataConverter"
+  this.tableName              = "MrDataConverter";
 
   this.useUnderscores         = true;
   this.headersProvided        = true;
@@ -62,11 +59,8 @@ DataConverter.prototype.create = function(w,h) {
   var outputHeaderText = '<div class="groupHeader" id="inputHeader"><p class="groupHeadline">Output as <select name="Data Types" id="dataSelector" >';
     for (var i=0; i < this.outputDataTypes.length; i++) {
 
-      outputHeaderText += '<option value="'+this.outputDataTypes[i]["id"]+'" '
-              + (this.outputDataTypes[i]["id"] == this.outputDataType ? 'selected="selected"' : '')
-              + '>'
-              + this.outputDataTypes[i]["text"]+'</option>';
-    };
+      outputHeaderText += '<option value="'+this.outputDataTypes[i]["id"]+'" ' + (this.outputDataTypes[i]["id"] === this.outputDataType ? 'selected="selected"' : '') + '>' + this.outputDataTypes[i]["text"]+'</option>';
+    }
     outputHeaderText += '</select><span class="subhead" id="outputNotes"></span></p></div>';
   this.outputHeader = $(outputHeaderText);
   this.outputTextArea = $('<textarea class="textInputs" id="dataOutput"></textarea>');
@@ -87,7 +81,10 @@ DataConverter.prototype.create = function(w,h) {
     self.convert();
   });
 
-  $("#dataInput").keyup(function() {self.convert()});
+  $("#dataInput").keyup(function() {
+    self.convert();
+  });
+
   $("#dataInput").change(function() {
     self.convert();
   });
@@ -98,7 +95,7 @@ DataConverter.prototype.create = function(w,h) {
      });
 
   this.resize(w,h);
-}
+};
 
 DataConverter.prototype.resize = function(w,h) {
 
@@ -109,7 +106,7 @@ DataConverter.prototype.resize = function(w,h) {
   this.inputTextArea.css({width:paneWidth-20,height:paneHeight});
   this.outputTextArea.css({width: paneWidth-20, height:paneHeight});
 
-}
+};
 
 DataConverter.prototype.convert = function() {
 
@@ -142,9 +139,9 @@ DataConverter.prototype.convert = function() {
 
     this.outputTextArea.val(errors + this.outputText);
 
-  }; //end test for existence of input text
-}
+  } //end test for existence of input text
+};
 
 DataConverter.prototype.insertSampleData = function() {
   this.inputTextArea.val("NAME\tVALUE\tCOLOR\tDATE\nAlan\t12\tblue\tSep. 25, 2009\nShan\t13\t\"green\tblue\"\tSep. 27, 2009\nJohn\t45\torange\tSep. 29, 2009\nMinna\t27\tteal\tSep. 30, 2009");
-}
+};

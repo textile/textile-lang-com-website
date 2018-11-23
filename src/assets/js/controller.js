@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var widthOffset = 345;
-    var heightOffset = 35
+    var heightOffset = 35;
 
     var d = new DataConverter('converter');
 
@@ -51,7 +51,7 @@ $(document).ready(function() {
         d.useUnderscores = true;
 
         d.convert();
-    };
+    }
 
     updateSettings();
 });
