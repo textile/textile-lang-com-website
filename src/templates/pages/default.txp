@@ -74,7 +74,7 @@
                     <div class="article-description" itemprop="description">
                         <p><txp:meta_description format="" /></p>
                     </div>
-                    <section>
+                    <section class="js-only">
                         <h4>Try Textile (editable)</h4>
                         <form method="post" action="/try/" id="try-textile-form">
                             <textarea id="text_in" name="text" rows="4" cols="64">h2. Textile
@@ -87,11 +87,11 @@ Textile integrations are available for "a wide range platforms":/article/.</text
                         <p><input id="submit" type="submit"> <input id="reset" type="reset"></p>
                         </form>
                     </section>
-                    <section>
+                    <section class="js-only">
                         <h4>Browser output</h4>
                         <div class="result-textile" id="result"></div>
                     </section>
-                    <section>
+                    <section class="js-only">
                         <h4>HTML output</h4>
                         <pre class="result-html"><code id="html-result"></code></pre>
                     </section>

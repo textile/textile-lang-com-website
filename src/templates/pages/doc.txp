@@ -76,18 +76,22 @@
                     <p>Try your own Textile markup here.</p>
                 </div>
             </txp:if_individual_article>
-            <section>
+            <section class="no-js-only">
+                <h3>Textile example: <txp:title /></h3>
+                <pre><code><txp:body /></code></pre>
+            </section>
+            <section class="js-only">
                 <h4>Textile input (editable)</h4>
                 <form method="post" action="/try/" id="try-textile-form">
                     <textarea id="text_in" name="text" rows="4" cols="64"><txp:if_individual_article><txp:body /><txp:else />Go...</txp:if_individual_article></textarea>
                     <p><input id="submit" type="submit"> <input id="reset" type="reset"></p>
                 </form>
             </section>
-            <section>
+            <section class="js-only">
                 <h4>Browser output</h4>
                 <div class="result-textile" id="result"></div>
             </section>
-            <section>
+            <section class="js-only">
                 <h4>HTML output</h4>
                 <pre class="result-html"><code id="html-result"></code></pre>
             </section>

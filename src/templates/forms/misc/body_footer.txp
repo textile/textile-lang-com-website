@@ -3,11 +3,13 @@
 <div class="container">
     <aside class="layout-container complementary-content">
         <section class="layout-3col">
-            <h5>Tools</h5>
-            <ul class="list--no-bullets">
-                <li><a href="<txp:site_url />doc">Blank Textile input form</a></li>
-                <li><a href="<txp:site_url />tools/data-converter">Table data converter</a></li>
-            </ul>
+            <div class="js-only">
+                <h5>Tools</h5>
+                <ul class="list--no-bullets">
+                    <li><a href="<txp:site_url />doc">Blank Textile input form</a></li>
+                    <li><a href="<txp:site_url />tools/data-converter">Table data converter</a></li>
+                </ul>
+            </div>
             <h5>Report issues</h5>
             <ul class="list--no-bullets">
                 <li><a rel="external" href="https://github.com/textile/php-textile/issues"> Issues on PHP Textile (GitHub)</a></li>

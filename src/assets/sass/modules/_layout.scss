@@ -20,7 +20,7 @@ html {
 body {
     position: relative; /* 1 */
     margin: 0; /* 2 */
-    background: $color-body;
+    background-color: $color-body;
 }
 
 /**
@@ -28,6 +28,22 @@ body {
  */
 
 .screen-large {
+    display: none;
+}
+
+/**
+ * Display/hide certain content depending on whether JavaScript is enabled.
+ */
+
+.js-only {
+    display: none;
+
+    .js & {
+        display: block; // TODO: use `display: revert` when browser support is widespread.
+    }
+}
+
+.js .no-js-only {
     display: none;
 }
 
@@ -45,7 +61,7 @@ body {
 
 .wrapper {
     padding: 1px 0 0.5em;
-    background: $color-background;
+    background-color: $color-background;
 }
 
 /**
@@ -133,6 +149,14 @@ body {
     background-size: 178px 30px;
 }
 
+noscript {
+    display: block;
+    padding: 0.25em 1em;
+    background-color: $color-highlight;
+    font-size: $small-font-size;
+    text-align: center;
+}
+
 /**
  * Prevent really, really long words in article from breaking layout.
  */
@@ -159,14 +183,10 @@ article {
  * Additonal styling for Textile results output fields.
  */
 
-#try-textile-form [type="submit"] {
-    display: none;
-}
-
 .result-textile {
     padding: 0.5em; // 8px / 16px
     border: 1px solid $color-border;
-    background: $color-highlight-box;
+    background-color: $color-highlight-box;
 
     > :first-child {
         margin-top: 0;
@@ -180,7 +200,11 @@ article {
 .result-html {
     border: 1px solid $color-border;
     border-radius: 0;
-    background: $color-highlight-box;
+    background-color: $color-highlight-box;
+}
+
+#try-textile-form [type="submit"] {
+    display: none;
 }
 
 /**
