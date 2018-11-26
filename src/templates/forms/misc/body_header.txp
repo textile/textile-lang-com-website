@@ -17,7 +17,7 @@
             </a>
         </p>
     </txp:etc_cache>
-    <meta itemprop="logo" content="<txp:site_url />assets/img/branding/wordmark/textile-wordmark.svg">
+    <meta itemprop="logo" content="<txp:site_url />assets/img/branding/wordmark/textile-wordmark.png">
 </header>
 <div class="wrapper">
     <div class="container">
