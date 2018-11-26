@@ -13,7 +13,7 @@
             <h5>Report issues</h5>
             <ul class="list--no-bullets">
                 <li><a rel="external" href="https://github.com/textile/php-textile/issues"> Issues on PHP Textile (GitHub)</a></li>
-                <li><a rel="external" href="https://github.com/textile/php-textile/issues"> Issues on this website (GitHub)</a></li>
+                <li><a rel="external" href="https://github.com/textile/textile-lang-com-website/issues"> Issues on this website (GitHub)</a></li>
             </ul>
         </section>
         <section class="layout-3col">
