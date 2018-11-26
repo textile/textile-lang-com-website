@@ -4,7 +4,6 @@
 <meta itemprop="accessibilityHazard" content="noMotionSimulationHazard">
 <meta itemprop="accessibilityHazard" content="noSoundHazard">
 <meta itemprop="accessibilityAPI" content="ARIA">
-
 <header class="site-header" itemscope itemtype="https://schema.org/Organization">
     <h1 class="masthead" itemprop="name"><a rel="home" itemprop="url" href="<txp:site_url />" title="Go to the Textile homepage">Textile</a></h1>
     <txp:etc_cache id="textile-version" time="-86400">
