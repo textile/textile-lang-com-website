@@ -1,5 +1,13 @@
 <h2 itemprop="headline"><txp:title /></h2>
 <meta itemprop="author" content="The Textile Language Development Team">
+<span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+    <meta itemprop="name" content="Textile">
+    <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+        <meta itemprop="url" content="<txp:site_url />assets/img/branding/wordmark/textile-wordmark.png">
+        <meta itemprop="width" content="1060">
+        <meta itemprop="height" content="360">
+    </span>
+</span>
 <meta itemprop="datePublished" content="<txp:posted format="iso8601" />">
 <meta itemprop="dateModified" content="<txp:modified format="iso8601" />">
 <txp:if_description>
