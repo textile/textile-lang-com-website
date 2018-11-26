@@ -1,9 +1,10 @@
+<meta itemprop="mainEntityOfPage" content="<txp:permlink />">
 <h2 itemprop="headline"><txp:title /></h2>
 <meta itemprop="author" content="The Textile Language Development Team">
 <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="Textile">
     <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-        <meta itemprop="url" content="<txp:site_url />assets/img/branding/wordmark/textile-wordmark.png">
+        <meta itemprop="contentUrl" content="<txp:site_url />assets/img/branding/wordmark/textile-wordmark.png">
         <meta itemprop="width" content="1060">
         <meta itemprop="height" content="360">
     </span>
@@ -15,9 +16,11 @@
         <p><txp:meta_description format="" /></p>
     </div>
 </txp:if_description>
-<meta itemprop="image" content="<txp:site_url />assets/img/com/textile-wordmark-og.png">
-<meta itemprop="width" content="1200">
-<meta itemprop="height" content="1200">
+<span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+    <meta itemprop="contentUrl" content="<txp:site_url />assets/img/com/textile-wordmark-og.png">
+    <meta itemprop="width" content="1200">
+    <meta itemprop="height" content="1200">
+</span>
 <txp:if_section not name="doc">
     <div class="article-body" itemprop="articleBody">
         <txp:body />
