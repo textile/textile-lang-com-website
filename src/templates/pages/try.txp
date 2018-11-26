@@ -8,6 +8,7 @@
     if(isset($_POST['text'])) {
         $text = trim($_POST['text']);
         $result = $textile->TextileThis($text);
+        $result = preg_replace('/<!-- random-length HTML comment: ?.* -->/', '', $result);
 
         echo $result;
     }
