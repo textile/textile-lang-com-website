@@ -5,11 +5,29 @@
 @media screen and (min-width: $breakpoint) {
 
     /**
-     * Screen size-specific elements.
+     * Grid container.
      */
 
-    .screen-large {
-        display: block; // TODO: use `display: revert` when browser support is widespread.
+    .layout-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 0 2em;
+
+        > * {
+            overflow: auto; // Avoid content spillage.
+        }
+    }
+
+    /**
+     * Cells for 1 column layouts are generated.
+     *
+     * Example HTML:
+     *
+     * <div class="layout-1col"></div>
+     */
+
+    .layout-1col {
+        grid-column: span 12;
     }
 
     /**
@@ -27,6 +45,14 @@
 
     .layout-3col-2span {
         grid-column: span 8;
+    }
+
+    /**
+     * Screen size-specific elements.
+     */
+
+    .screen-large {
+        display: block; // TODO: use `display: revert` when browser support is widespread.
     }
 
     /**
