@@ -1,5 +1,5 @@
 <meta itemprop="mainEntityOfPage" content="<txp:permlink />">
-<h2 itemprop="headline"><txp:title /></h2>
+<h2 id="headline" itemprop="headline"><txp:title /></h2>
 <meta itemprop="author" content="The Textile Language Development Team">
 <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="Textile">
