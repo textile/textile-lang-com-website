@@ -3,7 +3,8 @@
     require txpath.'/vendors/Netcarver/Textile/DataBag.php';
     require txpath.'/vendors/Netcarver/Textile/Tag.php';
 
-    $textile = new \Netcarver\Textile\Parser();
+    $doctype = get_pref('doctype', 'html5');
+    $textile = new \Netcarver\Textile\Parser($doctype);
 
     if(isset($_POST['text'])) {
         $text = trim($_POST['text']);
