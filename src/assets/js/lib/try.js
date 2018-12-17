@@ -25,8 +25,9 @@ var TryTextileObserver = Class.create({
                 text: rcObserver.observable.value
             },
             onSuccess: function(response) {
-                rcObserver.resultElement.update(response.responseText);
-                rcObserver.htmlResultElement.update(response.responseText.escapeHTML());
+                var json = response.responseText.evalJSON();
+                rcObserver.resultElement.update(json.response);
+                rcObserver.htmlResultElement.update(json.response.escapeHTML());
             }
         });
     }

@@ -1,4 +1,6 @@
 <txp:php>
+    header('Content-type: application/json');
+
     require txpath.'/vendors/Netcarver/Textile/Parser.php';
     require txpath.'/vendors/Netcarver/Textile/DataBag.php';
     require txpath.'/vendors/Netcarver/Textile/Tag.php';
@@ -8,8 +10,15 @@
 
     if(isset($_POST['text'])) {
         $text = trim($_POST['text']);
-        $result = $textile->TextileThis($text);
+        $result = $textile
+            ->setRestricted(false)
+            ->setLite(false)
+            ->setBlockTags(true)
+            ->setImages(true)
+            ->setLinkRelationShip('')
+            ->parse($text);
 
-        echo $result;
+        echo json_encode(array('response' => $result));
+        exit;
     }
 </txp:php>
