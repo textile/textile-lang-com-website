@@ -2,11 +2,23 @@
    ========================================================================== */
 
 /**
- * Correct `button` style inheritance in Firefox and Opera.
+ * 1. Correct `button` style inheritance in Firefox and Opera.
  */
 
 button {
-    text-transform: none;
+    text-transform: none; /* 1 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
 }
 
 /**
@@ -55,18 +67,6 @@ button,
         border-color: $color-link-focus;
         outline: 1px solid transparent; // Allows for repainting in high contrast modes.
     }
-}
-
-/**
- * Remove the inner border and padding in Firefox.
- */
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-    padding: 0;
-    border-style: none;
 }
 
 /**

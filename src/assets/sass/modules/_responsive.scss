@@ -9,12 +9,17 @@
      */
 
     .layout-container {
+        display: flex; // Flexbox fallback for browsers without CSS Grid support.
         display: grid;
+        flex-wrap: wrap; // Flexbox fallback for browsers without CSS Grid support.
+        margin: 0 -1em; // Flexbox fallback for browsers without CSS Grid support.
         grid-template-columns: repeat(12, 1fr);
         grid-gap: 0 2em;
 
         > * {
             min-width: 0; // Fix Firefox `pre` overflow issues.
+            padding: 0 1em; // Flexbox fallback.
+            box-sizing: border-box; // Flexbox fallback.
         }
     }
 
@@ -27,6 +32,7 @@
      */
 
     .layout-1col {
+        width: 100%; // Flexbox fallback.
         grid-column: span 12;
     }
 
@@ -40,11 +46,22 @@
      */
 
     .layout-3col {
+        width: 33.333%; // Flexbox fallback.
         grid-column: span 4;
     }
 
     .layout-3col-2span {
+        width: 66.666%; // Flexbox fallback.
         grid-column: span 8;
+    }
+
+    // Override Flexbox fallback for browsers with CSS Grid support.
+    @supports (display: grid) {
+        .layout-1col,
+        .layout-3col,
+        .layout-3col-2span {
+            width: auto;
+        }
     }
 
     /**
