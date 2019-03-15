@@ -207,15 +207,6 @@ select {
 }
 
 /**
- * Remove browser-specific `select` UI in Firefox 4+.
- */
-
-select:-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 $color-text-form;
-}
-
-/**
  * Override height and background set in a previous rule and allow auto height.
  */
 
@@ -233,6 +224,14 @@ select[multiple] {
 select[size="0"],
 select[size="1"] {
     height: 2em; // 32px / 16px
+}
+
+/**
+ * Remove browser-specific `select` UI in IE 11.
+ */
+
+select::-ms-expand {
+    opacity: 0;
 }
 
 /**
