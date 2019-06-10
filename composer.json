@@ -3,8 +3,8 @@
      "vendor-dir": "public/vendor"
   },
   "require": {
-    "textpattern/composer-lock": "4.7.1",
-    "textpattern/composer-installer": "dev-master",
+    "textpattern/lock": "4.7.3",
+    "textpattern/installer": "1.0.8",
     "etc-plugins/etc_cache": "0.2.8"
   }
 }
