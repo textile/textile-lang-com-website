@@ -4,7 +4,7 @@
   },
   "require": {
     "textpattern/lock": "4.7.3",
-    "textpattern/installer": "1.0.8",
+    "textpattern/installer": "1.0.10",
     "etc-plugins/etc_cache": "0.2.8"
   }
 }
