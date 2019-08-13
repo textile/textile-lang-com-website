@@ -178,7 +178,7 @@ module.exports = function (grunt)
         // Sass configuration.
         sass: {
             options: {
-                implementation: require('dart-sass'),
+                implementation: require('sass'),
                 outputStyle: 'expanded', // outputStyle = expanded, nested, compact or compressed.
                 sourceMap: false
             },
