@@ -2,9 +2,6 @@ module.exports = function (grunt)
 {
     'use strict';
 
-    // Define Sass implmentation (Dart-Sass).
-    const sass = require('dart-sass');
-
     // Load all Grunt tasks.
     require('load-grunt-tasks')(grunt);
 
@@ -181,7 +178,7 @@ module.exports = function (grunt)
         // Sass configuration.
         sass: {
             options: {
-                implementation: sass,
+                implementation: require('dart-sass'),
                 outputStyle: 'expanded', // outputStyle = expanded, nested, compact or compressed.
                 sourceMap: false
             },
