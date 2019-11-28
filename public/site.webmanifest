@@ -1,7 +1,7 @@
 {
   "short_name": "textile-lang.com",
   "name": "Textile Markup Language Homepage",
-  "start_url": "./?utm_source=web_app_manifest",
+  "start_url": "https://textile-lang.com",
   "icons": [
     {
       "src": "/favicon-192x192.png",
