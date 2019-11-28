@@ -7,9 +7,9 @@
 
 table {
     width: 100%;
-    background-color: $color-background-form;
-    border-collapse: collapse;
     border-spacing: 0;
+    border-collapse: collapse;
+    background-color: $color-background-form;
 }
 
 /**
@@ -31,8 +31,8 @@ td {
     min-width: 6em; // 96px / 16px
     padding: 0.5em; // 8px / 16px
     border: 1px solid $color-border-light;
-    text-align: left;
     vertical-align: top;
+    text-align: left;
 }
 
 /**

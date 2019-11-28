@@ -41,26 +41,26 @@ button,
     border-radius: 0.5em;
     background-clip: padding-box;
     background-color: $color-button-background;
+    box-shadow: 0 2px 0 $color-button-shadow;
     color: $color-text-button;
     font-weight: normal;
     text-align: center;
-    box-shadow: 0 2px 0 $color-button-shadow;
-    cursor: pointer; /* 1 */
     appearance: none; /* 2 */
+    cursor: pointer; /* 1 */
 
     &:hover {
         border-color: darken($color-button-border, 13%);
+        filter: brightness(1.05);
         color: $color-text-button-hover;
         text-decoration: none;
-        filter: brightness(1.05);
     }
 
     &:active {
         top: 2px;
         border-color: darken($color-button-border, 15%);
+        box-shadow: none;
         color: $color-text-button-active;
         text-decoration: none;
-        box-shadow: none;
     }
 
     &:focus {

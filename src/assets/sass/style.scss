@@ -23,7 +23,6 @@
    ========================================================================== */
 
 @media screen {
-
     @import "modules/layout";
     @import "modules/navigation";
     @import "modules/links";
@@ -38,7 +37,6 @@
     @import "modules/social";
     @import "modules/misc";
     @import "modules/http-errors";
-
 }
 
 @import "modules/responsive";
@@ -50,7 +48,5 @@
    ========================================================================== */
 
 @media print {
-
     @import "modules/print";
-
 }
