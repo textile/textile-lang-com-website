@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "autosize": "4.0.2",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "prismjs": "1.19.0",
     "textile-mark": "1.0.0"
   },
