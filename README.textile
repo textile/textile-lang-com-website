@@ -1,6 +1,6 @@
 h1. Textile website
 
-!https://badges.greenkeeper.io/textile/textile-lang-com-website.svg(Greenkeeper)!:https://greenkeeper.io/ !https://travis-ci.org/textile/textile-lang-com-website.svg(Build Status)!:https://travis-ci.org/textile/textile-lang-com-website
+!https://snyk.io/test/github/textile/textile-lang-com-website/badge.svg?targetFile=package.json(Known Vulnerabilities)!:https://snyk.io/test/github/textile/textile-lang-com-website?targetFile=package.json !https://travis-ci.org/textile/textile-lang-com-website.svg(Build Status)!:https://travis-ci.org/textile/textile-lang-com-website
 
 Official 2018+ website of the "Textile Markup Language":https://textile-lang.com/ project. *Requires Textpattern 4.7.1 or later.*
 
