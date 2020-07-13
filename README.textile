@@ -56,3 +56,7 @@ h2. Plugins used
 All plugins we use are installed via Composer:
 
 * "@etc_cache@":https://github.com/etc-plugins/etc_cache ✓ Composer
+
+h2. License
+
+Licensed under the "GPLv2 license":https://github.com/textile/textile-lang-com-website/blob/master/LICENSE.
