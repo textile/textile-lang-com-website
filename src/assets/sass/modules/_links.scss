@@ -49,6 +49,21 @@ h6 {
 }
 
 /**
+ * Paginator (prev/next) navigation links on articles/article lists.
+ *
+ * Example HTML:
+ *
+ * <nav class="paginator">
+ *     <a rel="prev">
+ *     <a rel="next">
+ */
+
+.paginator {
+    display: flex;
+    justify-content: space-between;
+}
+
+/**
  * Additional styling for links within complementary content and site
  * header/footer.
  */
