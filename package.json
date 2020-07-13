@@ -38,7 +38,7 @@
     "textile-mark": "1.0.0"
   },
   "optionalDependencies": {
-    "fibers": "4.0.2"
+    "fibers": "5.0.0"
   },
   "browserslist": [
     "> 0.5%",
