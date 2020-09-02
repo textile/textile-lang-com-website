@@ -24,6 +24,14 @@ body {
 }
 
 /**
+ * Render the `main` element consistently in IE 11.
+ */
+
+main {
+    display: block;
+}
+
+/**
  * Hide items targetted at large screens. Overrode in second breakpoint.
  */
 
