@@ -44,7 +44,7 @@
     <footer class="site-footer">
         <p>
             <small>
-                Copyright 2003–<txp:php>echo date('Y');</txp:php> The Textile Language Development Team. Textile is both free and open source.
+                Copyright 2002–<txp:php>echo date('Y');</txp:php> The Textile Language Development Team. Textile is both free and open source.
                 <a rel="external" href="https://raw.githubusercontent.com/textile/php-textile/master/LICENSE">BSD 3-Clause license</a>.
             </small>
         </p>
