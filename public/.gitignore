@@ -3,10 +3,10 @@
 /css.php
 /files
 /images
-/img-cms
 /index.php
 /themes/*/
 /textpattern
 /vendor
-/*.png
 /*.ico
+/*.png
+/*.svg
