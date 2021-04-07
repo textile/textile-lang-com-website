@@ -39,9 +39,18 @@ module.exports = function (grunt)
             '<%= paths.dest.templates %>'
         ],
 
+        // Concat JavaScript that has already been minified (because Uglify mangles Prototype.js)
+        concat: {
+            dist: {
+                src: ['<%= paths.src.js %>lib/prototype.min.js', '<%= paths.src.js %>lib/try.min.js'],
+                dest: '<%= paths.dest.js %>try.js',
+            }
+        },
+
         // Run some tasks in parallel to speed up the build process.
         concurrent: {
             dist: [
+                'concat',
                 'copy',
                 'css',
                 'jshint'
@@ -217,11 +226,6 @@ module.exports = function (grunt)
                             '<%= paths.src.js %>lib/datagridrenderer.js',
                             '<%= paths.src.js %>lib/controller.js',
                             '<%= paths.src.js %>lib/converter.js'
-                        ],
-
-                        '<%= paths.dest.js %>try.js': [
-                            '<%= paths.src.js %>lib/prototype.min.js',
-                            '<%= paths.src.js %>lib/try.js'
                         ],
                     }
                 ]
