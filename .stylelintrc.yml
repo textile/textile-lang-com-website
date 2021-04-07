@@ -9,11 +9,11 @@ plugins:
 
 rules:
 
- # Specify percentage or number notation for alpha-values.
+  # Specify percentage or number notation for alpha-values.
   alpha-value-notation: number
 
-  # Specify a blacklist of disallowed at-rules.
-  at-rule-blacklist:
+  # Specify a list of disallowed at-rules.
+  at-rule-disallowed-list:
     - debug
 
   # Require or disallow an empty line before at-rules.
@@ -42,13 +42,22 @@ rules:
     - true
     -
       ignoreAtRules:
+        - at-root
         - each
         - else
+        - debug
+        - error
+        - extend
+        - for
+        - forward
         - function
         - if
         - include
         - mixin
         - return
+        - use
+        - warn
+        - while
 
   # Disallow vendor prefixes for at-rules.
   at-rule-no-vendor-prefix: true
@@ -116,6 +125,9 @@ rules:
   # Disallow empty comments.
   comment-no-empty: true
 
+  # Specify a pattern for comments.
+  #comment-pattern:
+
   # Require or disallow whitespace on the inside of comment markers.
   comment-whitespace-inside: always
 
@@ -136,6 +148,9 @@ rules:
 
   # Require a single space or disallow whitespace before the bang of declarations.
   declaration-bang-space-before: always
+
+  # Disallow duplicate custom properties within declaration blocks.
+  declaration-block-no-duplicate-custom-properties: true
 
   # Disallow duplicate properties within declaration blocks.
   #declaration-block-no-duplicate-properties:
@@ -261,7 +276,7 @@ rules:
   function-whitespace-after: always
 
   # Specify number or angle notation for degree hues.
-  hue-degree-notation: angle
+  hue-degree-notation: number
 
   # Specify indentation.
   indentation: 4
@@ -332,6 +347,9 @@ rules:
   # Require a single space or disallow whitespace before the commas of media query lists.
   media-query-list-comma-space-before: never
 
+  # Disallow invalid named grid areas.
+  named-grid-areas-no-invalid: true
+
   # Disallow selectors of lower specificity from coming after overriding selectors of higher specificity.
   #no-descending-specificity: true
 
@@ -378,7 +396,11 @@ rules:
   property-case: lower
 
   # Disallow unknown properties.
-  property-no-unknown: true
+  property-no-unknown:
+    - true
+    -
+      ignoreProperties:
+        - contains-intrinsic-size
 
   # Disallow vendor prefixes for properties.
   property-no-vendor-prefix:
@@ -399,6 +421,9 @@ rules:
 
   # Require a single space or disallow whitespace on the inside of the brackets within attribute selectors.
   selector-attribute-brackets-space-inside: never
+
+  # Specify a list of disallowed attribute names.
+  #selector-attribute-name-disallowed-list:
 
   # Specify a blacklist of disallowed attribute operators.
   #selector-attribute-operator-blacklist:

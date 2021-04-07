@@ -39,18 +39,9 @@ module.exports = function (grunt)
             '<%= paths.dest.templates %>'
         ],
 
-        // Concat JavaScript that has already been minified (because Uglify mangles Prototype.js)
-        concat: {
-            dist: {
-                src: ['<%= paths.src.js %>lib/prototype.min.js', '<%= paths.src.js %>lib/try.min.js'],
-                dest: '<%= paths.dest.js %>try.js',
-            }
-        },
-
         // Run some tasks in parallel to speed up the build process.
         concurrent: {
             dist: [
-                'concat',
                 'copy',
                 'css',
                 'jshint'
@@ -197,8 +188,18 @@ module.exports = function (grunt)
             src: ['<%= paths.src.sass %>**/*.{css,scss}']
         },
 
-        // Uglify and copy JavaScript files from `node_modules` and from `src/js/` to `public/assets/js/`.
-        uglify: {
+        // Minify and copy JavaScript files from `node_modules` and from `src/js/` to `public/assets/js/`.
+        terser: {
+            options: {
+                ecma: 2015,
+                compress: {
+                    booleans_as_integers: true,
+                    drop_console: true
+                },
+                format: {
+                    comments: false
+                }
+            },
             dist: {
                 files: [
                     {
@@ -223,6 +224,11 @@ module.exports = function (grunt)
                             '<%= paths.src.js %>lib/controller.js',
                             '<%= paths.src.js %>lib/converter.js'
                         ],
+
+                        '<%= paths.dest.js %>try.js': [
+                            '<%= paths.src.js %>lib/prototype.min.js',
+                            '<%= paths.src.js %>lib/try.js'
+                        ],
                     }
                 ]
             }
@@ -238,7 +244,7 @@ module.exports = function (grunt)
                 files: '<%= paths.src.js %>*.js',
                 tasks: [
                     'jshint',
-                    'uglify'
+                    'terser'
                 ]
             },
             html: {
@@ -250,7 +256,7 @@ module.exports = function (grunt)
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['clean', 'concurrent', 'replace', 'uglify']);
+    grunt.registerTask('build', ['clean', 'concurrent', 'replace', 'terser']);
     grunt.registerTask('css', ['stylelint', 'sass', 'postcss']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('travis', ['build']);
