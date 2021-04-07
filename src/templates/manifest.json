@@ -1,8 +1,8 @@
 {
-    "title": "Textile official website",
-    "version": "1.0.5",
-    "description": "",
-    "author": "The Textile Language Development Team",
-    "author_uri": "https://textile-lang.com",
-    "txp-type": "textpattern-theme"
+  "title": "Textile official website",
+  "txp-type": "textpattern-theme",
+  "version": "@@version",
+  "description": "Textile-Lang.com site theme.",
+  "author": "The Textile Language Development Team",
+  "author_uri": "https://textile-lang.com"
 }

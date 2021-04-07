@@ -78,20 +78,8 @@ module.exports = function (grunt)
                     },
                     {
                         expand: true,
-                        cwd: 'node_modules/textile-mark/assets/apple-touch-icon/',
-                        src: ['**'],
-                        dest: 'public/'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'node_modules/textile-mark/assets/favicon/',
-                        src: ['**'],
-                        dest: 'public/'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'node_modules/textile-mark/assets/windows-site-tile/',
-                        src: ['**'],
+                        cwd: 'node_modules/textile-mark/assets/favicons/',
+                        src: '**',
                         dest: 'public/'
                     }
                 ]
@@ -151,6 +139,10 @@ module.exports = function (grunt)
                         {
                             match: 'timestamp',
                             replacement: '<%= opt.timestamp %>'
+                        },
+                        {
+                            match: 'version',
+                            replacement: '<%= pkg.version %>'
                         }
                     ]
                 },
@@ -159,9 +151,11 @@ module.exports = function (grunt)
                     {
                         expand: true,
                         cwd: '<%= paths.src.templates %>',
-                        src: '**',
+                        src: ['**', '!manifest.json'],
                         dest: '<%= paths.dest.templates %>'
-                    }
+                    },
+                    // Generate version number automatically in theme manifest.json file.
+                    {'<%= paths.dest.templates %>manifest.json': '<%= paths.src.templates %>manifest.json'}
                 ]
             }
         },

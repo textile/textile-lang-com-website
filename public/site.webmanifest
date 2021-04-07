@@ -1,20 +1,13 @@
 {
-  "short_name": "textile-lang.com",
+  "short_name": "Textile-Lang.com",
   "name": "Textile Markup Language Homepage",
   "start_url": "https://textile-lang.com",
+  "scope": "https://textile-lang.com",
   "icons": [
-    {
-      "src": "/favicon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/favicon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable any" }
   ],
   "background_color": "#ffffff",
   "theme_color": "#ffe8aa",
-  "display": "browser"
+  "display": "minimal-ui"
 }

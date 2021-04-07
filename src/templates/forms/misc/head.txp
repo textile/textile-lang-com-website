@@ -5,8 +5,11 @@
 <link rel="preload" href="https://textile-lang.com/assets/fonts/pt-serif-v11-latin-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="https://textile-lang.com/assets/fonts/pt-serif-v11-latin-700italic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/style.@@timestamp.css">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="icon" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" sizes="16x16" href="/favicon-16x16.png">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffe8aa">
 <meta name="generator" content="Textpattern CMS">
 <meta name="application-name" content="Textile Markup Language">
