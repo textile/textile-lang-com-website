@@ -27,13 +27,13 @@
     "grunt-terser": "2.0.0",
     "load-grunt-tasks": "5.1.0",
     "postcss": "8.2.15",
-    "sass": "1.32.10",
+    "sass": "1.32.13",
     "stylelint": "13.13.1",
     "stylelint-order": "4.1.0",
     "stylelint-scss": "3.19.0"
   },
   "dependencies": {
-    "autosize": "4.0.2",
+    "autosize": "4.0.3",
     "jquery": "3.6.0",
     "prismjs": "1.23.0",
     "textile-mark": "1.1.0"
