@@ -33,7 +33,7 @@
     "stylelint-scss": "3.19.0"
   },
   "dependencies": {
-    "autosize": "4.0.4",
+    "autosize": "5.0.0",
     "jquery": "3.6.0",
     "prismjs": "1.23.0",
     "textile-mark": "1.1.0"
