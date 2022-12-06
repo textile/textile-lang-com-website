@@ -12,12 +12,12 @@
   "devDependencies": {
     "@lodder/grunt-postcss": "3.1.1",
     "autoprefixer": "10.4.13",
-    "cssnano": "5.1.0",
+    "cssnano": "5.1.14",
     "grunt": "1.5.3",
     "grunt-cli": "1.4.3",
     "grunt-concurrent": "3.0.0",
     "grunt-contrib-clean": "2.0.1",
-    "grunt-contrib-concat": "2.0.0",
+    "grunt-contrib-concat": "2.1.0",
     "grunt-contrib-copy": "1.0.0",
     "grunt-contrib-jshint": "3.2.0",
     "grunt-contrib-watch": "1.1.0",
@@ -26,7 +26,7 @@
     "grunt-stylelint": "0.16.0",
     "grunt-terser": "2.0.0",
     "load-grunt-tasks": "5.1.0",
-    "postcss": "8.4.7",
+    "postcss": "8.4.19",
     "sass": "1.56.1",
     "stylelint": "13.13.1",
     "stylelint-order": "4.1.0",
@@ -35,11 +35,11 @@
   "dependencies": {
     "autosize": "5.0.1",
     "jquery": "3.6.1",
-    "prismjs": "1.27.0",
+    "prismjs": "1.29.0",
     "textile-mark": "1.1.0"
   },
   "optionalDependencies": {
-    "fibers": "5.0.1"
+    "fibers": "5.0.3"
   },
   "browserslist": [
     "> 0.5%",
