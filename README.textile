@@ -1,7 +1,5 @@
 h1. Textile website
 
-!https://travis-ci.com/textile/textile-lang-com-website.svg(Build Status)!:https://travis-ci.com/textile/textile-lang-com-website
-
 Official 2018+ website of the "Textile Markup Language":https://textile-lang.com/ project. *Requires Textpattern 4.7.1 or later.*
 
 h2. Supported web browsers
